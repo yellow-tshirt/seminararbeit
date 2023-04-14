@@ -1,5 +1,5 @@
 fn main(){
-    let cm: Message = Message::Color(50, 50, 50);
+    let cm: Message = Message::Color(1,2,3);
     processMessage(cm);
 
 }
@@ -19,3 +19,9 @@ enum Message{
     Text(String),
     Color(u8, u8, u8)
 }
+
+struct Alert{
+    importance: u8,
+    name: String,
+}
+
