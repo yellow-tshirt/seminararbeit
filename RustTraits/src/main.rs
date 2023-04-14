@@ -90,7 +90,7 @@ impl Animal for Dog{
 //returning traits
 fn example3(){
     println!("randomly selected Pet");
-    println!("{:?}", random_pet().play());
+    random_pet().play();
 }
 
 trait Pet {
@@ -111,13 +111,28 @@ impl Pet for Cat{
     }
 }
 fn random_pet() -> Box<dyn Pet>{
-    let randomBool:bool = rand::thread_rng().gen();
-    match randomBool{
+    let random_bool:bool = rand::thread_rng().gen();
+    match random_bool{
         true => Box::new(Dog{name:"John"}),
         false => Box::new(Cat{name:"Luna", hungry: false})
     }
 }
-//
+//supertraits + ambiguity
+trait Person{
+    fn name(&self) -> String;
+}
+
+trait Student: Person{
+    fn university(&self) -> String;
+}
+
+trait Programmer{
+    fn favoriteLanguage(&self) -> String;
+}
+
+fn example4(){
+
+}
 fn main() {
     example3()
 }
