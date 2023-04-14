@@ -1,9 +1,3 @@
-fn main(){
-    let cm: Message = Message::Color(1,2,3);
-    processMessage(cm);
-
-}
-
 fn processMessage(m:Message){
     match m{
         Message::Hello => println!("Hello Message received -> Say Hello"),
@@ -25,3 +19,7 @@ struct Alert{
     name: String,
 }
 
+fn main(){
+    let cm: Message = Message::Color(1,2,3);
+    processMessage(cm);
+}
