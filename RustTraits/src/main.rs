@@ -1,6 +1,4 @@
-fn main() {
-
-}
+use rand::Rng;
 
 fn example1(){
     let mut luna: Cat = Animal::new("Luna");
@@ -10,6 +8,8 @@ fn example1(){
     luna.feed();
     luna.talk();
 }
+//basics
+#[derive(Debug)]
 struct Cat{
     name: &'static str,
     hungry: bool,
@@ -60,4 +60,64 @@ impl Animal for Cat{
     fn talk(&self){
        println!("... {} ...", self.noise()) 
     }
+}
+
+//derive
+fn example2(){
+    let john = Dog::default();
+    println!("{:?}", john);
+}
+#[derive(Debug, Default)]//PartialEq, PartialOrd, Copy
+struct Dog{
+    name: &'static str,
+}
+
+impl Animal for Dog{
+    fn new(name: &'static str) -> Self {
+        Dog{name}
+    }
+    fn name(&self) -> &'static str {
+        self.name
+    }
+    fn noise(&self) -> &'static str {
+        "woof"
+    }
+    fn talk(&self) {
+        println!("dog {} goes {}", self.name(), self.noise())
+    }
+}
+
+//returning traits
+fn example3(){
+    println!("randomly selected Pet");
+    println!("{:?}", random_pet().play());
+}
+
+trait Pet {
+    fn play(&self){
+        println!("Pet is playing")
+    }
+}
+
+impl Pet for Dog {
+    fn play(&self) {
+        println!("Dog is playing with a stick")
+    }
+}
+
+impl Pet for Cat{
+    fn play(&self) {
+        println!("Cat is playing with yarn")
+    }
+}
+fn random_pet() -> Box<dyn Pet>{
+    let randomBool:bool = rand::thread_rng().gen();
+    match randomBool{
+        true => Box::new(Dog{name:"John"}),
+        false => Box::new(Cat{name:"Luna", hungry: false})
+    }
+}
+//
+fn main() {
+    example3()
 }
