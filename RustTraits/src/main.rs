@@ -62,30 +62,30 @@ impl Animal for Cat{
     }
 }
 
-//derive
-fn example2(){
-    let john = Dog::default();
-    println!("{:?}", john);
-}
-#[derive(Debug, Default)]//PartialEq, PartialOrd, Copy
+//derive useful meta programming
+// fn example2(){
+//     let john = Dog::default();
+//     println!("{:?}", john);
+// }
+#[derive(Debug, Default)]//these traits will be implemented for us
 struct Dog{
     name: &'static str,
 }
 
-impl Animal for Dog{
-    fn new(name: &'static str) -> Self {
-        Dog{name}
-    }
-    fn name(&self) -> &'static str {
-        self.name
-    }
-    fn noise(&self) -> &'static str {
-        "woof"
-    }
-    fn talk(&self) {
-        println!("dog {} goes {}", self.name(), self.noise())
-    }
-}
+// impl Animal for Dog{
+//     fn new(name: &'static str) -> Self {
+//         Dog{name}
+//     }
+//     fn name(&self) -> &'static str {
+//         self.name
+//     }
+//     fn noise(&self) -> &'static str {
+//         "woof"
+//     }
+//     fn talk(&self) {
+//         println!("dog {} goes {}", self.name(), self.noise())
+//     }
+// }
 
 //returning traits
 fn example3(){
@@ -117,6 +117,34 @@ fn random_pet() -> Box<dyn Pet>{
         false => Box::new(Cat{name:"Luna", hungry: false})
     }
 }
+
+trait Hide{
+    fn hide(&self){
+        println!("Dog is now hidden");
+    }
+}
+trait Combination: Pet+Hide{
+
+}
+
+struct Hamster{}
+impl Hide for Hamster{
+   fn hide(&self){
+    println!("Hamster is hiding");
+   }
+}
+impl Pet for Hamster{
+   fn play(&self){
+    println!("Hamster is playing");
+   }
+}
+impl Combination for Hamster{
+}
+
+
+fn multiple_traits() -> Box<dyn Combination>{
+    return Box::new(Hamster{})
+}
 //supertraits + ambiguity
 trait Person{
     fn name(&self) -> String;
@@ -127,7 +155,16 @@ trait Student: Person{
 }
 
 trait Programmer{
-    fn favoriteLanguage(&self) -> String;
+    fn favorite_language(&self) -> String;
+}
+
+trait ITStudent: Student+Programmer{
+    fn git_username(&self) -> String;
+}
+
+struct Hka_Student{}
+impl ITStudent for Hka_Student{
+
 }
 
 fn example4(){
