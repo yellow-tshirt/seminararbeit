@@ -1,9 +1,11 @@
+use rand::Rng;
+
 fn main() {
     println!("Hello, world!");
 }
 
 enum Animal{
-    Dog(String, i32),
+    Dog(),
     Cat(String, i32),
     Bird(String, i32),
 }
