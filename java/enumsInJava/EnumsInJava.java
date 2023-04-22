@@ -16,6 +16,10 @@ enum AnimalWithValues{
         this.label= label;
         this.weight = weight;
     }
+
+    public boolean isCat(){
+        (this == AnimalWithValues.Cat) ? true: false;
+    }
 }
 
 public class EnumsInJava{

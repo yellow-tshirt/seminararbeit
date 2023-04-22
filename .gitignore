@@ -1,4 +1,5 @@
 ./traits/
-RustExamples/target
-RustTraits/target
-RustEnums/target
+./rust/**/target
+rust/EnumsInRustSimple/target
+rust/previousRustExamples/RustEnums/target
+rust/previousRustExamples/RustTraits/target
