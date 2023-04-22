@@ -1,6 +1,10 @@
 use rand::Rng
 fn main() {
-    println!("Hello, world!");
+    match lookUpAnimal(1){
+        Some(Animal::Dog) => println!("Found pet was a dog"),
+        Some(_) => println!("Found pet with id 1"),
+        None => println!("Sadly no pet was found")
+    }
 }
 
 enum Animal{
@@ -10,8 +14,9 @@ enum Animal{
 }
 
 fn lookUpAnimal(id: i32) -> Option<Animal>{
-    let rng = rand::thread_rng();
-    if rng.gen_boolean(){
-        
+    if(id == 1){
+        return Some(Animal::Dog);
+    }else{
+        return None
     }
 }

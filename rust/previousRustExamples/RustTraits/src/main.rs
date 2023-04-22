@@ -162,10 +162,6 @@ trait ITStudent: Student+Programmer{
     fn git_username(&self) -> String;
 }
 
-struct Hka_Student{}
-impl ITStudent for Hka_Student{
-
-}
 
 fn example4(){
 
