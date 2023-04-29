@@ -1,6 +1,7 @@
 fn main() {
     let d = Animal::Dog;
-    println!("The {} has a weight of {} kg", d.get_label(), d.get_weight())
+    println!("The {} has a weight of {} kg", d.get_label(), d.get_weight());
+    println!("is cat = {}", d.is_cat());
 }
 
 enum Animal {
@@ -23,6 +24,14 @@ impl Animal{
             Animal::Dog => 20,
             Animal::Cat => 10,
             Animal::Bird => 1,
+        }
+    }
+    
+    fn is_cat(&self) -> bool{
+        match self{
+            Animal::Cat => true,
+            Animal::Dog => false,
+            Animal::Bird => false
         }
     }
 }

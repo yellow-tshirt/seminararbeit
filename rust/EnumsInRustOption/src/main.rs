@@ -1,4 +1,3 @@
-use rand::Rng
 fn main() {
     match lookUpAnimal(1){
         Some(Animal::Dog) => println!("Found pet was a dog"),
