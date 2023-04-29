@@ -4,33 +4,24 @@ public class Expression {
     }
 }
 
-abstract class Exp{
-    abstract public int eval();
-}
-
+abstract class Exp{abstract public int eval();}
 class IntExp extends Exp{
     public int val;
-
     public IntExp(int val){
         this.val = val;
     }
-
     @Override
     public int eval() {
         return val;
     }
-    
 }
-
 class PlusExp extends Exp{
     public Exp left;
     public Exp right;
-
     public PlusExp(Exp left, Exp right){
         this.left = left;
         this.right = right;
     }
-
     @Override
     public int eval() {
         return left.eval() + right.eval();
