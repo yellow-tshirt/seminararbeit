@@ -25,3 +25,11 @@ class Rectangle implements Shape{
         return x*y;
     }
 }
+
+interface Person{
+    public String name();
+}
+
+interface Student extends Person{
+    public String university();
+}
