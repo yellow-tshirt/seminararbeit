@@ -1,6 +1,7 @@
 public class Expression{
     public static void main(String[] args) {
         Exp p = Exp.Plus;
+        //not accessible
         System.out.println(p.left);
         System.out.println(p.right);
     }
