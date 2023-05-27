@@ -26,7 +26,6 @@ impl Exp{
                 Exp::Int { val:0 } => return 0,
                 _ => return left.eval() * right.eval()
             }
-
        }
    }
 }
