@@ -1,4 +1,3 @@
-
 enum Message{
     Hello,
     Text(String),
