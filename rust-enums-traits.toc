@@ -1,29 +1,37 @@
 \babel@toc {german}{}\relax 
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
 \contentsline {section}{\numberline {2}Enums}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Enums in Rust}{2}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Match Statement}{2}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Generische Enums}{2}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1}Enums in Rust}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Match Statement}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Der Enum als algebraischer Datentyp}{2}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}Rekusive Enums und Datentypen}{2}{subsubsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.2}Enums in Java}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Vergleich von Java und Rust Enums}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Rust Enum Implementationsbeispiele}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Beispielfunktionalität in Java}{4}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Traits}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Allgemeines zu Traits}{4}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Traits sind keine Typen}{4}{subsubsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.2}Traits in Rust}{4}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Default-Implementationen}{4}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Trait Bounds}{4}{subsubsection.3.2.2}%
-\contentsline {paragraph}{Mehrfaches Traitbinding}{4}{section*.2}%
-\contentsline {paragraph}{Konditionelle Implementierung mit Trait Bounds}{4}{section*.3}%
-\contentsline {subsubsection}{\numberline {3.2.3}Dynamische Traits}{4}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Traits als Parameter}{4}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Supertraits}{4}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Referenzierung des eigenen Typen}{4}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Spezifizierung von Platzhaltertypen}{4}{subsubsection.3.2.7}%
-\contentsline {subsubsection}{\numberline {3.2.8}Shorthand Schreibweise}{4}{subsubsection.3.2.8}%
-\contentsline {subsubsection}{\numberline {3.2.9}Schreibeweise bei Uneindeutigkeit}{4}{subsubsection.3.2.9}%
-\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{4}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{4}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{4}{section.4}%
+\contentsline {subsubsection}{\numberline {2.1.4}Nested Pattern Matching}{3}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Generische Enums}{3}{subsubsection.2.1.5}%
+\contentsline {subsubsection}{\numberline {2.1.6}Verwendung des Rust Enums zur Vermeidung von Nullpointer-Ausnahmen}{4}{subsubsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.2}Enums in Java}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Normale Enums}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Enums mit Werten}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Enum Funktionen}{5}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Vergleich von Java und Rust Enums}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Rust Enum Implementationsbeispiele}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Beispielfunktionalität in Java}{5}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Expression-Logik in Java}{5}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Java Enums am Limit - Idee einer Wrapperinstanz für den Typ}{5}{subsubsection.2.5.2}%
+\contentsline {section}{\numberline {3}Traits}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Allgemeines zu Traits}{6}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Traits sind keine Typen}{6}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Traits in Rust}{6}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Default-Implementationen}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Trait Bounds}{6}{subsubsection.3.2.2}%
+\contentsline {paragraph}{Mehrfaches Traitbinding}{6}{section*.2}%
+\contentsline {paragraph}{Konditionelle Implementierung mit Trait Bounds}{6}{section*.3}%
+\contentsline {subsubsection}{\numberline {3.2.3}Dynamische Traits}{6}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Traits als Parameter}{6}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Supertraits}{7}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Referenzierung des eigenen Typen}{7}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Spezifizierung von Platzhaltertypen}{7}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Shorthand Schreibweise}{7}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}Schreibeweise bei Uneindeutigkeit}{7}{subsubsection.3.2.9}%
+\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{7}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{7}{section.4}%

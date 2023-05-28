@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Shape}::\PYG{n}{Square}\PYG{p}{(}\PYG{l+m+mi}{16}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The area of the shape is \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{n}{s1}\PYG{p}{.}\PYG{n}{area}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{enum} \PYG{n+nc}{Shape}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Square}\PYG{p}{(}\PYG{k+kt}{u32}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{Rectangle}\PYG{p}{(}\PYG{k+kt}{u32}\PYG{p}{,}\PYG{k+kt}{u32}\PYG{p}{),}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Shape}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u32}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{match}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{Shape}::\PYG{n}{Square}\PYG{p}{(}\PYG{n}{a}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{a}\PYG{o}{*}\PYG{n}{a}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{Shape}::\PYG{n}{Rectangle}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,}\PYG{n}{b}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{a}\PYG{o}{*}\PYG{n}{b}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

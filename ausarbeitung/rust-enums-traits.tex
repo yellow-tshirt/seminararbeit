@@ -27,65 +27,251 @@
 \pagenumbering{arabic}
 \maketitle
 \begin{abstract}
-    Something
 \end{abstract}
 \section{Einleitung}
-Eines der faszinierendsten Aspekte der Programmiersprachen Rust und Java ist ihre unterschiedliche Herangehensweise an die Modellierung von Datenstrukturen und Verhaltensweisen. In diesem Vergleich werden wir uns insbesondere auf die Konzepte der Enums und Traits in beiden Sprachen konzentrieren. Enums ermöglichen es, benutzerdefinierte Datentypen zu definieren, die eine begrenzte Anzahl von möglichen Werten repräsentieren, während Traits die Möglichkeit bieten, Verhaltensweisen zu abstrahieren und zu wiederverwenden.
-
-Wir werden sowohl die Gemeinsamkeiten als auch die Unterschiede zwischen Rust und Java in Bezug auf Enums und Traits analysieren. Dabei betrachten wir die Syntax, die Flexibilität, die Typsicherheit und die Einsatzmöglichkeiten dieser Konzepte in beiden Sprachen. Ziel ist es, ein umfassendes Verständnis dafür zu entwickeln, wie Enums und Traits in Rust und Java genutzt werden können und welche Vor- und Nachteile sie bieten.
-
-Indem wir die Besonderheiten von Rusts Enums und Traits mit denen von Javas Entsprechungen vergleichen, erhalten wir Einblicke in die unterschiedlichen Paradigmen, die hinter den beiden Sprachen stehen. Dieser Vergleich ermöglicht es Entwicklern, ihre Entscheidungen bei der Wahl einer geeigneten Sprache für bestimmte Projekte besser zu treffen und ihre Kenntnisse über die Konzepte der Enums und Traits in Rust und Java zu erweitern.
 \section{Enums}
-Enums, oder auch Aufzählungstypen, sind spezielle Datentypen in der Programmierung, die eine begrenzte Menge von benannten Werten repräsentieren. Sie ermöglichen es, eine feste Liste von möglichen Optionen zu definieren, aus denen ein Wert ausgewählt werden kann. Enums werden häufig verwendet, um eine klar definierte Menge von Zuständen, Typen oder Optionen darzustellen, die in einem Programm oder einer Anwendung auftreten können.
-
-Durch die Verwendung von Enums können Programmierer den Code lesbarer und verständlicher machen, da die verwendeten Werte klar benannt sind und eine eindeutige Bedeutung haben. Enums bieten auch eine verbesserte Typsicherheit, da der Compiler sicherstellen kann, dass nur gültige Werte eines Enums verwendet werden.
-
-Enums können in verschiedenen Programmiersprachen implementiert werden und weisen je nach Sprache unterschiedliche Funktionalitäten auf. In einigen Sprachen können Enums beispielsweise mit zusätzlichen Daten oder Verhaltensweisen erweitert werden, während sie in anderen Sprachen auf eine festgelegte Liste von Werten beschränkt sind. Die genaue Implementierung von Enums variiert also, aber ihr Hauptzweck bleibt die Darstellung einer begrenzten Anzahl von benannten Werten.
+Enumerationstypen \\
+Auf den ersten Blick identisch. \\
+Java Enum:
+\begin{minted}{java}
+enum Color{
+    red,
+    green,
+    blue;
+}
+\end{minted}
+Rust Enum:
+\begin{minted}{rust}
+enum Animal {
+    Dog,
+    Cat,
+    Bird,
+}
+\end{minted}
+Auf Konkretere Unterschiede gehen wir jetzt ein
 \subsection{Enums in Rust}
-In der Programmiersprache Rust sind Enums spezielle Datentypen, die eine feste Liste von benannten Varianten darstellen können. Enums in Rust ermöglichen es, eine bestimmte Menge von Werten zu definieren, die eine Variable annehmen kann. Jede Variante eines Enums kann zusätzliche Daten enthalten oder auch komplett leer sein.
-
-Rust-Enums bieten eine hohe Flexibilität, da sie es ermöglichen, komplexe Datenstrukturen aufzubauen, die unterschiedliche Zustände oder Typen repräsentieren können. Dadurch können Programmierer den Code lesbarer und sicherer gestalten. Enums in Rust werden oft in Kombination mit dem "match"-Ausdruck verwendet, um den verschiedenen Varianten eines Enums entsprechende Aktionen zuzuordnen.
-
-Eine der Stärken von Rust-Enums liegt in ihrer Kombinierbarkeit mit Pattern Matching. Dadurch können Programmierer effektiv auf verschiedene Varianten eines Enums reagieren und entsprechende Logik implementieren. Rust bietet auch die Möglichkeit, Enums mit Methoden zu erweitern, um zusätzliche Verhaltensweisen für bestimmte Varianten bereitzustellen.
-
-Im Gegensatz zu einigen anderen Programmiersprachen erfordert Rust, dass Enums vollständig abgedeckt sind, wenn sie in einem "match"-Ausdruck verwendet werden. Das bedeutet, dass alle möglichen Varianten behandelt werden müssen, um sicherzustellen, dass keine unbehandelten Fälle auftreten können.
-
-Enums sind ein wichtiger Bestandteil der Rust-Sprache und tragen zur Erstellung robuster und sicherer Codestrukturen bei, indem sie eine klare und explizite Darstellung von verschiedenen Zuständen oder Optionen ermöglichen, die eine Variable annehmen kann.
+- Algebraische Datentypen
 \subsubsection{Match Statement}
-\subsubsection{Generische Enums}
+\begin{itemize}
+	\item abgeschlossen
+	\item an Haskell angelehnt
+	\item mehr als nur if else
+	\item sehr ergonomisch, aussagekräftig und kurz
+\end{itemize}
+\begin{minted}{rust}
+fn main() {
+	let a1 = Animal::Dog;
+	match a1{
+		Animal::Dog => println!("It's a Dog"),
+		Animal::Cat => println!("It's a Cat"),
+		Animal::Bird => println!("It's a Bird")
+	}
+}
+
+enum Animal{
+	Dog,
+	Cat,
+	Bird
+}
+\end{minted}
+\subsubsection{Der Enum als algebraischer Datentyp}
+\begin{itemize}
+	\item beliebige Struktur
+	\item werte können sich verändern
+	\item flexibel
+	\item pattern matching lässt uns die einzelnen Werte benutzen
+\end{itemize}
+\begin{minted}{rust}
+fn main() {
+    let s1 = Shape::Square(16);
+    println!("The area of the shape is {}",s1.area());
+}
+
+enum Shape{
+    Square(u32),
+    Rectangle(u32,u32),
+}
+
+impl Shape{
+    fn area(&self) -> u32{
+        match self {
+            Shape::Square(a) => a*a,
+            Shape::Rectangle(a,b) => a*b,
+        }
+    }
+}
+\end{minted}
 \subsubsection{Rekusive Enums und Datentypen}
+\begin{itemize}
+	\item braucht Box (wie Zeiger)
+	\item Box sonst, rekursive Definition ohne Direktion
+\end{itemize}
+\begin{minted}{rust}
+enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+}
+
+impl Exp{
+    fn eval(&self) -> i32{
+        match self{
+            Exp::Int{val} => *val,
+            Exp::Plus{left, right} => left.eval() + right.eval() ,
+            Exp::Mult{left, right} => left.eval() + right.eval()
+
+        }
+    }
+}
+\end{minted}
+\subsubsection{Nested Pattern Matching}
+\begin{itemize}
+	\item kann noch granulareres pattern matching betreiben
+\end{itemize}
+\begin{minted}{rust}
+pub enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+}
+
+impl Exp{
+   fn eval(&self) -> i32{
+       match self{
+           Exp::Int{val} => *val,
+           Exp::Plus{left, right} => left.eval() + right.eval() ,
+           Exp::Mult{left, right} => 
+            match **left {
+                Exp::Int { val:0 } => return 0,
+                _ => return left.eval() * right.eval()
+            }
+       }
+   }
+}
+\end{minted}
+\subsubsection{Generische Enums}
+\begin{itemize}
+	\item Enums können mit generischen Werten generiert werden
+\end{itemize}
+\begin{minted}{rust}
+enum Option<T> {
+	None,
+	Some(T),
+}
+\end{minted}
+\subsubsection{Verwendung des Rust Enums zur Vermeidung von Nullpointer-Ausnahmen}
+\begin{itemize}
+	\item Java hat ähnliches Konzept aber mit Klassen
+	\item Nullpointer, der große Milliarden € Fehler
+\end{itemize}
+\begin{minted}{rust}
+mintedfn main() {
+    match lookUpAnimal(1){
+        Some(Animal::Dog) => println!("Found pet was a dog"),
+        Some(_) => println!("Found pet with id 1"),
+        None => println!("Sadly no pet was found")
+    }
+}
+
+enum Animal{
+    Dog,
+    Cat,
+    Bird,
+}
+
+fn lookUpAnimal(id: i32) -> Option<Animal>{
+    if(id == 1){
+        return Some(Animal::Dog);
+    }else{
+        return None
+    }
+}
+\end{minted}
 \subsection{Enums in Java}
-In der Programmiersprache Java sind Enums spezielle Datentypen, die eine festgelegte Menge von benannten Werten repräsentieren. Enums ermöglichen es, eine spezifische Liste von Konstanten zu definieren, die eine Variable annehmen kann. Jeder Wert in einem Java-Enum wird als eine Instanz der Enum-Klasse betrachtet.
-
-Java-Enums bieten eine übersichtliche Möglichkeit, eine begrenzte Anzahl von Optionen oder Zuständen darzustellen. Sie können verwendet werden, um eine feste Menge von verwandten Konstanten zu definieren, die in einem Programm verwendet werden sollen. Enums in Java sind typsicher, da der Compiler sicherstellen kann, dass nur gültige Werte eines Enums verwendet werden.
-
-Enums in Java können zusätzlich Informationen tragen. Jeder Enum-Wert kann mit Attributen versehen sein, die spezifische Daten repräsentieren können. Diese Attribute können über Methoden abgerufen werden, die den Enum-Werten zugeordnet sind. Auf diese Weise können Enums in Java auch Verhaltensweisen implementieren.
-
-Ein wichtiger Aspekt von Java-Enums ist die Fähigkeit, switch-Anweisungen und Fallunterscheidungen auf Enums anzuwenden. Dies erleichtert das Schreiben von Code, der auf verschiedene Enum-Werte reagieren und entsprechende Aktionen ausführen kann.
-
-Enums in Java bieten eine robuste und flexible Möglichkeit, eine feste Menge von Werten darzustellen und deren Verwendung in einem Programm zu kontrollieren. Sie ermöglichen eine klarere und lesbarere Codebasis, da die verwendeten Werte explizit benannt sind und eine eindeutige Bedeutung haben.
+\begin{itemize}
+	\item Enums sind Instanzen
+	\item Instanz statisch und final (per default)
+\end{itemize}
+\subsubsection{Normale Enums}
+\subsubsection{Enums mit Werten}
+\subsubsection{Enum Funktionen}
 \subsection{Vergleich von Java und Rust Enums}
-Rust Enums:
-
-    Rust-Enums repräsentieren eine feste Liste von benannten Varianten.
-    Jede Variante kann zusätzliche Daten enthalten oder leer sein.
-    Rust-Enums bieten Flexibilität, komplexe Datenstrukturen aufzubauen und unterschiedliche Zustände oder Typen darzustellen.
-    Enums in Rust werden oft mit Pattern Matching verwendet, um auf verschiedene Varianten zu reagieren.
-    Rust ermöglicht die Erweiterung von Enums mit Methoden, um zusätzliches Verhalten für bestimmte Varianten anzubieten.
-    Rust erfordert eine vollständige Abdeckung von Enums in "match"-Ausdrücken, um unbehandelte Fälle zu vermeiden.
-
-Java Enums:
-
-    Java-Enums repräsentieren eine festgelegte Menge von benannten Konstanten.
-    Jeder Enum-Wert wird als Instanz der Enum-Klasse betrachtet.
-    Java-Enums bieten eine übersichtliche Möglichkeit, eine begrenzte Anzahl von Optionen oder Zuständen darzustellen.
-    Enums in Java können zusätzliche Informationen tragen und Verhaltensweisen implementieren.
-    Java ermöglicht die Verwendung von switch-Anweisungen und Fallunterscheidungen auf Enums.
-    Java-Enums tragen zur Kontrolle und Lesbarkeit des Codes bei, da die verwendeten Werte explizit benannt sind.
-
-Zusammenfassend lässt sich sagen, dass sowohl Rust-Enums als auch Java-Enums die Möglichkeit bieten, eine begrenzte Anzahl von Optionen oder Zuständen darzustellen. Beide Sprachen erlauben die Definition von benannten Werten, wobei Rust-Enums flexibler sind, da sie zusätzliche Daten und Verhaltensweisen unterstützen. Java-Enums hingegen ermöglichen die Verwendung von switch-Anweisungen und bieten eine kompakte und lesbarere Syntax. Die genaue Implementierung und Syntax von Enums kann je nach Sprache variieren, aber der grundlegende Zweck bleibt die Darstellung einer begrenzten Menge von benannten Werten.
 \subsection{Rust Enum Implementationsbeispiele}
 \subsection{Beispielfunktionalität in Java}
+\subsubsection{Expression-Logik in Java}
+\subsubsection{Java Enums am Limit - Idee einer Wrapperinstanz für den Typ}
+\begin{itemize}
+	\item Idee, was aber wenn die Instanz ein Wrapper ist
+	\item nicht sehr ergonomisch 
+	\item statische variablen schneiden uns 
+\end{itemize}
+\begin{minted}{java}
+mintedpublic class playground{
+	public static void main(String[] args) {
+		Animal a = Animal.Dog;
+		Animal a2 = Animal.Dog;
+		Animal b = Animal.Cat;
+		System.out.println(a.getObject());
+		System.out.println(a2.getObject());
+		System.out.println(b.getObject());
+		a.setObject("new Dog Value");
+		b.setObject("new Cat value");
+		System.out.println(a.getObject());
+		System.out.println(a.getObject());
+		System.out.println(b.getObject());
+	}
+}
+
+enum Animal{
+	Dog(new Wrapper("Doggy")),
+	Cat(new Wrapper("Catty"));
+
+	private Wrapper w;
+	private Animal(Wrapper w){
+		this.w = w;
+	}
+
+	public Object getObject(){
+		return w.item;
+	}
+	public void setObject(Object o){
+		w.item = o;
+	}
+}
+
+class Wrapper{
+	Object item;
+
+	public Wrapper(Object o){
+		item = o;
+	}
+}
+\end{minted}
+output
+\begin{minted}{shell}
+Doggy
+Doggy
+Catty
+new Dog Value
+new Dog Value
+new Cat value
+\end{minted}
 \section{Traits}
 \subsection{Allgemeines zu Traits}
 \subsubsection{Traits sind keine Typen}

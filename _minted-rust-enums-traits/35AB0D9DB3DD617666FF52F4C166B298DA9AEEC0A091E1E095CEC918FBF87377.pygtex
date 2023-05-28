@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Animal}::\PYG{n}{Dog}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{match}\PYG{+w}{ }\PYG{n}{a1}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{Animal}::\PYG{n}{Dog}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}It\PYGZsq{}s a Dog\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{		}\PYG{n}{Animal}::\PYG{n}{Cat}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}It\PYGZsq{}s a Cat\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{		}\PYG{n}{Animal}::\PYG{n}{Bird}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}It\PYGZsq{}s a Bird\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{enum} \PYG{n+nc}{Animal}\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{Dog}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{Cat}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{Bird}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

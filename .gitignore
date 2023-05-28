@@ -9,3 +9,7 @@ rust/generischemehrfachimplementierung/target
 rust/supertraits/target
 rust/conditionalImplementation/target
 rust/sametypinputoutput/target
+
+# Added by cargo
+
+/target

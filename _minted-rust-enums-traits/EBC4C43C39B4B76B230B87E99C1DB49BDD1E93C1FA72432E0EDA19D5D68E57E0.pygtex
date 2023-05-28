@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{enum}\PYG{+w}{ }\PYG{n}{Color}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{red}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{green}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{blue}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

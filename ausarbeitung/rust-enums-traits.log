@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.28)  28 MAY 2023 14:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.28)  28 MAY 2023 19:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**rust-enums-traits.tex
-(./rust-enums-traits.tex
+**/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex
+(/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -123,8 +123,7 @@ Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
 File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel languages
-)
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
@@ -308,7 +307,7 @@ runsystem(mkdir -p _minted-rust-enums-traits)...disabled (restricted).
 
 
 
-./rust-enums-traits.tex:10: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:10: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
 
 See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -340,7 +339,7 @@ runsystem(which pygmentize && touch rust-enums-traits.aex)...disabled (restricte
 
 
 
-./rust-enums-traits.tex:19: Package minted Error: You must have `pygmentize' installed to use this package.
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:19: Package minted Error: You must have `pygmentize' installed to use this package.
 
 See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -359,12 +358,7 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [1ppt].
 
-(./rust-enums-traits.aux
-
-Package babel Warning: Undefined language 'nil' in aux.
-(babel)                Reported on input line 21.
-
-)
+(./rust-enums-traits.aux)
 \openout1 = `rust-enums-traits.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -420,7 +414,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
- (./rust-enums-traits.out) (./rust-enums-traits.out)
 \@outlinefile=\write5
 \openout5 = `rust-enums-traits.out'.
 
@@ -432,25 +425,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 22.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rust-enums-traits.toc
-
-./rust-enums-traits.toc:1: Package babel Error: You haven't defined the language 'nil' yet.
-(babel)                Perhaps you misspelled it or your installation
-(babel)                is not complete.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \babel@toc {nil}{}
-                      \relax
-Your command will be ignored, type <return> to proceed
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
-)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \tf@toc=\write6
 \openout6 = `rust-enums-traits.toc'.
 
@@ -460,37 +435,293 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 l.26 \newpage
               [1
 
-] [1] [2]
-Overfull \hbox (0.83386pt too wide) in paragraph at lines 79--85
-\OT1/cmr/m/n/10 ten. Je-der Enum-Wert wird als In-stanz der Enum-Klasse be-trach-tet. Java-Enums
+]
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-rust-enums-traits/default.pygstyle)...disabled (restricted).
+
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package catchfile Error: File `_minted-rust-enums-traits/default.pygstyle' not found.
+
+See the catchfile package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{minted}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-rust-enums-traits/default.pygstyle)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package catchfile Error: File `_minted-rust-enums-traits/default.pygstyle' not found.
+
+See the catchfile package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{minted}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package minted Error: Cannot find Pygments style default.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{minted}
+                 
+Cannot find Pygments style default
+
+runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/EBC4C43C39B4B76B230B87E99C1DB49BDD1E93C1FA72432E0EDA19D5D68E57E0.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{minted}
+                 
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/DA20814BB281FFC00DDC5EC2379D43A6DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:50: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \end{minted}
+                 
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/35AB0D9DB3DD617666FF52F4C166B298DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:76: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 \end{minted}
+                 
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/31BEFA60DA55398021776FAB3ADECE04DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:103: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 \end{minted}
+                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/78F402233483E1DAF3502B0EC88EC514DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:134: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 \end{minted}
+                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/52F831C09BBD2DCEB165156D34E5B1B3DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:167: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 \end{minted}
+                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/EDC57085EBF90F97EE0EF8635B2006E2DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:177: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 \end{minted}
+                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+
+Overfull \hbox (1.32877pt too wide) in paragraph at lines 178--178
+[]\OT1/cmr/bx/n/10 Verwendung des Rust En-ums zur Ver-mei-dung von Nullpointer-
  []
 
+\openout3 = `rust-enums-traits.pyg'.
 
-Overfull \hbox (10.86174pt too wide) in paragraph at lines 86--87
-\OT1/cmr/m/n/10 Enums die M[]oglichkeit bie-ten, ei-ne be-grenz-te An-zahl von Op-tio-nen oder Zust[]anden
- []
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/CAEE6B1A51926286853C2B4BDD86C673DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-[3] (./rust-enums-traits.bbl
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:205: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.205 \end{minted}
+                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+[1]
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/8DB0C30304683F34438D0D99E4B458D5DD1E93C1FA72432E0EDA19D5D68E57E0.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:265: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 \end{minted}
+                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l shell -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/84C3FDDDA2173CDA30098A63148735D66399E595E3B1A76D1AD36407ED4A681D.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+
+/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:274: Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool,
+or may be using frozencache with a missing file.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.274 \end{minted}
+                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect, 
+or using frozencache with a missing file.
+
+[2] (./rust-enums-traits.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [4] (./rust-enums-traits.aux)
-Package rerunfilecheck Info: File `rust-enums-traits.out' has not changed.
-(rerunfilecheck)             Checksum: 70CA04375FA713A0BC859902D873B901;4444.
+) [3] (./rust-enums-traits.aux)
+
+Package rerunfilecheck Warning: File `rust-enums-traits.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rust-enums-traits.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  865F7FAC9EEBA80B178B1180EF9CC1A6;6333.
+runsystem(rm rust-enums-traits.pyg)...disabled (restricted).
+
  ) 
 Here is how much of TeX's memory you used:
- 14367 strings out of 478287
- 243515 string characters out of 5849289
- 598204 words of memory out of 5000000
- 32338 multiletter control sequences out of 15000+600000
- 474121 words of font info for 44 fonts, out of 8000000 for 9000
+ 14396 strings out of 478287
+ 247175 string characters out of 5849289
+ 595989 words of memory out of 5000000
+ 32351 multiletter control sequences out of 15000+600000
+ 474456 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,67p,660b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on rust-enums-traits.pdf (6 pages, 115286 bytes).
+ 61i,6n,67p,328b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on rust-enums-traits.pdf (5 pages, 101672 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 43 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

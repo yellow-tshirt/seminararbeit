@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.28)  28 MAY 2023 14:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.28)  28 MAY 2023 19:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**ausarbeitung/rust-enums-traits.tex
+**ausarbeitung/rust-enums-traits.tex ./
 (./ausarbeitung/rust-enums-traits.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
@@ -488,6 +488,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 4.
+
+Overfull \hbox (19.1117pt too wide) in paragraph at lines 10--10
+ [][] [][]\OT1/cmr/m/n/10 Verwendung des Rust En-ums zur Ver-mei-dung von Nullp
+ointer- 
+ []
+
 )
 \tf@toc=\write6
 \openout6 = `rust-enums-traits.toc'.
@@ -499,48 +505,92 @@ een already used, duplicate ignored
 l.26 \newpage
               [1
 
-] [1] [2]
-Overfull \hbox (0.83386pt too wide) in paragraph at lines 79--85
-\OT1/cmr/m/n/10 ten. Je-der Enum-Wert wird als In-stanz der Enum-Klasse be-trac
-h-tet. Java-Enums
+]
+\openout3 = `rust-enums-traits.pyg'.
+
+ (./_minted-rust-enums-traits/default.pygstyle)
+(./_minted-rust-enums-traits/EBC4C43C39B4B76B230B87E99C1DB49BDD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
+)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/DA20814BB281FFC00DDC5EC2379D43A6DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/35AB0D9DB3DD617666FF52F4C166B298DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [1])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/31BEFA60DA55398021776FAB3ADECE04DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/78F402233483E1DAF3502B0EC88EC514DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [2])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/52F831C09BBD2DCEB165156D34E5B1B3DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/EDC57085EBF90F97EE0EF8635B2006E2DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [3])
+Overfull \hbox (1.32877pt too wide) in paragraph at lines 178--178
+[]\OT1/cmr/bx/n/10 Verwendung des Rust En-ums zur Ver-mei-dung von Nullpointer-
+
  []
 
+\openout3 = `rust-enums-traits.pyg'.
 
-Overfull \hbox (10.86174pt too wide) in paragraph at lines 86--87
-\OT1/cmr/m/n/10 Enums die M[]oglichkeit bie-ten, ei-ne be-grenz-te An-zahl von 
-Op-tio-nen oder Zust[]anden
- []
 
-[3]
+(./_minted-rust-enums-traits/CAEE6B1A51926286853C2B4BDD86C673DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex) [4]
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/8DB0C30304683F34438D0D99E4B458D5DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [5])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/84C3FDDDA2173CDA30098A63148735D66399E595E3B1A76D1A
+D36407ED4A681D.pygtex)
 No file rust-enums-traits.bbl.
-runsystem(rm _minted-rust-enums-traits/default.pygstyle)...executed.
-
-runsystem(rm _minted-rust-enums-traits/F9EE97480413DD85E58F88170A2E2CE2DD1E93C1
-FA72432E0EDA19D5D68E57E0.pygtex)...executed.
-
-[4] (./rust-enums-traits.aux)
+[6] [7] (./rust-enums-traits.aux)
 Package rerunfilecheck Info: File `rust-enums-traits.out' has not changed.
-(rerunfilecheck)             Checksum: 70CA04375FA713A0BC859902D873B901;4444.
+(rerunfilecheck)             Checksum: 865F7FAC9EEBA80B178B1180EF9CC1A6;6333.
+runsystem(rm rust-enums-traits.pyg)...executed.
+
  ) 
 Here is how much of TeX's memory you used:
- 14374 strings out of 478287
- 243940 string characters out of 5849289
- 598345 words of memory out of 5000000
- 32340 multiletter control sequences out of 15000+600000
- 474121 words of font info for 44 fonts, out of 8000000 for 9000
+ 14569 strings out of 478287
+ 250899 string characters out of 5849289
+ 603008 words of memory out of 5000000
+ 32491 multiletter control sequences out of 15000+600000
+ 474624 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,67p,673b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr9.pfb>
-Output written on rust-enums-traits.pdf (6 pages, 115132 bytes).
+ 61i,6n,67p,496b,705s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on rust-enums-traits.pdf (9 pages, 132524 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
