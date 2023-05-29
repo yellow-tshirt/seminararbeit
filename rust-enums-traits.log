@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.28)  28 MAY 2023 19:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.28)  29 MAY 2023 11:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -553,44 +553,88 @@ Overfull \hbox (1.32877pt too wide) in paragraph at lines 178--178
 
 
 (./_minted-rust-enums-traits/CAEE6B1A51926286853C2B4BDD86C673DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex) [4]
+CEC918FBF87377.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
-(./_minted-rust-enums-traits/8DB0C30304683F34438D0D99E4B458D5DD1E93C1FA72432E0E
+(./_minted-rust-enums-traits/9FC9AB56C83AA347F9B25640AC8C3B61DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P str
+ipnl=False -o _minted-rust-enums-traits/DB490DDB2B212F8948B9B9CD7DEB8148DD1E93C
+1FA72432E0EDA19D5D68E57E0.pygtex rust-enums-traits.pyg)...executed.
+
+
+(./_minted-rust-enums-traits/DB490DDB2B212F8948B9B9CD7DEB8148DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [4])
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P str
+ipnl=False -o _minted-rust-enums-traits/68D810C7D5E906EC8E447D3A3AD3B664DD1E93C
+1FA72432E0EDA19D5D68E57E0.pygtex rust-enums-traits.pyg)...executed.
+
+
+(./_minted-rust-enums-traits/68D810C7D5E906EC8E447D3A3AD3B664DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P str
+ipnl=False -o _minted-rust-enums-traits/CB788B7E10B45A56F0AECD2382ED9C12DD1E93C
+1FA72432E0EDA19D5D68E57E0.pygtex rust-enums-traits.pyg)...executed.
+
+
+(./_minted-rust-enums-traits/CB788B7E10B45A56F0AECD2382ED9C12DD1E93C1FA72432E0E
 DA19D5D68E57E0.pygtex [5])
 \openout3 = `rust-enums-traits.pyg'.
 
 
-(./_minted-rust-enums-traits/84C3FDDDA2173CDA30098A63148735D66399E595E3B1A76D1A
-D36407ED4A681D.pygtex)
+(./_minted-rust-enums-traits/77AB6001ADA6873929F64546FA0FE986DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [6])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/8DB0C30304683F34438D0D99E4B458D5DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [7])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/E30D6339CC39088A5029A84626EA7F0A6399E595E3B1A76D1A
+D36407ED4A681D.pygtex) [8]
 No file rust-enums-traits.bbl.
-[6] [7] (./rust-enums-traits.aux)
+runsystem(rm _minted-rust-enums-traits/8707472711492FCB279A95C57ED6E664DD1E93C1
+FA72432E0EDA19D5D68E57E0.pygtex)...executed.
+
+runsystem(rm _minted-rust-enums-traits/1B0C20A9DB4F239F0017C314A37DA609DD1E93C1
+FA72432E0EDA19D5D68E57E0.pygtex)...executed.
+
+[9] (./rust-enums-traits.aux)
 Package rerunfilecheck Info: File `rust-enums-traits.out' has not changed.
-(rerunfilecheck)             Checksum: 865F7FAC9EEBA80B178B1180EF9CC1A6;6333.
+(rerunfilecheck)             Checksum: 36998A3EADA124EAF3FD17860F35FFD2;6393.
 runsystem(rm rust-enums-traits.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 14569 strings out of 478287
- 250899 string characters out of 5849289
- 603008 words of memory out of 5000000
- 32491 multiletter control sequences out of 15000+600000
- 474624 words of font info for 46 fonts, out of 8000000 for 9000
+ 14611 strings out of 478287
+ 254269 string characters out of 5849289
+ 603305 words of memory out of 5000000
+ 32512 multiletter control sequences out of 15000+600000
+ 474792 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,6n,67p,496b,705s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on rust-enums-traits.pdf (9 pages, 132524 bytes).
+/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on rust-enums-traits.pdf (11 pages, 142954 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{enum}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Dog}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Cat}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Bird}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -209,12 +209,155 @@ fn lookUpAnimal(id: i32) -> Option<Animal>{
 	\item Instanz statisch und final (per default)
 \end{itemize}
 \subsubsection{Normale Enums}
+\begin{minted}{java}
+enum Animal{
+    Dog,
+    Cat,
+    Bird
+}
+\end{minted}
 \subsubsection{Enums mit Werten}
+\begin{minted}{java}
+enum AnimalWithValues{
+    Dog("Dog", 20),
+    Cat("Dog", 10),
+    Bird("Bird", 1);
+
+    public final String label;
+    public final int weight;
+
+    //constructor
+    private AnimalWithValues(String label, int weight){
+        this.label= label;
+        this.weight = weight;
+    }
+}
+\end{minted}
 \subsubsection{Enum Funktionen}
+\begin{minted}{java}
+enum AnimalWithValues{
+    Dog("Dog", 20),
+    Cat("Dog", 10),
+    Bird("Bird", 1);
+
+    public final String label;
+    public final int weight;
+
+    //constructor
+    private AnimalWithValues(String label, int weight){
+        this.label= label;
+        this.weight = weight;
+    }
+}
+//Instanzmethode -> compiler macht Instanzen von unseren Enumtypen
+public boolean isCat(){
+if (this == AnimalWithValues.Cat){
+	return true;
+}else{
+	return false;
+}
+}
+\end{minted}
 \subsection{Vergleich von Java und Rust Enums}
 \subsection{Rust Enum Implementationsbeispiele}
+\subsubsection{}
 \subsection{Beispielfunktionalität in Java}
 \subsubsection{Expression-Logik in Java}
+Naiver Ansatz
+\begin{minted}{java}
+mintedpublic class Expression{
+    public static void main(String[] args) {
+        Exp p = Exp.Plus;
+        //not accessible
+        System.out.println(p.left);
+        System.out.println(p.right);
+    }
+}
+
+enum Exp {
+    Int {
+        //cannot be changed(static, final)
+        int val;
+
+public int eval() {
+            return this.val;
+        }
+
+    },
+    Plus {
+        Exp left;
+        Exp right;
+
+        public int eval() {
+            return this.left.eval() + this.right.eval();
+        }
+    },
+    Mult {
+        Exp left;
+        Exp right;
+
+        public int eval() {
+            return this.left.eval() * this.right.eval();
+        }
+    };
+    
+
+    public abstract int eval();
+}
+
+enum ExpTwo{
+    Int,
+    Plus,
+    Mult
+}
+\end{minted}
+Ansatz mit  Klassen
+\begin{minted}{java}
+public class Expression {
+    public static void main(String[] args) {
+        System.out.println("test");
+    }
+}
+
+abstract class Exp{abstract public int eval();}
+class IntExp extends Exp{
+    public int val;
+    public IntExp(int val){
+        this.val = val;
+    }
+    @Override
+    public int eval() {
+        return val;
+    }
+}
+class PlusExp extends Exp{
+    public Exp left;
+    public Exp right;
+    public PlusExp(Exp left, Exp right){
+        this.left = left;
+        this.right = right;
+    }
+    @Override
+    public int eval() {
+        return left.eval() + right.eval();
+    }
+}
+
+class MultExp extends Exp{
+    public Exp left;
+    public Exp right;
+
+    public MultExp(Exp left, Exp right){
+        this.left = left;
+        this.right = right;
+    }
+
+    @Override
+    public int eval() {
+        return left.eval() * right.eval();
+    }
+}
+\end{minted}
 \subsubsection{Java Enums am Limit - Idee einer Wrapperinstanz für den Typ}
 \begin{itemize}
 	\item Idee, was aber wenn die Instanz ein Wrapper ist
@@ -265,12 +408,7 @@ class Wrapper{
 \end{minted}
 output
 \begin{minted}{shell}
-Doggy
-Doggy
-Catty
-new Dog Value
-new Dog Value
-new Cat value
+minted
 \end{minted}
 \section{Traits}
 \subsection{Allgemeines zu Traits}

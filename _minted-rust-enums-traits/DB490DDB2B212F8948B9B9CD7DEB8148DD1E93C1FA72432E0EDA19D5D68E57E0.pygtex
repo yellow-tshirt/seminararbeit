@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{enum}\PYG{+w}{ }\PYG{n}{AnimalWithValues}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Dog}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Dog\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{Cat}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Dog\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{Bird}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Bird\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//constructor}
+\PYG{+w}{    }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{n+nf}{AnimalWithValues}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{label}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{weight}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
