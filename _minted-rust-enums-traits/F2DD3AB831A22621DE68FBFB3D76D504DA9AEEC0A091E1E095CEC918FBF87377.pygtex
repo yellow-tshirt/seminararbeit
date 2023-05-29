@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{mintedtrait}\PYG{+w}{ }\PYG{n}{Shape}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{}\PYG{k+kt}{i32}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{struct} \PYG{n+nc}{Square}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{a}: \PYG{k+kt}{i32}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Shape}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Square}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYGZhy{}\PYGZgt{}\PYG{k+kt}{i32}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{s}\PYG{p}{.}\PYG{n}{a}\PYG{o}{*}\PYG{n}{s}\PYG{p}{.}\PYG{n}{a}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{struct} \PYG{n+nc}{Rectangle}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{a}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{b}: \PYG{k+kt}{i32}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{//Das Shape Prädikat muss für A und für B gelten}
+\PYG{k}{fn} \PYG{n+nf}{sum\PYGZus{}area}\PYG{o}{\PYGZlt{}}\PYG{n}{A}:\PYG{n+nc}{Shape}\PYG{p}{,}\PYG{n}{B}:\PYG{n+nc}{Shape}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{A}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{B}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{Shape}::\PYG{n}{area}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{Shape}::\PYG{n}{area}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -205,7 +205,8 @@ fn lookUpAnimal(id: i32) -> Option<Animal>{
 \end{minted}
 \subsection{Enums in Java}
 \begin{itemize}
-	\item Enums sind Instanzen
+	\item Enums sind spezielle Klasse
+	\item Enumtypen sind Instanzen
 	\item Instanz statisch und final (per default)
 \end{itemize}
 \subsubsection{Normale Enums}
@@ -235,29 +236,7 @@ enum AnimalWithValues{
 \end{minted}
 \subsubsection{Enum Funktionen}
 \begin{minted}{java}
-enum AnimalWithValues{
-    Dog("Dog", 20),
-    Cat("Dog", 10),
-    Bird("Bird", 1);
-
-    public final String label;
-    public final int weight;
-
-    //constructor
-    private AnimalWithValues(String label, int weight){
-        this.label= label;
-        this.weight = weight;
-    }
-}
-//Instanzmethode -> compiler macht Instanzen von unseren Enumtypen
-public boolean isCat(){
-if (this == AnimalWithValues.Cat){
-	return true;
-}else{
-	return false;
-}
-}
-\end{minted}
+minted\end{minted}
 \subsection{Vergleich von Java und Rust Enums}
 \subsection{Rust Enum Implementationsbeispiele}
 \subsubsection{}
@@ -265,10 +244,10 @@ if (this == AnimalWithValues.Cat){
 \subsubsection{Expression-Logik in Java}
 Naiver Ansatz
 \begin{minted}{java}
-mintedpublic class Expression{
+public class Expression{
     public static void main(String[] args) {
         Exp p = Exp.Plus;
-        //not accessible
+//not accessible
         System.out.println(p.left);
         System.out.println(p.right);
     }
@@ -408,20 +387,182 @@ class Wrapper{
 \end{minted}
 output
 \begin{minted}{shell}
-minted
+Doggy
+Doggy
+Catty
+new Dog Value
+new Dog Value
+new Cat value
 \end{minted}
 \section{Traits}
 \subsection{Allgemeines zu Traits}
+\begin{enumerate}
+	\item geteilte funktionalität mit anderen Typen
+	\item Funktionsmenge über einem Typen
+	\item Oft mit Interfaces verglichen, sind aber keine Interfaces
+	\item interfaces sind Typen
+	\item adressieren ähnliche Probleme, traits aber mächtiger
+\end{enumerate}
 \subsubsection{Traits sind keine Typen}
 \subsection{Traits in Rust}
+\begin{enumerate}
+		\item Prädikat auf einem Typen
+\end{enumerate}
+
+\begin{minted}{rust}
+mintedtrait Shape{
+    fn area(s: &Self) ->i32;
+}
+
+struct Square{
+    a: i32
+}
+
+impl Shape for Square {
+    fn area(s: &Self)->i32{
+        s.a*s.a
+    }
+}
+
+struct Rectangle{
+    a: i32,
+    b: i32
+}
+
+impl Shape for Rectangle {
+    fn area(s: &Self)->i32{
+        s.a*s.b
+    }
+}
+
+\end{minted}
 \subsubsection{Default-Implementationen}
+\begin{enumerate}
+	\item geht in java auch
+\end{enumerate}
+\begin{minted}{rust}
+fn main() {
+    let c1:Cat  = Cat{};
+    Animal::makeNoise(&c1);
+}
+
+trait Animal{
+    fn makeNoise(s: &Self){
+        println!("The Animal made a noise");
+    }
+}
+struct Cat{}
+impl Animal for Cat{}
+\end{minted}
+When running main yields
+\begin{minted}{shell}
+The Animal made a noise
+\end{minted}
 \subsubsection{Trait Bounds}
-\paragraph{Mehrfaches Traitbinding}
-\paragraph{Konditionelle Implementierung mit Trait Bounds}
+\begin{minted}{rust}
+//Das Shape Prädikat muss für A und für B gelten
+fn sum_area<A:Shape,B:Shape>(x : &A, y : &B) -> i32 {
+    return area(x) + area(y)
+ }
+\end{minted}
+\subsubsection{Multiples Binding}
+Man kann auch Prädikate/Traits verunden
+\begin{minted}{rust}
+fn sum_area<A:Shape+OtherTraits>(x : &+OtherTraits) -> i32 {
+	...
+ }
+\end{minted}
+\subsubsection{Konditionelle Implementierung mit Trait Bounds}
+\begin{minted}{rust}
+struct Pair<T> {
+    x: T,
+    y: T,
+}
+
+struct dog{
+    name: String,
+    age: u8,
+}
+
+impl<T> Pair<T> {
+    fn new(x: T, y: T) -> Self {
+        Self { x, y }
+    }
+}
+
+impl<T: Display + PartialOrd> Pair<T> {
+    fn cmp_display(&self) {
+        if self.x >= self.y {
+            println!("The largest member is x = {}", self.x);
+        } else {
+            println!("The largest member is y = {}", self.y);
+        }
+    }
+}
+\end{minted}
 \subsubsection{Dynamische Traits}
-\subsubsection{Traits als Parameter}
-wie interfaces
+Repräsentieren von Interfaces in Rust \\
+Können Konkrete Typen als Parameter und Rückgabewerte nutzen
+\begin{minted}{rust}
+fn sum_area(x : Box<dyn Shape>, y: Box<dyn Shape>) -> i32 {
+    return area(x) + area(y)
+ }
+\end{minted}
+\subsubsection{Kurzschreibweise für dynamische Traits}
+\begin{minted}{rust}
+fn sum_area(x : &(impl Shape), y: &(impl Shape)) -> i32 {
+    return area(x) + area(y)
+ }
+\end{minted}
+\subsubsection{Where Clause}
 \subsubsection{Supertraits}
+\begin{itemize}
+	\item man kann hirarchie nachbauen
+\end{itemize}
+\begin{minted}{rust}
+fn main() {
+    let s = hskaStudent{name:"Mario", university:"hska", fav_language:"rust", git_username:"myusername"};
+    comp_sci_student_greeting(s);
+}
+
+trait Person {
+    fn name(&self) -> String;
+}
+
+trait Student: Person {
+    fn university(&self) -> String;
+}
+
+trait Programmer {
+    fn fav_language(&self) -> String;
+}
+trait CompSciStudent: Programmer + Student {
+    fn git_username(&self) -> String;
+}
+
+fn comp_sci_student_greeting<s: CompSciStudent>(student: s) {
+    ...
+}
+
+struct hskaStudent{
+    name: &'static str,
+    university: &'static str,
+    fav_language: &'static str,
+    git_username: &'static str,
+}
+
+impl Person for hskaStudent{
+    fn name(&self) -> String{
+        self.name.to_string()
+    }
+}
+
+impl Student for hskaStudent{
+    fn university(&self) -> String {
+       self.university().to_string() 
+    }
+}
+\end{minted}
 \subsubsection{Referenzierung des eigenen Typen}
 \subsubsection{Spezifizierung von Platzhaltertypen}
 \subsubsection{Shorthand Schreibweise}
@@ -433,46 +574,4 @@ wie interfaces
 \bibliographystyle{plain}
 \bibliography{bib}
 
-\end{document}\documentclass[a4paper, 1ppt]{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{listings}
-\usepackage[german]{babel}
-\usepackage{abstract}
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{hyphenat}
-\usepackage{minted}
-\clubpenalty=10000
-\widowpenalty=1000
-\title{Seminararbeit Traits und Enums in Rust}
-\date{}
-\author{Mario Occhinegro\\HKA University of Applied Sciences}
-\usepackage{setspace}
-\onehalfspacing
-\singlespacing
-
-\begin{document}
-\pagenumbering{gobble} 
-\maketitle
-\newpage
-\clearpage
-\tableofcontents
-\setcounter{page}{1}
-\newpage
-\pagenumbering{arabic}
-\maketitle
-\begin{abstract}
-		    Something
-	\end{abstract}
-	\section{Einleitung}
-	Eines der faszinierendsten Aspekte der Programmiersprachen Rust und Java ist ihre unterschiedliche Herangehensweise an die Modellierung von Datenstrukturen und Verhaltensweisen. In diesem Vergleich werden wir uns insbesondere auf die Konzepte der Enums und Traits in beiden Sprachen konzentrieren. Enums ermöglichen es, benutzerdefinierte Datentypen zu definieren, die eine begrenzte Anzahl von möglichen Werten repräsentieren, während Traits die Möglichkeit bieten, Verhaltensweisen zu abstrahieren und zu wiederverwenden.
-
-	Wir werden sowohl die Gemeinsamkeiten als auch die Unterschiede zwischen Rust und Java in Bezug auf Enums und Traits analysieren. Dabei betrachten wir die Syntax, die Flexibilität, die Typsicherheit und die Einsatzmöglichkeiten dieser Konzepte in beiden Sprachen. Ziel ist es, ein umfassendes Verständnis dafür zu entwickeln, wie Enums und Traits in Rust und Java genutzt werden können und welche Vor- und Nachteile sie bieten.
-
-	Indem wir die Besonderheiten von Rusts Enums und Traits mit denen von Javas Entsprechungen vergleichen, erhalten wir Einblicke in die unterschiedlichen Paradigmen, die hinter den beiden Sprachen stehen. Dieser Vergleich ermöglicht es Entwicklern, ihre Entscheidungen bei der Wahl einer geeigneten Sprache für bestimmte Projekte besser zu treffen und ihre Kenntnisse über die Konzepte der Enums und Traits in Rust und Java zu erweitern.
-	\section{Enums}
-	Enums, oder auch Aufzählungstypen, sind spezielle Datentypen in der Programmierung, die eine begrenzte Menge von benannten Werten repräsentieren. Sie ermöglichen es, eine feste Liste von möglichen Optionen zu definieren, aus denen ein Wert ausgewählt werden kann. Enums werden häufig verwendet, um eine klar definierte Menge von Zuständen, Typen oder Optionen darzustellen, die in einem Programm oder einer Anwendung auftreten können.
-
-	Durch die Verwendung von Enums können Programmierer den Code lesbarer und verständlicher machen, da die verwendeten Werte klar benannt sind und eine eindeutige Bedeutung haben. Enums bieten auch eine verbesserte Typsicherheit, da der Compiler sicherstellen kann, dass nur gültige Werte eines Enums verwendet werden.
-
-	Enums können in verschiedenen Programmiersprachen implementiert werden und weisen je nach Sprache unterschiedliche Funktionalitäten auf. In einigen Sprachen können Enums beispielsweise mit zu
+\end{document}\documentclass[a5paper, 1ppt]{article}

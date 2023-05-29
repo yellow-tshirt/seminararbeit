@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{c1}:\PYG{n+nc}{Cat}\PYG{+w}{  }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Cat}\PYG{p}{\PYGZob{}\PYGZcb{};}
+\PYG{+w}{    }\PYG{n}{Animal}::\PYG{n}{makeNoise}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{c1}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{makeNoise}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The Animal made a noise\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{struct} \PYG{n+nc}{Cat}\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Animal}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Cat}\PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}

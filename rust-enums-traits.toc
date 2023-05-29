@@ -18,21 +18,22 @@
 \contentsline {subsection}{\numberline {2.5}Beispielfunktionalität in Java}{5}{subsection.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.1}Expression-Logik in Java}{5}{subsubsection.2.5.1}%
 \contentsline {subsubsection}{\numberline {2.5.2}Java Enums am Limit - Idee einer Wrapperinstanz für den Typ}{7}{subsubsection.2.5.2}%
-\contentsline {section}{\numberline {3}Traits}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Allgemeines zu Traits}{9}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Traits sind keine Typen}{9}{subsubsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.2}Traits in Rust}{9}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Traits}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Allgemeines zu Traits}{8}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Traits sind keine Typen}{8}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Traits in Rust}{8}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Default-Implementationen}{9}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Trait Bounds}{9}{subsubsection.3.2.2}%
-\contentsline {paragraph}{Mehrfaches Traitbinding}{9}{section*.2}%
-\contentsline {paragraph}{Konditionelle Implementierung mit Trait Bounds}{9}{section*.3}%
-\contentsline {subsubsection}{\numberline {3.2.3}Dynamische Traits}{9}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Traits als Parameter}{9}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Supertraits}{9}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Referenzierung des eigenen Typen}{9}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Spezifizierung von Platzhaltertypen}{9}{subsubsection.3.2.7}%
-\contentsline {subsubsection}{\numberline {3.2.8}Shorthand Schreibweise}{9}{subsubsection.3.2.8}%
-\contentsline {subsubsection}{\numberline {3.2.9}Schreibeweise bei Uneindeutigkeit}{9}{subsubsection.3.2.9}%
-\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{9}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{9}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{9}{section.4}%
+\contentsline {subsubsection}{\numberline {3.2.3}Multiples Binding}{9}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Konditionelle Implementierung mit Trait Bounds}{10}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Dynamische Traits}{10}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Kurzschreibweise für dynamische Traits}{10}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Where Clause}{10}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Supertraits}{10}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}Referenzierung des eigenen Typen}{12}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.10}Spezifizierung von Platzhaltertypen}{12}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}Shorthand Schreibweise}{12}{subsubsection.3.2.11}%
+\contentsline {subsubsection}{\numberline {3.2.12}Schreibeweise bei Uneindeutigkeit}{12}{subsubsection.3.2.12}%
+\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{12}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{12}{section.4}%
