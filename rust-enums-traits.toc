@@ -7,7 +7,7 @@
 \contentsline {subsubsection}{\numberline {2.1.3}Rekusive Enums und Datentypen}{2}{subsubsection.2.1.3}%
 \contentsline {subsubsection}{\numberline {2.1.4}Nested Pattern Matching}{3}{subsubsection.2.1.4}%
 \contentsline {subsubsection}{\numberline {2.1.5}Generische Enums}{3}{subsubsection.2.1.5}%
-\contentsline {subsubsection}{\numberline {2.1.6}Verwendung des Rust Enums zur Vermeidung von Nullpointer-Ausnahmen}{4}{subsubsection.2.1.6}%
+\contentsline {subsubsection}{\numberline {2.1.6}Rust Enums und die Vermeidung von Nullpointer-Ausnahmen}{4}{subsubsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.2}Enums in Java}{4}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Normale Enums}{4}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Enums mit Werten}{4}{subsubsection.2.2.2}%
@@ -31,10 +31,12 @@
 \contentsline {subsubsection}{\numberline {3.2.7}Where Clause}{11}{subsubsection.3.2.7}%
 \contentsline {subsubsection}{\numberline {3.2.8}Shorthand Schreibweise}{11}{subsubsection.3.2.8}%
 \contentsline {subsubsection}{\numberline {3.2.9}Schreibeweise bei Uneindeutigkeit}{11}{subsubsection.3.2.9}%
-\contentsline {subsubsection}{\numberline {3.2.10}Supertraits}{11}{subsubsection.3.2.10}%
-\contentsline {subsubsection}{\numberline {3.2.11}Referenzierung des eigenen Typen}{12}{subsubsection.3.2.11}%
-\contentsline {subsubsection}{\numberline {3.2.12}Platzhaltertypen}{12}{subsubsection.3.2.12}%
-\contentsline {subsubsection}{\numberline {3.2.13}Assoziierte Konstanten}{13}{subsubsection.3.2.13}%
-\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{13}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{13}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{13}{section.4}%
+\contentsline {subsubsection}{\numberline {3.2.10}Supertraits}{12}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}Referenzierung des eigenen Typen}{13}{subsubsection.3.2.11}%
+\contentsline {subsubsection}{\numberline {3.2.12}Platzhaltertypen}{14}{subsubsection.3.2.12}%
+\contentsline {subsubsection}{\numberline {3.2.13}Assoziierte Konstanten}{14}{subsubsection.3.2.13}%
+\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{15}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Nicht vereinbare Interfaces}{15}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Generische Mehrfachimplementierung}{15}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{15}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{15}{section.4}%

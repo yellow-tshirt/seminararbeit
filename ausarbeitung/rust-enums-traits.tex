@@ -175,7 +175,7 @@ enum Option<T> {
 	Some(T),
 }
 \end{minted}
-\subsubsection{Verwendung des Rust Enums zur Vermeidung von Nullpointer-Ausnahmen}
+\subsubsection{Rust Enums und die Vermeidung von Nullpointer-Ausnahmen}
 \begin{itemize}
 	\item Java hat ähnliches Konzept aber mit Klassen
 	\item Nullpointer, der große Milliarden € Fehler
@@ -516,7 +516,78 @@ fn sum_area(x : &(impl Shape), y: &(impl Shape)) -> i32 {
 \end{minted}
 \subsubsection{Where Clause}
 \subsubsection{Shorthand Schreibweise}
+Andere Schreibweise, so kann man die Funktion auf einer Instanz des Structs aufrufen
+\begin{minted}{rust}
+trait Shape{
+   fn area(&self) -> String;
+}
+
+impl Shape for Square{
+   fn area(&self) -> i32{
+       self.a*self.a
+   }
+}
+
+fn main() {
+   let s = Square{a: 10};
+   print!("{}", s.area());
+}
+\end{minted}
 \subsubsection{Schreibeweise bei Uneindeutigkeit}
+\begin{minted}{rust}
+fn main() {
+   let s = Square{a: 10};
+   print!("{}", Shape2::area(&s));
+}
+
+struct Square{
+    a: u32,
+}
+trait Shape{
+   fn area(&self) -> u32;
+}
+
+impl Shape for Square{
+   fn area(&self) -> u32{
+       self.a*self.a
+   }
+}
+trait Shape2{
+   fn area(&self) -> u32;
+}
+
+impl Shape2 for Square{
+   fn area(&self) -> u32{
+       self.a*self.a
+   }
+}
+\end{minted}
+\begin{minted}{rust}
+trait Shape{
+   fn area(&self) -> String;
+}
+
+impl Shape for Square{
+   fn area(&self) -> i32{
+       self.a*self.a
+   }
+}
+trait Shape2{
+   fn area(&self) -> String;
+}
+
+impl Shape2 for Square{
+   fn area(&self) -> i32{
+       self.a*self.a
+   }
+}
+
+
+fn main() {
+   let s = Square{a: 10};
+   print!("{}", Shape2::area(s));
+}
+\end{minted}
 \subsubsection{Supertraits}
 \begin{itemize}
 	\item man kann hirarchie nachbauen
@@ -647,6 +718,8 @@ impl TransformAB for Machine{
 }
 \end{minted}
 \subsection{Rust Trait Beispiele}
+\subsubsection{Nicht vereinbare Interfaces}
+\subsubsection{Generische Mehrfachimplementierung}
 \subsection{Beispielfunktionalität in Java}
 \section{Vergleich der beiden Ansätze}
 
