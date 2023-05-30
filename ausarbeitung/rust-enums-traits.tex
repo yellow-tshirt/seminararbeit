@@ -337,7 +337,7 @@ class MultExp extends Exp{
     }
 }
 \end{minted}
-\subsubsection{Java Enums am Limit - Idee einer Wrapperinstanz für den Typ}
+\subsubsection{Java Enums am Limit - Wrapperinstanz für den Typ}
 \begin{itemize}
 	\item Idee, was aber wenn die Instanz ein Wrapper ist
 	\item nicht sehr ergonomisch 
@@ -515,58 +515,137 @@ fn sum_area(x : &(impl Shape), y: &(impl Shape)) -> i32 {
  }
 \end{minted}
 \subsubsection{Where Clause}
+\subsubsection{Shorthand Schreibweise}
+\subsubsection{Schreibeweise bei Uneindeutigkeit}
 \subsubsection{Supertraits}
 \begin{itemize}
 	\item man kann hirarchie nachbauen
 \end{itemize}
 \begin{minted}{rust}
 fn main() {
-    let s = hskaStudent{name:"Mario", university:"hska", fav_language:"rust", git_username:"myusername"};
-    comp_sci_student_greeting(s);
+    let s = HskaStudent{name:"Mario", university:"hska", fav_language:"rust", git_username:"yellow-tshirt"};
+    comp_sci_student_greeting(&s);
 }
-
 trait Person {
     fn name(&self) -> String;
 }
-
 trait Student: Person {
     fn university(&self) -> String;
 }
-
 trait Programmer {
     fn fav_language(&self) -> String;
 }
 trait CompSciStudent: Programmer + Student {
     fn git_username(&self) -> String;
 }
-
-fn comp_sci_student_greeting<s: CompSciStudent>(student: s) {
-    ...
+fn comp_sci_student_greeting<S: CompSciStudent>(student: &S) {
+    println!("Hey my name is {}, I study at {}. My favorite language is {} and my git username is {}", student.name(), student.university(), student. fav_language(), student.git_username());
 }
-
-struct hskaStudent{
+struct HskaStudent{
     name: &'static str,
     university: &'static str,
     fav_language: &'static str,
     git_username: &'static str,
 }
-
-impl Person for hskaStudent{
+impl Person for HskaStudent{
     fn name(&self) -> String{
         self.name.to_string()
     }
 }
-
-impl Student for hskaStudent{
+impl Student for HskaStudent{
     fn university(&self) -> String {
-       self.university().to_string() 
+        String::from(self.university)
+    }
+}
+
+impl Programmer for HskaStudent{
+    fn fav_language(&self) -> String{
+        String::from(self.fav_language)
+    }
+}
+impl CompSciStudent for HskaStudent{
+    fn git_username(&self) -> String {
+        String::from(self.git_username)
     }
 }
 \end{minted}
 \subsubsection{Referenzierung des eigenen Typen}
-\subsubsection{Spezifizierung von Platzhaltertypen}
-\subsubsection{Shorthand Schreibweise}
-\subsubsection{Schreibeweise bei Uneindeutigkeit}
+\begin{minted}{rust}
+trait genCopy{
+    fn genCopy(s: &Self) -> Self;
+}
+
+struct Dog{
+    name: String,
+    age: u8,
+}
+struct Cat{
+    name: String,
+    age: u8,
+}
+
+impl genCopy for Dog{
+    fn genCopy(s: &Self) -> Self {
+        return Dog{name: s.name.clone(), age: s.age};
+    }
+}
+impl genCopy for Cat{
+    fn genCopy(s: &Self) -> Self {
+        return Cat{name: s.name.clone(), age: s.age};
+    }
+}
+\end{minted}
+\subsubsection{Platzhaltertypen}
+\begin{minted}{rust}
+fn main(){
+    let m = Machine{};
+    let a: i8 = 16;
+    let b: i32 = TransformAB::transform(&m, a);
+}
+trait TransformAB{
+    type A;
+    type B;
+    fn transform(s: &Self, a: Self::A) -> Self::B;
+}
+
+struct Machine{}
+impl TransformAB for Machine{
+    type A = i8;
+    type B = i32;
+    fn transform(s: &Self, a: Self::A) -> Self::B {
+        i32::from(a)
+    }
+}
+\end{minted}
+\subsubsection{Assoziierte Konstanten}
+\begin{minted}{rust}
+fn main(){
+    let m = Machine{};
+    let a: i8 = 16;
+    let b: Vec<i32> = TransformAB::transform(&m, a);
+}
+trait TransformAB{
+    type A;
+    type B;
+    const TIMES: u8;
+    fn transform(s: &Self, a: Self::A) -> Vec<Self::B>;
+}
+
+struct Machine{}
+impl TransformAB for Machine{
+    type A = i8;
+    type B = i32;
+    const TIMES:u8 = 50;
+    fn transform(s: &Self, a: Self::A) -> Vec<Self::B>{
+        let mut v = Vec::new();
+        let a32 = i32::from(a);
+        for i in 0..Self::TIMES  {
+            v.push(a32);
+        }
+        v
+    }
+}
+\end{minted}
 \subsection{Rust Trait Beispiele}
 \subsection{Beispielfunktionalität in Java}
 \section{Vergleich der beiden Ansätze}

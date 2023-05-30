@@ -17,7 +17,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}}{5}{subsubsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.5}Beispielfunktionalität in Java}{5}{subsection.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.1}Expression-Logik in Java}{5}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Java Enums am Limit - Idee einer Wrapperinstanz für den Typ}{7}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2}Java Enums am Limit - Wrapperinstanz für den Typ}{7}{subsubsection.2.5.2}%
 \contentsline {section}{\numberline {3}Traits}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Allgemeines zu Traits}{8}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Traits sind keine Typen}{8}{subsubsection.3.1.1}%
@@ -28,12 +28,13 @@
 \contentsline {subsubsection}{\numberline {3.2.4}Konditionelle Implementierung mit Trait Bounds}{10}{subsubsection.3.2.4}%
 \contentsline {subsubsection}{\numberline {3.2.5}Dynamische Traits}{10}{subsubsection.3.2.5}%
 \contentsline {subsubsection}{\numberline {3.2.6}Kurzschreibweise für dynamische Traits}{10}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Where Clause}{10}{subsubsection.3.2.7}%
-\contentsline {subsubsection}{\numberline {3.2.8}Supertraits}{10}{subsubsection.3.2.8}%
-\contentsline {subsubsection}{\numberline {3.2.9}Referenzierung des eigenen Typen}{12}{subsubsection.3.2.9}%
-\contentsline {subsubsection}{\numberline {3.2.10}Spezifizierung von Platzhaltertypen}{12}{subsubsection.3.2.10}%
-\contentsline {subsubsection}{\numberline {3.2.11}Shorthand Schreibweise}{12}{subsubsection.3.2.11}%
-\contentsline {subsubsection}{\numberline {3.2.12}Schreibeweise bei Uneindeutigkeit}{12}{subsubsection.3.2.12}%
-\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{12}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{12}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{12}{section.4}%
+\contentsline {subsubsection}{\numberline {3.2.7}Where Clause}{11}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Shorthand Schreibweise}{11}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}Schreibeweise bei Uneindeutigkeit}{11}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.10}Supertraits}{11}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}Referenzierung des eigenen Typen}{12}{subsubsection.3.2.11}%
+\contentsline {subsubsection}{\numberline {3.2.12}Platzhaltertypen}{12}{subsubsection.3.2.12}%
+\contentsline {subsubsection}{\numberline {3.2.13}Assoziierte Konstanten}{13}{subsubsection.3.2.13}%
+\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{13}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{13}{section.4}%

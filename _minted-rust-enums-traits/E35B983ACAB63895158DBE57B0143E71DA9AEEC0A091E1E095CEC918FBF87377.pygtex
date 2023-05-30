@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Machine}\PYG{p}{\PYGZob{}\PYGZcb{};}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a}: \PYG{k+kt}{i8} \PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{b}: \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{i32}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{TransformAB}::\PYG{n}{transform}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{m}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{TransformAB}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{A}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{B}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{const}\PYG{+w}{ }\PYG{n}{TIMES}: \PYG{k+kt}{u8}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{transform}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a}: \PYG{n+nc}{Self}::\PYG{n}{A}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{n+nb+bp}{Self}::\PYG{n}{B}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{struct} \PYG{n+nc}{Machine}\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{TransformAB}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Machine}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{A}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{i8}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{B}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{const}\PYG{+w}{ }\PYG{n}{TIMES}:\PYG{k+kt}{u8} \PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{50}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{transform}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a}: \PYG{n+nc}{Self}::\PYG{n}{A}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{n+nb+bp}{Self}::\PYG{n}{B}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{v}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Vec}::\PYG{n}{new}\PYG{p}{();}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{i32}::\PYG{n}{from}\PYG{p}{(}\PYG{n}{a}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{..}\PYG{n+nb+bp}{Self}::\PYG{n}{TIMES}\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{v}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{a32}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{n}{v}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

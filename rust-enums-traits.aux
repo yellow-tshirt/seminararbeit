@@ -38,7 +38,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}}{5}{subsubsection.2.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Beispielfunktionalität in Java}{5}{subsection.2.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Expression-Logik in Java}{5}{subsubsection.2.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Java Enums am Limit - Idee einer Wrapperinstanz für den Typ}{7}{subsubsection.2.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Java Enums am Limit - Wrapperinstanz für den Typ}{7}{subsubsection.2.5.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Traits}{8}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Allgemeines zu Traits}{8}{subsection.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Traits sind keine Typen}{8}{subsubsection.3.1.1}\protected@file@percent }
@@ -49,8 +49,12 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Konditionelle Implementierung mit Trait Bounds}{10}{subsubsection.3.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}Dynamische Traits}{10}{subsubsection.3.2.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.6}Kurzschreibweise für dynamische Traits}{10}{subsubsection.3.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7}Where Clause}{10}{subsubsection.3.2.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.8}Supertraits}{10}{subsubsection.3.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7}Where Clause}{11}{subsubsection.3.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.8}Shorthand Schreibweise}{11}{subsubsection.3.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.9}Schreibeweise bei Uneindeutigkeit}{11}{subsubsection.3.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.10}Supertraits}{11}{subsubsection.3.2.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.11}Referenzierung des eigenen Typen}{12}{subsubsection.3.2.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.12}Platzhaltertypen}{12}{subsubsection.3.2.12}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{bib}
 \gdef\minted@oldcachelist{,
@@ -78,12 +82,12 @@
   529943636ED6185B6FBB565FCBF06D81DA9AEEC0A091E1E095CEC918FBF87377.pygtex,
   AE674BD72B166407B5502CF39F1C0090DA9AEEC0A091E1E095CEC918FBF87377.pygtex,
   581B53A9A83BA21FD53A8CDF6BAB1C1FDA9AEEC0A091E1E095CEC918FBF87377.pygtex,
-  8EBF0944D5599D2204FB125028AC2C5EDA9AEEC0A091E1E095CEC918FBF87377.pygtex}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.9}Referenzierung des eigenen Typen}{12}{subsubsection.3.2.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.10}Spezifizierung von Platzhaltertypen}{12}{subsubsection.3.2.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.11}Shorthand Schreibweise}{12}{subsubsection.3.2.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.12}Schreibeweise bei Uneindeutigkeit}{12}{subsubsection.3.2.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{12}{subsection.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{12}{subsection.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{12}{section.4}\protected@file@percent }
-\gdef \@abspage@last{14}
+  7E303D37E3041354E90EC9BAE7FC8D36DA9AEEC0A091E1E095CEC918FBF87377.pygtex,
+  468A0312F379B8547B57D2956D5C15BEDA9AEEC0A091E1E095CEC918FBF87377.pygtex,
+  F0D4675CA681ABFD4F716A3DE47883D6DA9AEEC0A091E1E095CEC918FBF87377.pygtex,
+  E35B983ACAB63895158DBE57B0143E71DA9AEEC0A091E1E095CEC918FBF87377.pygtex}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.13}Assoziierte Konstanten}{13}{subsubsection.3.2.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Rust Trait Beispiele}{13}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Beispielfunktionalität in Java}{13}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Vergleich der beiden Ansätze}{13}{section.4}\protected@file@percent }
+\gdef \@abspage@last{15}
