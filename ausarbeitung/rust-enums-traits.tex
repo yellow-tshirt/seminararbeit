@@ -411,6 +411,8 @@ impl Exp{
 }
 \end{minted}
 \subsection{Rust-Enum-Funktionalität in Java}
+\subsubsection{Switch Case vs Match}
+Veränderung des Enums spielt für SC keine Rolle
 \subsubsection{Expression-Logik in Java}
 Naiver Ansatz (Geht nicht)
 \begin{minted}{java}
@@ -574,13 +576,13 @@ new Cat value
 	\item interfaces sind Typen
 	\item adressieren ähnliche Probleme, traits aber mächtiger
 \end{enumerate}
-\subsubsection{Traits sind keine Typen}
+\subsubsection{Einfacher Trait}
 \begin{enumerate}
 		\item Prädikat auf einem Typen
 \end{enumerate}
 
 \begin{minted}{rust}
-mintedtrait Shape{
+trait Shape{
     fn area(s: &Self) ->i32;
 }
 
@@ -635,13 +637,6 @@ fn sum_area<A:Shape,B:Shape>(x : &A, y : &B) -> i32 {
     return area(x) + area(y)
  }
 \end{minted}
-\subsubsection{Multiples Binding}
-Man kann auch Prädikate/Traits verunden
-\begin{minted}{rust}
-fn sum_area<A:Shape+OtherTraits>(x : &+OtherTraits) -> i32 {
-	...
- }
-\end{minted}
 \subsubsection{Dynamische Traits}
 Repräsentieren von Interfaces in Rust \\
 Können Konkrete Typen als Parameter und Rückgabewerte nutzen
@@ -674,6 +669,61 @@ fn main() {
    print!("{}", s.area());
 }
 \end{minted}
+\subsubsection{Platzhaltertypen}
+\begin{minted}{rust}
+fn main(){
+    let m = Machine{};
+    let a: i8 = 16;
+    let b: i32 = TransformAB::transform(&m, a);
+}
+trait TransformAB{
+    type A;
+    type B;
+    fn transform(s: &Self, a: Self::A) -> Self::B;
+}
+
+struct Machine{}
+impl TransformAB for Machine{
+    type A = i8;
+    type B = i32;
+    fn transform(s: &Self, a: Self::A) -> Self::B {
+        i32::from(a)
+    }
+}
+\end{minted}
+\subsubsection{Assoziierte Konstanten}
+\begin{minted}{rust}
+fn main(){
+    let m = Machine{};
+    let a: i8 = 16;
+    let b: Vec<i32> = TransformAB::transform(&m, a);
+}
+trait TransformAB{
+    type A;
+    type B;
+    const TIMES: u8;
+    fn transform(s: &Self, a: Self::A) -> Vec<Self::B>;
+}
+
+struct Machine{}
+impl TransformAB for Machine{
+    type A = i8;
+    type B = i32;
+    const TIMES:u8 = 50;
+    fn transform(s: &Self, a: Self::A) -> Vec<Self::B>{
+        let mut v = Vec::new();
+        let a32 = i32::from(a);
+        for i in 0..Self::TIMES  {
+            v.push(a32);
+        }
+        v
+    }
+}
+\end{minted}
+\subsection{Mächtigkeit von Traits}
+\subsubsection{Gleiche Methodensignatur}
+- kurzschreibweise geht hier nicht
+\subsubsection{Generische Mehrfachimplementierung}
 \subsubsection{Schreibeweise bei Uneindeutigkeit}
 \begin{minted}{rust}
 fn main() {
@@ -807,63 +857,6 @@ impl genCopy for Cat{
     }
 }
 \end{minted}
-\subsubsection{Platzhaltertypen}
-\begin{minted}{rust}
-fn main(){
-    let m = Machine{};
-    let a: i8 = 16;
-    let b: i32 = TransformAB::transform(&m, a);
-}
-trait TransformAB{
-    type A;
-    type B;
-    fn transform(s: &Self, a: Self::A) -> Self::B;
-}
-
-struct Machine{}
-impl TransformAB for Machine{
-    type A = i8;
-    type B = i32;
-    fn transform(s: &Self, a: Self::A) -> Self::B {
-        i32::from(a)
-    }
-}
-\end{minted}
-\subsubsection{Assoziierte Konstanten}
-\begin{minted}{rust}
-fn main(){
-    let m = Machine{};
-    let a: i8 = 16;
-    let b: Vec<i32> = TransformAB::transform(&m, a);
-}
-trait TransformAB{
-    type A;
-    type B;
-    const TIMES: u8;
-    fn transform(s: &Self, a: Self::A) -> Vec<Self::B>;
-}
-
-struct Machine{}
-impl TransformAB for Machine{
-    type A = i8;
-    type B = i32;
-    const TIMES:u8 = 50;
-    fn transform(s: &Self, a: Self::A) -> Vec<Self::B>{
-        let mut v = Vec::new();
-        let a32 = i32::from(a);
-        for i in 0..Self::TIMES  {
-            v.push(a32);
-        }
-        v
-    }
-}
-\end{minted}
-\subsection{Interfaces in Java}
-Wird oft hiermit verglichen, ist aber anders.
-Interfaces sind Typen
-\subsection{Mächtigkeit von Traits}
-\subsubsection{Nicht vereinbare Interfaces}
-\subsubsection{Generische Mehrfachimplementierung}
 \subsubsection{Funktionalität für Third-Party-Datentypen}
 \subsubsection{Konditionelle Implementierung}
 \begin{minted}{rust}
@@ -892,6 +885,13 @@ impl<T: Display + PartialOrd> Pair<T> {
         }
     }
 }
+\end{minted}
+\subsubsection{Multiples Binding}
+Man kann auch Prädikate/Traits verunden
+\begin{minted}{rust}
+fn sum_area<A:Shape+OtherTraits>(x : &+OtherTraits) -> i32 {
+	...
+ }
 \end{minted}
 \subsection{Traitfunktionalität in Java}
 \subsubsection{Nicht vereinbare Interfaces (Java)}

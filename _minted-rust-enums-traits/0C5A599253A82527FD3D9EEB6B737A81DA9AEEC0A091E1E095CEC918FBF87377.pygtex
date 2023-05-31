@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{mintedtrait}\PYG{+w}{ }\PYG{n}{Shape}\PYG{p}{\PYGZob{}}
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Shape}\PYG{p}{\PYGZob{}}
 \PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{}\PYG{k+kt}{i32}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 
