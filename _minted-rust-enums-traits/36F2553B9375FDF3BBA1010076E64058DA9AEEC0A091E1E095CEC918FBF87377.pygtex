@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{enum} \PYG{n+nc}{Exp}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Int}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{val}: \PYG{k+kt}{i32}
+    \PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{n}{Plus}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{left}: \PYG{n+nb}{Box}\PYG{o}{\PYGZlt{}}\PYG{n}{Exp}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{right}: \PYG{n+nb}{Box}\PYG{o}{\PYGZlt{}}\PYG{n}{Exp}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{n}{Mult}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{left}: \PYG{n+nb}{Box}\PYG{o}{\PYGZlt{}}\PYG{n}{Exp}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{right}: \PYG{n+nb}{Box}\PYG{o}{\PYGZlt{}}\PYG{n}{Exp}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

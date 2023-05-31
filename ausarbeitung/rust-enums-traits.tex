@@ -30,17 +30,11 @@
 \end{abstract}
 \section{Einleitung}
 \section{Enums}
+\subsection{Enums in Rust}
+\subsubsection{Normale Enums}
 Enumerationstypen \\
 Auf den ersten Blick identisch. \\
 Java Enum:
-\begin{minted}{java}
-enum Color{
-    red,
-    green,
-    blue;
-}
-\end{minted}
-Rust Enum:
 \begin{minted}{rust}
 enum Animal {
     Dog,
@@ -48,39 +42,102 @@ enum Animal {
     Bird,
 }
 \end{minted}
-Auf Konkretere Unterschiede gehen wir jetzt ein
-\subsection{Enums in Rust}
-- Algebraische Datentypen
-\subsubsection{Match Statement}
-\begin{itemize}
-	\item abgeschlossen
-	\item an Haskell angelehnt
-	\item mehr als nur if else
-	\item sehr ergonomisch, aussagekräftig und kurz
-\end{itemize}
+\subsubsection{Enum mit Werten}
 \begin{minted}{rust}
-fn main() {
-	let a1 = Animal::Dog;
-	match a1{
-		Animal::Dog => println!("It's a Dog"),
-		Animal::Cat => println!("It's a Cat"),
-		Animal::Bird => println!("It's a Bird")
-	}
+enum Animal {
+    Dog,
+    Cat,
+    Bird,
 }
 
-enum Animal{
-	Dog,
-	Cat,
-	Bird
+impl Animal{
+    fn get_label(&self) -> String{
+        match self{
+            Animal::Dog => String::from("Dog"),
+            Animal::Cat => String::from("Cat"),
+            Animal::Bird => String::from("Bird"),
+        }
+    }
+
+    fn get_weight(&self) -> i32{
+        match self{
+            Animal::Dog => 20,
+            Animal::Cat => 10,
+            Animal::Bird => 1,
+        }
+    }
+}
+
+\end{minted}
+\subsubsection{Enum mit Funktionen}
+\begin{minted}{rust}
+enum Animal {
+    Dog,
+    Cat,
+    Bird,
+}
+
+impl Animal{
+    fn is_cat(&self) -> bool{
+        match self{
+            Animal::Cat => true,
+            Animal::Dog => false,
+            Animal::Bird => false
+        }
+    }
 }
 \end{minted}
-\subsubsection{Der Enum als algebraischer Datentyp}
+\subsection{Enums in Java}
 \begin{itemize}
-	\item beliebige Struktur
-	\item werte können sich verändern
-	\item flexibel
-	\item pattern matching lässt uns die einzelnen Werte benutzen
+	\item Enums sind spezielle Klasse
+	\item Enumtypen sind Instanzen
+	\item Instanz statisch und final (per default)
 \end{itemize}
+\subsubsection{Normale Enums}
+\begin{minted}{java}
+enum Animal{
+    Dog,
+    Cat,
+    Bird
+}
+\end{minted}
+\subsubsection{Enums mit Werten}
+\begin{minted}{java}
+enum Animal{
+    Dog("Dog", 20),
+    Cat("Dog", 10),
+    Bird("Bird", 1);
+
+    public final String label;
+    public final int weight;
+
+    private Animal(String label, int weight){
+        this.label= label;
+        this.weight = weight;
+    }
+}
+\end{minted}
+\subsubsection{Enum mit Funktionen}
+\begin{minted}{rust}
+enum Animal{
+    Dog
+    Cat
+    Bird;
+
+    public boolean isCat(){
+        if (this == Animal.Cat){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+\end{minted}
+\begin{minted}{java}
+minted\end{minted}
+\subsection{Mächtigkeit von Rust Enums}
+\subsubsection{Der Enum als algebraischer Datentyp}
+- Algebraische Datentypen
 \begin{minted}{rust}
 fn main() {
     let s1 = Shape::Square(16);
@@ -101,70 +158,12 @@ impl Shape{
     }
 }
 \end{minted}
-\subsubsection{Rekusive Enums und Datentypen}
 \begin{itemize}
-	\item braucht Box (wie Zeiger)
-	\item Box sonst, rekursive Definition ohne Direktion
+	\item beliebige Struktur
+	\item werte können sich verändern
+		\item flexibel
+	\item pattern matching lässt uns die einzelnen Werte benutzen
 \end{itemize}
-\begin{minted}{rust}
-enum Exp {
-    Int {
-        val: i32
-    },
-    Plus {
-        left: Box<Exp>,
-        right: Box<Exp>
-    },
-    Mult{
-        left: Box<Exp>,
-        right: Box<Exp>
-    },
-}
-
-impl Exp{
-    fn eval(&self) -> i32{
-        match self{
-            Exp::Int{val} => *val,
-            Exp::Plus{left, right} => left.eval() + right.eval() ,
-            Exp::Mult{left, right} => left.eval() + right.eval()
-
-        }
-    }
-}
-\end{minted}
-\subsubsection{Nested Pattern Matching}
-\begin{itemize}
-	\item kann noch granulareres pattern matching betreiben
-\end{itemize}
-\begin{minted}{rust}
-pub enum Exp {
-    Int {
-        val: i32
-    },
-    Plus {
-        left: Box<Exp>,
-        right: Box<Exp>
-    },
-    Mult{
-        left: Box<Exp>,
-        right: Box<Exp>
-    },
-}
-
-impl Exp{
-   fn eval(&self) -> i32{
-       match self{
-           Exp::Int{val} => *val,
-           Exp::Plus{left, right} => left.eval() + right.eval() ,
-           Exp::Mult{left, right} => 
-            match **left {
-                Exp::Int { val:0 } => return 0,
-                _ => return left.eval() * right.eval()
-            }
-       }
-   }
-}
-\end{minted}
 \subsubsection{Generische Enums}
 \begin{itemize}
 	\item Enums können mit generischen Werten generiert werden
@@ -203,46 +202,217 @@ fn lookUpAnimal(id: i32) -> Option<Animal>{
     }
 }
 \end{minted}
-\subsection{Enums in Java}
-\begin{itemize}
-	\item Enums sind spezielle Klasse
-	\item Enumtypen sind Instanzen
-	\item Instanz statisch und final (per default)
-\end{itemize}
-\subsubsection{Normale Enums}
-\begin{minted}{java}
-enum Animal{
-    Dog,
-    Cat,
-    Bird
+\subsubsection{Rekursive Enums}
+\begin{enumerate}
+	\item Box needed
+\end{enumerate}
+\begin{minted}{rust}
+pub enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
 }
 \end{minted}
-\subsubsection{Enums mit Werten}
-\begin{minted}{java}
-enum AnimalWithValues{
-    Dog("Dog", 20),
-    Cat("Dog", 10),
-    Bird("Bird", 1);
+\subsubsection{Match Statement}
+\begin{minted}{rust}
+fn main(){
+    let e:Exp = Exp::Plus { 
+        left: Box::new(Exp::Int { val: 10 }), right: Box::new(Exp::Int { val: 22})
+    };
+    println!("Evaluates to: {}", e.eval());
+}
 
-    public final String label;
-    public final int weight;
+pub enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+}
 
-    //constructor
-    private AnimalWithValues(String label, int weight){
-        this.label= label;
-        this.weight = weight;
+impl Exp{
+   fn eval(&self) -> i32{
+       match self{
+           Exp::Int{val} => *val,
+           Exp::Plus{left, right} => left.eval() + right.eval() ,
+           Exp::Mult{left, right} => left.eval() * right.eval()
+       }
+   }
+}
+\end{minted}
+output
+\begin{minted}{shell}
+minted\end{minted}
+\subsubsection{Feste Enum Cases}
+\begin{minted}{rust}
+fn main(){
+    let e:Exp = Exp::Plus { 
+        left: Box::new(Exp::Int { val: 10 }), right: Box::new(Exp::Int { val: 22})
+    };
+    println!("Evaluates to: {}", e.eval());
+}
+enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Div{
+        left: Box<Exp>,
+        right: Box<Exp>
     }
 }
+
+impl Exp{
+   fn eval(&self) -> i32{
+       match self{
+           Exp::Int{val} => *val,
+           Exp::Plus{left, right} => left.eval() + right.eval() ,
+           Exp::Mult{left, right} => left.eval() * right.eval()
+       }
+   }
+}
+pub enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+}
+
+impl Exp{
+   fn eval(&self) -> i32{
+       match self{
+           Exp::Int{val} => *val,
+           Exp::Plus{left, right} => left.eval() + right.eval() ,
+           Exp::Mult{left, right} => left.eval() * right.eval()
+       }
+   }
+}
 \end{minted}
-\subsubsection{Enum Funktionen}
-\begin{minted}{java}
-minted\end{minted}
-\subsection{Vergleich von Java und Rust Enums}
-\subsection{Rust Enum Implementationsbeispiele}
-\subsubsection{}
-\subsection{Beispielfunktionalität in Java}
+output
+\begin{minted}{shell}
+   Compiling playground v0.1.0 (/home/mario/Desktop/seminararbeit/rust/playground)
+error[E0004]: non-exhaustive patterns: `&Exp::Div { .. }` not covered
+  --> src/main.rs:27:14
+   |
+27 |        match self{
+   |              ^^^^ pattern `&Exp::Div { .. }` not covered
+   |
+note: `Exp` defined here
+  --> src/main.rs:19:5
+   |
+7  | pub enum Exp {
+   |          ---
+...
+19 |     Div{
+   |     ^^^ not covered
+   = note: the matched value is of type `&Exp`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+   |
+30 ~            Exp::Mult{left, right} => left.eval() * right.eval(),
+31 +            &Exp::Div { .. } => todo!()
+   |
+
+For more information about this error, try `rustc --explain E0004`.
+error: could not compile `playground` due to previous error
+
+\end{minted}
+\subsubsection{Nested Pattern Matching}
+\begin{itemize}
+	\item kann noch granulareres pattern matching betreiben
+\end{itemize}
+\begin{minted}{rust}
+pub enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+}
+
+impl Exp{
+   fn eval(&self) -> i32{
+       match self{
+           Exp::Int{val} => *val,
+           Exp::Plus{left, right} => left.eval() + right.eval() ,
+           Exp::Mult{left, right} => 
+            match **left {
+                Exp::Int { val:0 } => return 0,
+                _ => return left.eval() * right.eval()
+            }
+       }
+   }
+}
+\end{minted}
+\subsubsection{Erweiterbare Funktionen für Enums}
+\begin{minted}{rust}
+pub enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+}
+
+impl Exp{
+   fn eval(&self) -> i32{
+       match self{
+           Exp::Int{val} => *val,
+           Exp::Plus{left, right} => left.eval() + right.eval() ,
+           Exp::Mult{left, right} => left.eval() * right.eval()
+       }
+   }
+   fn treeHeight(&self) -> u32 {
+		match self{
+           Exp::Int{val} => 1,
+           Exp::Plus{left, right} => left.treeHeight() + right.treeHeight(),
+           Exp::Mult{left, right} => left.treeHeight() + right.treeHeight(),
+		} 
+   }
+}
+\end{minted}
+\subsection{Rust-Enum-Funktionalität in Java}
 \subsubsection{Expression-Logik in Java}
-Naiver Ansatz
+Naiver Ansatz (Geht nicht)
 \begin{minted}{java}
 public class Expression{
     public static void main(String[] args) {
@@ -394,8 +564,9 @@ new Dog Value
 new Dog Value
 new Cat value
 \end{minted}
+\subsubsection{Enums kombiniert mit Klassen}
 \section{Traits}
-\subsection{Allgemeines zu Traits}
+\subsection{Traits in Rust}
 \begin{enumerate}
 	\item geteilte funktionalität mit anderen Typen
 	\item Funktionsmenge über einem Typen
@@ -404,7 +575,6 @@ new Cat value
 	\item adressieren ähnliche Probleme, traits aber mächtiger
 \end{enumerate}
 \subsubsection{Traits sind keine Typen}
-\subsection{Traits in Rust}
 \begin{enumerate}
 		\item Prädikat auf einem Typen
 \end{enumerate}
@@ -472,34 +642,6 @@ fn sum_area<A:Shape+OtherTraits>(x : &+OtherTraits) -> i32 {
 	...
  }
 \end{minted}
-\subsubsection{Konditionelle Implementierung mit Trait Bounds}
-\begin{minted}{rust}
-struct Pair<T> {
-    x: T,
-    y: T,
-}
-
-struct dog{
-    name: String,
-    age: u8,
-}
-
-impl<T> Pair<T> {
-    fn new(x: T, y: T) -> Self {
-        Self { x, y }
-    }
-}
-
-impl<T: Display + PartialOrd> Pair<T> {
-    fn cmp_display(&self) {
-        if self.x >= self.y {
-            println!("The largest member is x = {}", self.x);
-        } else {
-            println!("The largest member is y = {}", self.y);
-        }
-    }
-}
-\end{minted}
 \subsubsection{Dynamische Traits}
 Repräsentieren von Interfaces in Rust \\
 Können Konkrete Typen als Parameter und Rückgabewerte nutzen
@@ -514,7 +656,6 @@ fn sum_area(x : &(impl Shape), y: &(impl Shape)) -> i32 {
     return area(x) + area(y)
  }
 \end{minted}
-\subsubsection{Where Clause}
 \subsubsection{Shorthand Schreibweise}
 Andere Schreibweise, so kann man die Funktion auf einer Instanz des Structs aufrufen
 \begin{minted}{rust}
@@ -717,11 +858,47 @@ impl TransformAB for Machine{
     }
 }
 \end{minted}
-\subsection{Rust Trait Beispiele}
+\subsection{Interfaces in Java}
+Wird oft hiermit verglichen, ist aber anders.
+Interfaces sind Typen
+\subsection{Mächtigkeit von Traits}
 \subsubsection{Nicht vereinbare Interfaces}
 \subsubsection{Generische Mehrfachimplementierung}
-\subsection{Beispielfunktionalität in Java}
-\section{Vergleich der beiden Ansätze}
+\subsubsection{Funktionalität für Third-Party-Datentypen}
+\subsubsection{Konditionelle Implementierung}
+\begin{minted}{rust}
+struct Pair<T> {
+    x: T,
+    y: T,
+}
+
+struct dog{
+    name: String,
+    age: u8,
+}
+
+impl<T> Pair<T> {
+    fn new(x: T, y: T) -> Self {
+        Self { x, y }
+    }
+}
+
+impl<T: Display + PartialOrd> Pair<T> {
+    fn cmp_display(&self) {
+        if self.x >= self.y {
+            println!("The largest member is x = {}", self.x);
+        } else {
+            println!("The largest member is y = {}", self.y);
+        }
+    }
+}
+\end{minted}
+\subsection{Traitfunktionalität in Java}
+\subsubsection{Nicht vereinbare Interfaces (Java)}
+\subsubsection{Generische Mehrfachimplementierung (Java)}
+\subsubsection{Funktionalität für Third-Party-Datentypen (Java)}
+\subsubsection{Konditionelle Implementierung (Java)}
+\section{Vergleich}
 
 \bibliographystyle{plain}
 \bibliography{bib}

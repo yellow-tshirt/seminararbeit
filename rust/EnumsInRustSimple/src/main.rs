@@ -26,6 +26,7 @@ impl Animal{
             Animal::Bird => 1,
         }
     }
+}
     
     fn is_cat(&self) -> bool{
         match self{

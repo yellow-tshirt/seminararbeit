@@ -1,26 +1,37 @@
-fn main() {
-   let s = Square{a: 10};
-   print!("{}", Shape2::area(&s));
+fn main(){
+    let e:Exp = Exp::Plus { 
+        left: Box::new(Exp::Int { val: 10 }), right: Box::new(Exp::Int { val: 22})
+    };
+    println!("Evaluates to: {}", e.treeHeight());
 }
 
-struct Square{
-    a: u32,
-}
-trait Shape{
-   fn area(&self) -> u32;
+pub enum Exp {
+    Int {
+        val: i32
+    },
+    Plus {
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
+    Mult{
+        left: Box<Exp>,
+        right: Box<Exp>
+    },
 }
 
-impl Shape for Square{
-   fn area(&self) -> u32{
-       self.a*self.a
+impl Exp{
+   fn eval(&self) -> i32{
+       match self{
+           Exp::Int{val} => *val,
+           Exp::Plus{left, right} => left.eval() + right.eval() ,
+           Exp::Mult{left, right} => left.eval() * right.eval()
+       }
    }
-}
-trait Shape2{
-   fn area(&self) -> u32;
-}
-
-impl Shape2 for Square{
-   fn area(&self) -> u32{
-       self.a*self.a
+   fn treeHeight(&self) -> u32 {
+		match self{
+           Exp::Int{val} => 1,
+           Exp::Plus{left, right} => left.treeHeight() + right.treeHeight(),
+           Exp::Mult{left, right} => left.treeHeight() + right.treeHeight(),
+		} 
    }
 }

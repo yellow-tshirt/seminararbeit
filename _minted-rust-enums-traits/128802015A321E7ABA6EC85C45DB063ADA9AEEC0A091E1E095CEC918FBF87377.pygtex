@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Enumerationstypen}\PYG{+w}{ }\PYG{err}{\PYGZbs{}\PYGZbs{}}
+\PYG{n}{Auf}\PYG{+w}{ }\PYG{n}{den}\PYG{+w}{ }\PYG{n}{ersten}\PYG{+w}{ }\PYG{n}{Blick}\PYG{+w}{ }\PYG{n}{identisch}\PYG{p}{.}\PYG{+w}{ }\PYG{err}{\PYGZbs{}\PYGZbs{}}
+\PYG{n}{Java}\PYG{+w}{ }\PYG{n}{Enum}:
+\PYG{n+nc}{enum}\PYG{+w}{ }\PYG{n}{Animal}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Dog}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Cat}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Bird}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
