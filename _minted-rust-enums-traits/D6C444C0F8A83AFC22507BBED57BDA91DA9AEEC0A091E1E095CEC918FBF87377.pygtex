@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }: \PYG{n+nc}{some\PYGZus{}struct}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{some\PYGZus{}struct}\PYG{p}{\PYGZob{}\PYGZcb{};}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{someInteger}: \PYG{k+kt}{i32} \PYG{o}{=}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{.}\PYG{n}{mygenval}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{someString}: \PYG{n+nb}{String} \PYG{o}{=}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{.}\PYG{n}{mygenval}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{struct} \PYG{n+nc}{some\PYGZus{}struct}\PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{generic}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}}
+\PYG{+w}{   }\PYG{k}{fn} \PYG{n+nf}{mygenval}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{T}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{generic}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{i32}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{some\PYGZus{}struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{   }\PYG{k}{fn} \PYG{n+nf}{mygenval}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32}\PYG{p}{\PYGZob{}}
+\PYG{+w}{       }\PYG{l+m+mi}{5}
+\PYG{+w}{   }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{generic}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{String}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{some\PYGZus{}struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{   }\PYG{k}{fn} \PYG{n+nf}{mygenval}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{\PYGZob{}}
+\PYG{+w}{       }\PYG{l+s}{\PYGZdq{}abc\PYGZdq{}}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{()}
+\PYG{+w}{   }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

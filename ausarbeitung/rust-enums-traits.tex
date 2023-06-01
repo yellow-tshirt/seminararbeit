@@ -318,7 +318,6 @@ impl Exp{
 \end{minted}
 output
 \begin{minted}{shell}
-   Compiling playground v0.1.0 (/home/mario/Desktop/seminararbeit/rust/playground)
 error[E0004]: non-exhaustive patterns: `&Exp::Div { .. }` not covered
   --> src/main.rs:27:14
    |
@@ -341,8 +340,6 @@ help: ensure that all possible cases are being handled by adding a match arm wit
    |
 
 For more information about this error, try `rustc --explain E0004`.
-error: could not compile `playground` due to previous error
-
 \end{minted}
 \subsubsection{Nested Pattern Matching}
 \begin{itemize}
@@ -412,7 +409,13 @@ impl Exp{
 \end{minted}
 \subsection{Rust-Enum-Funktionalität in Java}
 \subsubsection{Switch Case vs Match}
-Veränderung des Enums spielt für SC keine Rolle
+
+\begin{itemize}
+	\item Veränderung des Enums spielt für SC keine Rolle
+\item Dieses Verhalten ist auch nicht in Java über tricks Möglich
+\item Pattern Matching nur über weitere If/Else Abfragen Möglich
+\item nested pattern matching nur über weitere If Else Möglich
+\end{itemize}
 \subsubsection{Expression-Logik in Java}
 Naiver Ansatz (Geht nicht)
 \begin{minted}{java}
@@ -509,14 +512,14 @@ class MultExp extends Exp{
     }
 }
 \end{minted}
-\subsubsection{Java Enums am Limit - Wrapperinstanz für den Typ}
+\subsubsection{Vermeidung von Nullpointer-Ausnahmen}
+\subsubsection{Java Enums am Limit}
 \begin{itemize}
 	\item Idee, was aber wenn die Instanz ein Wrapper ist
-	\item nicht sehr ergonomisch 
 	\item statische variablen schneiden uns 
 \end{itemize}
 \begin{minted}{java}
-mintedpublic class playground{
+public class EnumLimit{
 	public static void main(String[] args) {
 		Animal a = Animal.Dog;
 		Animal a2 = Animal.Dog;
@@ -566,8 +569,7 @@ new Dog Value
 new Dog Value
 new Cat value
 \end{minted}
-\subsubsection{Enums kombiniert mit Klassen}
-\section{Traits}
+
 \subsection{Traits in Rust}
 \begin{enumerate}
 	\item geteilte funktionalität mit anderen Typen
@@ -608,6 +610,24 @@ impl Shape for Rectangle {
 }
 
 \end{minted}
+\subsubsection{Shorthand Schreibweise}
+Andere Schreibweise, so kann man die Funktion auf einer Instanz des Structs aufrufen
+\begin{minted}{rust}
+trait Shape{
+   fn area(&self) -> String;
+}
+
+impl Shape for Square{
+   fn area(&self) -> i32{
+       self.a*self.a
+   }
+}
+
+fn main() {
+   let s = Square{a: 10};
+   print!("{}", s.area());
+}
+\end{minted}
 \subsubsection{Default-Implementationen}
 \begin{enumerate}
 	\item geht in java auch
@@ -637,6 +657,13 @@ fn sum_area<A:Shape,B:Shape>(x : &A, y : &B) -> i32 {
     return area(x) + area(y)
  }
 \end{minted}
+\subsubsection{Multiples Binding}
+Man kann auch Prädikate/Traits verunden
+\begin{minted}{rust}
+fn sum_area<A:Shape+OtherTraits>(x : &+OtherTraits) -> i32 {
+	...
+ }
+\end{minted}
 \subsubsection{Dynamische Traits}
 Repräsentieren von Interfaces in Rust \\
 Können Konkrete Typen als Parameter und Rückgabewerte nutzen
@@ -650,24 +677,6 @@ fn sum_area(x : Box<dyn Shape>, y: Box<dyn Shape>) -> i32 {
 fn sum_area(x : &(impl Shape), y: &(impl Shape)) -> i32 {
     return area(x) + area(y)
  }
-\end{minted}
-\subsubsection{Shorthand Schreibweise}
-Andere Schreibweise, so kann man die Funktion auf einer Instanz des Structs aufrufen
-\begin{minted}{rust}
-trait Shape{
-   fn area(&self) -> String;
-}
-
-impl Shape for Square{
-   fn area(&self) -> i32{
-       self.a*self.a
-   }
-}
-
-fn main() {
-   let s = Square{a: 10};
-   print!("{}", s.area());
-}
 \end{minted}
 \subsubsection{Platzhaltertypen}
 \begin{minted}{rust}
@@ -720,65 +729,6 @@ impl TransformAB for Machine{
     }
 }
 \end{minted}
-\subsection{Mächtigkeit von Traits}
-\subsubsection{Gleiche Methodensignatur}
-- kurzschreibweise geht hier nicht
-\subsubsection{Generische Mehrfachimplementierung}
-\subsubsection{Schreibeweise bei Uneindeutigkeit}
-\begin{minted}{rust}
-fn main() {
-   let s = Square{a: 10};
-   print!("{}", Shape2::area(&s));
-}
-
-struct Square{
-    a: u32,
-}
-trait Shape{
-   fn area(&self) -> u32;
-}
-
-impl Shape for Square{
-   fn area(&self) -> u32{
-       self.a*self.a
-   }
-}
-trait Shape2{
-   fn area(&self) -> u32;
-}
-
-impl Shape2 for Square{
-   fn area(&self) -> u32{
-       self.a*self.a
-   }
-}
-\end{minted}
-\begin{minted}{rust}
-trait Shape{
-   fn area(&self) -> String;
-}
-
-impl Shape for Square{
-   fn area(&self) -> i32{
-       self.a*self.a
-   }
-}
-trait Shape2{
-   fn area(&self) -> String;
-}
-
-impl Shape2 for Square{
-   fn area(&self) -> i32{
-       self.a*self.a
-   }
-}
-
-
-fn main() {
-   let s = Square{a: 10};
-   print!("{}", Shape2::area(s));
-}
-\end{minted}
 \subsubsection{Supertraits}
 \begin{itemize}
 	\item man kann hirarchie nachbauen
@@ -829,6 +779,69 @@ impl CompSciStudent for HskaStudent{
     fn git_username(&self) -> String {
         String::from(self.git_username)
     }
+}
+\end{minted}
+\subsection{Mächtigkeit von Traits}
+\subsubsection{Gleiche Methodensignatur}
+- kurzschreibweise geht hier nicht
+\begin{minted}{rust}
+fn main() {
+   let x = some_struct{};
+   musicplayer::play(&x);
+   boardgame::stop(&x);
+}
+
+struct some_struct{}
+
+trait musicplayer{
+    fn play(s: &Self);
+    fn stop(&self);
+}
+trait boardgame{
+    fn play(s: &Self);
+    fn stop(&self);
+}
+
+impl musicplayer for some_struct {
+  fn play(s: &Self) {
+      println!("Playing music");
+  }
+  fn stop(&self) {
+      println!("Stopping music");
+  }
+}
+impl boardgame for some_struct {
+  fn play(s: &Self) {
+      println!("Playing boardgame");
+  }
+  fn stop(&self) {
+      println!("Stopping boardgame");
+  }
+}
+\end{minted}
+\subsubsection{Generische Mehrfachimplementierung}
+\begin{minted}{rust}
+fn main() {
+    let s : some_struct = some_struct{};
+    let someInteger: i32 = s.mygenval();
+    let someString: String = s.mygenval();
+}
+struct some_struct{}
+
+trait generic<T>{
+   fn mygenval(&self) -> T;
+}
+
+impl generic<i32> for some_struct {
+   fn mygenval(&self) -> i32{
+       5
+   }
+}
+
+impl generic<String> for some_struct {
+   fn mygenval(&self) -> String{
+       "abc".to_string()
+   }
 }
 \end{minted}
 \subsubsection{Referenzierung des eigenen Typen}
@@ -886,19 +899,81 @@ impl<T: Display + PartialOrd> Pair<T> {
     }
 }
 \end{minted}
-\subsubsection{Multiples Binding}
-Man kann auch Prädikate/Traits verunden
-\begin{minted}{rust}
-fn sum_area<A:Shape+OtherTraits>(x : &+OtherTraits) -> i32 {
-	...
- }
-\end{minted}
 \subsection{Traitfunktionalität in Java}
-\subsubsection{Nicht vereinbare Interfaces (Java)}
-\subsubsection{Generische Mehrfachimplementierung (Java)}
-\subsubsection{Funktionalität für Third-Party-Datentypen (Java)}
-\subsubsection{Konditionelle Implementierung (Java)}
+\subsubsection{Gleiche Methodensignatur}
+Geht nicht, weil nicht eindeutig (Signaturkonflikt)
+\begin{minted}{java}
+class SomeClass implements musicplayer, boardgame{
+   public void play(){
+       System.out.println("You are playing");
+   }
+}
+interface musicplayer{
+   public void play();
+}
+interface boardgame{
+   public void play();
+}
+\end{minted}
+\paragraph{Lösung via Adapterpattern}
+\begin{minted}{java}
+public class AdapterCompatible {
+    public static void main(String[] args) {
+        SomeClass sc = new SomeClass();
+        MusicPlayerAdapter ma = new MusicPlayerAdapter(sc);
+        BoardGameAdapter ba = new BoardGameAdapter(sc);
+        ma.play();
+        ba.play();
+    }
+}
+class SomeClass{
+    public void playMusic(){
+        System.out.println("Playing music");
+    }
+    public void playBoardGame(){
+        System.out.println("Playing boardgame");
+    }
+}
+interface MusicPlayer{
+    public void play();
+}
+interface BoardGame{
+    public void play();
+}
+
+class MusicPlayerAdapter implements MusicPlayer {
+    private SomeClass someClass;
+    
+    public MusicPlayerAdapter(SomeClass someClass) {
+        this.someClass = someClass;
+    }
+    @Override
+    public void play() {
+        someClass.playMusic();
+    }
+}
+
+class BoardGameAdapter implements BoardGame {
+    private SomeClass someClass;
+    
+    public BoardGameAdapter(SomeClass someClass) {
+        this.someClass = someClass;
+    }
+    @Override
+    public void play() {
+        someClass.playBoardGame();
+    }
+}
+\end{minted}
+\subsubsection{Generische Mehrfachimplementierung}
+\subsubsection{Funktionalität für Third-Party-Datentypen}
+\subsubsection{Konditionelle Implementierung}
 \section{Vergleich}
+\subsection{Enums}
+\begin{itemize}
+	\item Enums kombiniert mit Klassen kann Alle Enums nachbauen
+\end{itemize}
+\subsection{Traits}
 
 \bibliographystyle{plain}
 \bibliography{bib}

@@ -1,37 +1,22 @@
-fn main(){
-    let e:Exp = Exp::Plus { 
-        left: Box::new(Exp::Int { val: 10 }), right: Box::new(Exp::Int { val: 22})
-    };
-    println!("Evaluates to: {}", e.treeHeight());
+fn main() {
+    let s : some_struct = some_struct{};
+    let someInteger: i32 = s.mygenval();
+    let someString: String = s.mygenval();
+}
+struct some_struct{}
+
+trait generic<T>{
+   fn mygenval(&self) -> T;
 }
 
-pub enum Exp {
-    Int {
-        val: i32
-    },
-    Plus {
-        left: Box<Exp>,
-        right: Box<Exp>
-    },
-    Mult{
-        left: Box<Exp>,
-        right: Box<Exp>
-    },
-}
-
-impl Exp{
-   fn eval(&self) -> i32{
-       match self{
-           Exp::Int{val} => *val,
-           Exp::Plus{left, right} => left.eval() + right.eval() ,
-           Exp::Mult{left, right} => left.eval() * right.eval()
-       }
+impl generic<i32> for some_struct {
+   fn mygenval(&self) -> i32{
+       5
    }
-   fn treeHeight(&self) -> u32 {
-		match self{
-           Exp::Int{val} => 1,
-           Exp::Plus{left, right} => left.treeHeight() + right.treeHeight(),
-           Exp::Mult{left, right} => left.treeHeight() + right.treeHeight(),
-		} 
+}
+
+impl generic<String> for some_struct {
+   fn mygenval(&self) -> String{
+       "abc".to_string()
    }
 }
