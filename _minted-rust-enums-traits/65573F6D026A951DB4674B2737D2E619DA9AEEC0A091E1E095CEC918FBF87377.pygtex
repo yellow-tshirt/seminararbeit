@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{thread}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{time}::\PYG{n}{Duration}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{thiryparty\PYGZus{}struct}\PYG{p}{\PYGZob{}\PYGZcb{}.}\PYG{n}{sleep}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{struct} \PYG{n+nc}{thiryparty\PYGZus{}struct}\PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Sleep}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{sleep}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Sleep}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{thiryparty\PYGZus{}struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{sleep}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{thread}::\PYG{n}{sleep}\PYG{p}{(}\PYG{n}{Duration}::\PYG{n}{from\PYGZus{}millis}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{));}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

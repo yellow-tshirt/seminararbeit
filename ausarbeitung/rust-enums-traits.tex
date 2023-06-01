@@ -871,6 +871,25 @@ impl genCopy for Cat{
 }
 \end{minted}
 \subsubsection{Funktionalität für Third-Party-Datentypen}
+\begin{minted}{rust}
+use std::thread;
+use std::time::Duration;
+
+fn main() {
+    thiryparty_struct{}.sleep();
+}
+struct thiryparty_struct{}
+
+trait Sleep{
+    fn sleep(&self);
+}
+
+impl Sleep for thiryparty_struct {
+    fn sleep(&self){
+        thread::sleep(Duration::from_millis(1000));
+    }
+}
+\end{minted}
 \subsubsection{Konditionelle Implementierung}
 \begin{minted}{rust}
 struct Pair<T> {
@@ -966,7 +985,98 @@ class BoardGameAdapter implements BoardGame {
 }
 \end{minted}
 \subsubsection{Generische Mehrfachimplementierung}
+- Interface kann nicht mehr als einmal implementiert werden
+- Wieder Adapter
+\begin{minted}{java}
+public class SomeClass implements Generic<Integer>, Generic<String> {
+    public static void main(String[] args) {
+        SomeClass sc = new SomeClass();
+    }
+}
+
+interface Generic<T> {
+    public T mygenvalue();
+}
+\end{minted}
+output
+\begin{minted}{shell}
+SomeClass.java:1: error: Generic cannot be inherited with
+different arguments: <java.lang.Integer> and <java.lang.String>
+\end{minted}
+\paragraph{Lösung}
+\begin{minted}{java}
+public class SomeClass {
+    public static void main(String[] args) {
+        SomeClass sc = new SomeClass();
+        Integer someInt = new GenericIntAdapter(sc).mygenvalue();
+        String someString = new GenericStringAdapter(sc).mygenvalue();
+    }
+}
+
+interface Generic<T> {
+    public T mygenvalue();
+}
+
+class GenericIntAdapter implements Generic<Integer> {
+    private SomeClass someClass;
+
+    public GenericIntAdapter(SomeClass someClass) {
+        this.someClass = someClass;
+    }
+
+    @Override
+    public Integer mygenvalue() {
+        return 5;
+    }
+}
+class GenericStringAdapter implements Generic<String> {
+    private SomeClass someClass;
+
+    public GenericStringAdapter(SomeClass someClass){
+        this.someClass = someClass;
+    }
+    @Override
+    public String mygenvalue() {
+        return "abc";
+    }
+}
+\end{minted}
 \subsubsection{Funktionalität für Third-Party-Datentypen}
+\begin{minted}{java}
+public class ThirdParty {
+    public static void main(String[] args) {
+        ThirdParty original = new ThirdParty();
+        WrapperClass wrapper = new WrapperClass(original);
+
+        wrapper.doSomething();
+        wrapper.sleep();
+        wrapper.doSomething();
+    }
+    public void doSomething() {
+        System.out.println("Doing something...");
+    }
+}
+
+class WrapperClass {
+    private ThirdParty original;
+
+    public WrapperClass(ThirdParty original) {
+        this.original = original;
+    }
+
+    public void doSomething() {
+        original.doSomething();
+    }
+
+    public void sleep() {
+        try {
+            Thread.sleep(1000); // Sleep for 1000 milliseconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+\end{minted}
 \subsubsection{Konditionelle Implementierung}
 \section{Vergleich}
 \subsection{Enums}

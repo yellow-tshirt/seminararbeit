@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+SomeClass.java:1: error: Generic cannot be inherited with
+different arguments: \PYGZlt{}java.lang.Integer\PYGZgt{} and \PYGZlt{}java.lang.String\PYGZgt{}
+\end{Verbatim}

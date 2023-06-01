@@ -40,12 +40,13 @@
 \contentsline {subsubsection}{\numberline {2.6.3}Referenzierung des eigenen Typen}{17}{subsubsection.2.6.3}%
 \contentsline {subsubsection}{\numberline {2.6.4}Funktionalität für Third-Party-Datentypen}{18}{subsubsection.2.6.4}%
 \contentsline {subsubsection}{\numberline {2.6.5}Konditionelle Implementierung}{18}{subsubsection.2.6.5}%
-\contentsline {subsection}{\numberline {2.7}Traitfunktionalität in Java}{18}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Gleiche Methodensignatur}{18}{subsubsection.2.7.1}%
-\contentsline {paragraph}{Lösung via Adapterpattern}{18}{section*.2}%
+\contentsline {subsection}{\numberline {2.7}Traitfunktionalität in Java}{19}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Gleiche Methodensignatur}{19}{subsubsection.2.7.1}%
+\contentsline {paragraph}{Lösung via Adapterpattern}{19}{section*.2}%
 \contentsline {subsubsection}{\numberline {2.7.2}Generische Mehrfachimplementierung}{20}{subsubsection.2.7.2}%
-\contentsline {subsubsection}{\numberline {2.7.3}Funktionalität für Third-Party-Datentypen}{20}{subsubsection.2.7.3}%
-\contentsline {subsubsection}{\numberline {2.7.4}Konditionelle Implementierung}{20}{subsubsection.2.7.4}%
-\contentsline {section}{\numberline {3}Vergleich}{20}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Enums}{20}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Traits}{20}{subsection.3.2}%
+\contentsline {paragraph}{Lösung}{20}{section*.3}%
+\contentsline {subsubsection}{\numberline {2.7.3}Funktionalität für Third-Party-Datentypen}{21}{subsubsection.2.7.3}%
+\contentsline {subsubsection}{\numberline {2.7.4}Konditionelle Implementierung}{22}{subsubsection.2.7.4}%
+\contentsline {section}{\numberline {3}Vergleich}{22}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Enums}{22}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Traits}{22}{subsection.3.2}%

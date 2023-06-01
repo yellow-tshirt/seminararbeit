@@ -1,22 +1,17 @@
+use std::thread;
+use std::time::Duration;
+
 fn main() {
-    let s : some_struct = some_struct{};
-    let someInteger: i32 = s.mygenval();
-    let someString: String = s.mygenval();
+    thiryparty_struct{}.sleep();
 }
-struct some_struct{}
+struct thiryparty_struct{}
 
-trait generic<T>{
-   fn mygenval(&self) -> T;
+trait Sleep{
+    fn sleep(&self);
 }
 
-impl generic<i32> for some_struct {
-   fn mygenval(&self) -> i32{
-       5
-   }
-}
-
-impl generic<String> for some_struct {
-   fn mygenval(&self) -> String{
-       "abc".to_string()
-   }
+impl Sleep for thiryparty_struct {
+    fn sleep(&self){
+        thread::sleep(Duration::from_millis(1000));
+    }
 }
