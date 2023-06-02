@@ -1,15 +1,20 @@
 \begin{thebibliography}{1}
 
+\bibitem{haskellslides}
+Slides about haskell by prof. dr. sulzmann.
+\newblock
+  \url{https://sulzmann.github.io/ProgrammingParadigms/lec-rust-vs-haskell.html}.
+
 \bibitem{rustbook}
 The rust programming language.
 \newblock \url{https://doc.rust-lang.org/stable/book/}.
 
-\bibitem{sulzmannslides}
-Slides by prof. sulzmann.
-\newblock \url{https://doc.rust-lang.org/stable/book/}.
+\bibitem{rustslides}
+Slides about rust by prof. dr. sulzmann.
+\newblock \url{https://sulzmann.github.io/ProgrammingParadigms/lec-rust.html}.
 
 \bibitem{websitedesignpatterns}
-Slides by prof. sulzmann.
-\newblock \url{https://doc.rust-lang.org/stable/book/}.
+Design patterns.
+\newblock \url{https://refactoring.guru/design-patterns}.
 
 \end{thebibliography}
