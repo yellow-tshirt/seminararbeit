@@ -29,6 +29,12 @@
 \begin{abstract}
 \end{abstract}
 \section{Einleitung}
+List Sources
+\begin{itemize}
+	\item Sulzmann
+	\item Rustbook
+	\item Designpatterns Website
+\end{itemize}
 \section{Enums}
 \subsection{Enums in Rust}
 \subsubsection{Normale Enums}
@@ -512,7 +518,6 @@ class MultExp extends Exp{
     }
 }
 \end{minted}
-\subsubsection{Vermeidung von Nullpointer-Ausnahmen}
 \subsubsection{Java Enums am Limit}
 \begin{itemize}
 	\item Idee, was aber wenn die Instanz ein Wrapper ist
@@ -569,7 +574,7 @@ new Dog Value
 new Dog Value
 new Cat value
 \end{minted}
-
+\section{Traits}
 \subsection{Traits in Rust}
 \begin{enumerate}
 	\item geteilte funktionalität mit anderen Typen
@@ -890,6 +895,7 @@ impl Sleep for thiryparty_struct {
     }
 }
 \end{minted}
+\subsubsection{Referenzierung des eigenen Typen}
 \subsubsection{Konditionelle Implementierung}
 \begin{minted}{rust}
 struct Pair<T> {
@@ -1077,7 +1083,69 @@ class WrapperClass {
     }
 }
 \end{minted}
+\subsubsection{Referenzierung des eigenen Typens}
+\begin{minted}{java}
+public class SameInputOutput{
+    public static void main(String[] args) {
+        
+    }
+}
+interface sameObject<T>{
+    public T returnSameObject(T input);
+}
+
+class Dog implements sameObject<Dog>{
+    public Dog returnSameObject(Dog input){
+        return input;
+    }
+}
+\end{minted}
 \subsubsection{Konditionelle Implementierung}
+Ein bisschen anders, da das Pair jetzt nur werte zulässt die von der Abstrakten Klasse comparable erben
+\begin{minted}{java}
+public class Conditional {
+    public static void main(String[] args) {
+        Pair<Integer> intpair = new Pair(1,2);
+        Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
+    }    
+}
+
+class Pair<T extends Comparable<T>>{
+    private T x;
+    private T y;
+
+    public Pair(T x, T y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void cmpDisplay() {
+        if (x.compareTo(y) >= 0) {
+            System.out.println("The largest member is x = " + x);
+        } else {
+            System.out.println("The largest member is y = " + y);
+        }
+    }
+}
+
+class Dog{
+    private String name;
+    public Dog(String name){
+        this.name = name;
+    }
+}
+\end{minted}
+compiler output
+\begin{minted}{shell}
+Conditional.java:4: error: type argument Dog is not within bounds of type-variable T
+Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
+	 ^
+where T is a type-variable:
+T extends Comparable<T> declared in class Pair
+Conditional.java:4: error: incompatible types: Dog cannot be converted to Comparable
+Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
+\end{minted}
+Eine Idee wäre noch dynamisches Checken mit instance of, das ist aber Fehleranfällig. 
 \section{Vergleich}
 \subsection{Enums}
 \begin{itemize}
