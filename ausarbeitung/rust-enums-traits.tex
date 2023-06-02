@@ -29,19 +29,27 @@
 \begin{abstract}
 \end{abstract}
 \section{Einleitung}
-List Sources
-\begin{itemize}
-		\item Sulzmann Rust \cite{rustslides}
-		\item Sulzmann Haskell \cite{haskellslides}
-	\item Rustbook \cite{rustbook}
-	\item Designpatterns Website \cite{websitedesignpatterns}
-\end{itemize}
+In der Welt der Programmiersprachen gibt es eine Vielzahl von Ansätzen, um Datenstrukturen zu modellieren und die Funktionalität zwischen verschiedenen Typen zu teilen. In diesem Vergleich werfen wir einen Blick auf zwei mächtige Konzepte: Enums und Traits in Rust im Vergleich zu den Möglichkeiten, die Java bietet.
+Rust, eine moderne und stark typisierte Programmiersprache, bietet mit Enums algebraische Datentypen, die es ermöglichen, eine begrenzte Anzahl von Varianten zu definieren. Im Gegensatz zu herkömmlichen Enumerationen in anderen Sprachen sind Rust Enums jedoch viel flexibler. Sie können komplexe Datenstrukturen darstellen und sind nicht auf einfache numerische Werte beschränkt.
+Ein bemerkenswertes Merkmal von Rust Enums ist das sogenannte Pattern Matching. Hierbei handelt es sich um einen Mechanismus, der sicherstellt, dass alle möglichen Fälle des Enums abgedeckt sind. Dies erhöht die Sicherheit des Codes, da der Compiler sicherstellt, dass keine unbehandelten Fälle auftreten können. Im Vergleich dazu bietet Java keine eingebaute Unterstützung für algebraische Datentypen oder Pattern Matching, was zu einer potenziell fehleranfälligeren Handhabung von Varianten führen kann.
+Ein weiteres mächtiges Konzept in Rust sind Traits. Diese können als Mengen über einem Typ betrachtet werden und ähneln in gewisser Weise den Interfaces und Vererbungskonzepten in Java. Durch die Verwendung von Traits können Funktionalitäten zwischen verschiedenen Datentypen geteilt werden, wodurch Code modularer und wiederverwendbarer wird.
+Traits dienen auch als Prädikate über einem Typen, indem sie bestimmte Verhaltensweisen oder Fähigkeiten definieren, die ein Typ haben muss, um ein bestimmtes Trait zu implementieren. Dies ermöglicht eine flexible Komposition von Funktionen und Verhalten, ohne eine starre Vererbungshierarchie zu erzwingen.
+Im weiteren Verlauf dieses Vergleichs werden wir detaillierter auf die Vorteile von Traits gegenüber Interfaces und Vererbung eingehen. Darüber hinaus werden wir prüfen, ob Java überhaupt in der Lage ist, die gleiche Funktionalität wie Rust zu bieten und welche Kompromisse möglicherweise gemacht werden müssen.
+Mit diesem Hintergrundwissen tauchen wir nun in den Vergleich der Enums und Traits in Rust mit den Möglichkeiten in Java ein, um die Stärken und potenziellen Unterschiede zwischen diesen beiden Sprachen genauer zu untersuchen.
+\newpage
 \section{Enums}
+Enums sind in der Programmierung eine Möglichkeit, eine begrenzte Anzahl von Varianten oder Optionen zu definieren. Sie dienen dazu, eine feste Menge von Werten darzustellen, die ein bestimmtes Konzept oder eine bestimmte Entität repräsentieren können. Enums ermöglichen es, den Code lesbarer zu gestalten, indem sie eine klar definierte Liste von möglichen Zuständen oder Varianten zur Verfügung stellen.
+Auf den ersten Blick mögen Enums in Rust und Java ähnlich aussehen. Beide Sprachen bieten Mechanismen, um eine begrenzte Anzahl von Optionen zu modellieren. Jedoch gibt es einen entscheidenden Unterschied: Rust Enums sind algebraische Datentypen.
+Algebraische Datentypen in Rust erlauben es, komplexe Datenstrukturen zu definieren, die weit über einfache numerische Werte hinausgehen. Sie können Varianten enthalten, die selbst wiederum Daten oder weitere Optionen beinhalten können. Diese Flexibilität eröffnet ganz neue Möglichkeiten bei der Modellierung von Daten.
+Ein weiteres starkes Merkmal von Rust Enums ist das abgeschlossene Pattern Matching. Dies bedeutet, dass bei der Verarbeitung eines Enums alle möglichen Fälle explizit abgedeckt werden müssen. Der Compiler erzwingt diese Vollständigkeit, was zu sichererem und fehlerfreiem Code führt. Dadurch wird vermieden, dass unbehandelte Fälle auftreten und potenziell zu Fehlern führen können.
+Im Gegensatz dazu bieten Java Enums keine eingebaute Unterstützung für algebraische Datentypen oder abgeschlossenes Pattern Matching. Dies kann dazu führen, dass beim Umgang mit Enums in Java unbeabsichtigte Fehler auftreten können, wenn nicht alle Varianten explizit behandelt werden.
+Durch die Kombination von algebraischen Datentypen und abgeschlossenem Pattern Matching bieten Rust Enums eine überlegene Möglichkeit, komplexe Datenstrukturen zu modellieren und sicherzustellen, dass alle Fälle behandelt werden. Diese Funktionalitäten machen Rust Enums zu einer mächtigen und robusten Technik, die über die Möglichkeiten von Java Enums hinausgeht.
+
+Anhand einfacher Beispiele gehen zeigen ich zunächst, wie simple Enums, Enums mit zugehörigen Werten und Enums mit Funktionen in Rust und Java aussehen. Danach gehe ich auf den konkreten Unterschied ein und zeige den Mehrwert, den Rust Enums bringen. 
+Im Anschluss versuche ich die FUnktionalität, die Rust Enums uns geben in Java (falls es möglich ist) nachzubauen.
 \subsection{Enums in Rust}
 \subsubsection{Normale Enums}
-Enumerationstypen \\
-Auf den ersten Blick identisch. \\
-Java Enum:
+Einfache Auflistungen sind in Rust und Java komplett identisch.
 \begin{minted}{rust}
 enum Animal {
     Dog,
@@ -50,6 +58,9 @@ enum Animal {
 }
 \end{minted}
 \subsubsection{Enum mit Werten}
+Wenn wir jedem Enum einen konkreten Wert eines Typs zuordnen möchten, müssen wir das in Rust über eine Funktion machen.
+Das Pattern Matching auf das ich nachher noch genauer eingehen werde lässt uns an dieser Stelle bequem und übersichtlich die zugehörigen Werte festlegen.
+Bei Java ist es möglich, dies einer Option des Enums direkt anzugeben. Dies ist aber kein Nachteil, da es uns erlaubt bei Bedarf weitere Werte hinzuzufügen ohne das Enum zu verändern.
 \begin{minted}{rust}
 enum Animal {
     Dog,
@@ -77,6 +88,7 @@ impl Animal{
 
 \end{minted}
 \subsubsection{Enum mit Funktionen}
+Das definieren von Funktionen über einem Enumtypen funktioniert analog wie mit den hinzufügen von Werten.
 \begin{minted}{rust}
 enum Animal {
     Dog,
