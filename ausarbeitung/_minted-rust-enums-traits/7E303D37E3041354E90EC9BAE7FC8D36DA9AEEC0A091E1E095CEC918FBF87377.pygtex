@@ -1,0 +1,48 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{HskaStudent}\PYG{p}{\PYGZob{}}\PYG{n}{name}:\PYG{l+s}{\PYGZdq{}Mario\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{university}:\PYG{l+s}{\PYGZdq{}hska\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fav\PYGZus{}language}:\PYG{l+s}{\PYGZdq{}rust\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{git\PYGZus{}username}:\PYG{l+s}{\PYGZdq{}yellow\PYGZhy{}tshirt\PYGZdq{}}\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{n}{comp\PYGZus{}sci\PYGZus{}student\PYGZus{}greeting}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{s}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Person}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{name}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Student}: \PYG{n+nc}{Person}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{university}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Programmer}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{fav\PYGZus{}language}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{CompSciStudent}: \PYG{n+nc}{Programmer}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{Student}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{git\PYGZus{}username}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{comp\PYGZus{}sci\PYGZus{}student\PYGZus{}greeting}\PYG{o}{\PYGZlt{}}\PYG{n}{S}: \PYG{n+nc}{CompSciStudent}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{student}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{S}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Hey my name is \PYGZob{}\PYGZcb{}, I study at \PYGZob{}\PYGZcb{}. My favorite language is \PYGZob{}\PYGZcb{} and my git username is \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{student}\PYG{p}{.}\PYG{n}{name}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{student}\PYG{p}{.}\PYG{n}{university}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{student}\PYG{p}{.}\PYG{+w}{ }\PYG{n}{fav\PYGZus{}language}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{student}\PYG{p}{.}\PYG{n}{git\PYGZus{}username}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{struct} \PYG{n+nc}{HskaStudent}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{name}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+nb}{static} \PYG{k+kt}{str}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{university}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+nb}{static} \PYG{k+kt}{str}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{fav\PYGZus{}language}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+nb}{static} \PYG{k+kt}{str}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{git\PYGZus{}username}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+nb}{static} \PYG{k+kt}{str}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Person}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{HskaStudent}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{name}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{name}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{()}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Student}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{HskaStudent}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{university}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{university}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Programmer}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{HskaStudent}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{fav\PYGZus{}language}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{fav\PYGZus{}language}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{CompSciStudent}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{HskaStudent}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{git\PYGZus{}username}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{git\PYGZus{}username}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

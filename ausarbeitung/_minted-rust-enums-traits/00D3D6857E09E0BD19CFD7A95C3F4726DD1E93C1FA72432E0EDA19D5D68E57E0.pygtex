@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class} \PYG{n+nc}{SomeClass}\PYG{+w}{ }\PYG{k+kd}{implements}\PYG{+w}{ }\PYG{n}{musicplayer}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{boardgame}\PYG{p}{\PYGZob{}}
+\PYG{+w}{   }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{play}\PYG{p}{()\PYGZob{}}
+\PYG{+w}{       }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}You are playing\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{   }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{interface} \PYG{n+nc}{musicplayer}\PYG{p}{\PYGZob{}}
+\PYG{+w}{   }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{play}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{interface} \PYG{n+nc}{boardgame}\PYG{p}{\PYGZob{}}
+\PYG{+w}{   }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{play}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

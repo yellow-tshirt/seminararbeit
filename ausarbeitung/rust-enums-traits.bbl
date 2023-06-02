@@ -1,3 +1,15 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{rustbook}
+The rust programming language.
+\newblock \url{https://doc.rust-lang.org/stable/book/}.
+
+\bibitem{sulzmannslides}
+Slides by prof. sulzmann.
+\newblock \url{https://doc.rust-lang.org/stable/book/}.
+
+\bibitem{websitedesignpatterns}
+Slides by prof. sulzmann.
+\newblock \url{https://doc.rust-lang.org/stable/book/}.
 
 \end{thebibliography}

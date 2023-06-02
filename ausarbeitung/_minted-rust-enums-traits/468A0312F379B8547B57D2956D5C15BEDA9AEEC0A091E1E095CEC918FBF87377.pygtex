@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{genCopy}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{genCopy}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Self}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{struct} \PYG{n+nc}{Dog}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{name}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{age}: \PYG{k+kt}{u8}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{struct} \PYG{n+nc}{Cat}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{name}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{age}: \PYG{k+kt}{u8}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{genCopy}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Dog}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{genCopy}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Self}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{Dog}\PYG{p}{\PYGZob{}}\PYG{n}{name}: \PYG{n+nc}{s}\PYG{p}{.}\PYG{n}{name}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{age}: \PYG{n+nc}{s}\PYG{p}{.}\PYG{n}{age}\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{genCopy}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Cat}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{genCopy}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Self}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{Cat}\PYG{p}{\PYGZob{}}\PYG{n}{name}: \PYG{n+nc}{s}\PYG{p}{.}\PYG{n}{name}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{age}: \PYG{n+nc}{s}\PYG{p}{.}\PYG{n}{age}\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

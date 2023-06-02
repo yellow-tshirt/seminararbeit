@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Conditional.java:4: error: \PYG{n+nb}{type} argument Dog is not within bounds of type\PYGZhy{}variable T
+Pair\PYGZlt{}Dog\PYGZgt{} \PYG{n+nv}{dogpair} \PYG{o}{=} new Pair\PYG{o}{(}new Dog\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}Ben\PYGZdq{}}\PYG{o}{)}, new Dog\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}Albert\PYGZdq{}}\PYG{o}{))}\PYG{p}{;}
+	 \PYGZca{}
+where T is a type\PYGZhy{}variable:
+T extends Comparable\PYGZlt{}T\PYGZgt{} declared \PYG{k}{in} class Pair
+Conditional.java:4: error: incompatible types: Dog cannot be converted to Comparable
+Pair\PYGZlt{}Dog\PYGZgt{} \PYG{n+nv}{dogpair} \PYG{o}{=} new Pair\PYG{o}{(}new Dog\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}Ben\PYGZdq{}}\PYG{o}{)}, new Dog\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}Albert\PYGZdq{}}\PYG{o}{))}\PYG{p}{;}
+\end{Verbatim}

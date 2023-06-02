@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Shape}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{}\PYG{k+kt}{i32}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{struct} \PYG{n+nc}{Square}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{a}: \PYG{k+kt}{i32}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Shape}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Square}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYGZhy{}\PYGZgt{}\PYG{k+kt}{i32}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{s}\PYG{p}{.}\PYG{n}{a}\PYG{o}{*}\PYG{n}{s}\PYG{p}{.}\PYG{n}{a}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{struct} \PYG{n+nc}{Rectangle}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{a}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{b}: \PYG{k+kt}{i32}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Shape}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}\PYG{p}{)}\PYGZhy{}\PYGZgt{}\PYG{k+kt}{i32}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{s}\PYG{p}{.}\PYG{n}{a}\PYG{o}{*}\PYG{n}{s}\PYG{p}{.}\PYG{n}{b}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

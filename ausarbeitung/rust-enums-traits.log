@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.28)  28 MAY 2023 19:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.2)  2 JUN 2023 15:14
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
+ \write18 enabled.
  %&-line parsing enabled.
-**/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex
-(/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex
+**rust-enums-traits.tex ./
+(./rust-enums-traits.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
@@ -22,25 +22,32 @@ File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count193
 \lst@gtempboxa=\box50
 \lst@token=\toks17
@@ -53,83 +60,112 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \lst@newlines=\count197
 \lst@lineno=\count198
 \lst@maxwidth=\dimen144
- (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count199
 \lst@skipnumbers=\count266
 \lst@framebox=\box51
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count267
 \U@D=\dimen145
 \l@unhyphenated=\language87
- (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count268
- (/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
-Language: german 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
- (/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
-Language: germanb 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2021/02/27 v2.13 German support for babel (pre-1996 orthograph
+y)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2021/02/27 v2.13 German support for babel (pre-1996 orthograp
+hy)
 Package babel Info: Making " an active character on input line 139.
-))) (/usr/share/texlive/texmf-dist/tex/latex/abstract/abstract.sty
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/abstract/abstract.sty
 Package: abstract 2009/06/08 v1.2a configurable abstracts
 \abstitleskip=\skip49
 \absleftindent=\skip50
 \absrightindent=\skip51
 \absparindent=\skip52
 \absparsep=\skip53
-) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
- (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
-) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen146
 \Hy@linkcounter=\count269
 \Hy@pagecounter=\count270
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel languages
-) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count271
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -144,10 +180,13 @@ Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count272
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen147
- (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count273
 \Field@Width=\dimen148
@@ -161,7 +200,8 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6101.
 Package hyperref Info: PDF/A mode OFF on input line 6106.
 LaTeX Info: Redefining \ref on input line 6146.
 LaTeX Info: Redefining \pageref on input line 6150.
- (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -170,36 +210,48 @@ package with kernel methods
 \c@Hfootnote=\count276
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
- (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
 \Fld@listcount=\count277
 \c@bookmark@seq@number=\count278
- (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
 )
 \Hy@SectionHShift=\skip54
-) (/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
 \langwohyphens=\language88
 LaTeX Info: Redefining \_ on input line 43.
-) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
- (/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
- (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count279
-) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
 \FV@CodeLineNo=\count280
 \FV@InFile=\read3
@@ -207,9 +259,12 @@ Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
 \c@FancyVerbLine=\count281
 \FV@StepNumber=\count282
 \FV@OutFile=\write3
-) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
-) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count283
 \output=\toks18
@@ -249,7 +304,8 @@ LaTeX Info: Redefining \\ on input line 3056.
 \FV@LineBox=\box56
 \FV@LineIndentBox=\box57
 \FV@LineWidth=\dimen160
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count301
 \calc@Bcount=\count302
@@ -261,33 +317,43 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count303
 \calc@Cskip=\skip58
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
-) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
+runsystem(uname -s > "rust-enums-traits.w18")...executed.
 
-Package ifplatform Warning: 
-    shell escape is disabled, so I can only detect \ifwindows.
 
-) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+(./rust-enums-traits.w18)
+runsystem(rm -- "rust-enums-traits.w18")...executed.
+
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \integerpart=\count304
 \decimalpart=\count305
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
-) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip59
 \fb@frw=\dimen163
 \fb@frh=\dimen164
 \FrameRule=\dimen165
 \FrameSep=\dimen166
-) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count306
 \float@exts=\toks19
@@ -303,25 +369,16 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks21
 \c@listing=\count309
 )
-runsystem(mkdir -p _minted-rust-enums-traits)...disabled (restricted).
+runsystem(mkdir -p _minted-rust-enums-traits)...executed.
 
-
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:10: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 \clubpenalty
-                 =10000
-Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for more information.
 
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
@@ -335,19 +392,10 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
-runsystem(which pygmentize && touch rust-enums-traits.aex)...disabled (restricted).
+runsystem(which pygmentize && touch rust-enums-traits.aex)...executed.
 
+runsystem(rm rust-enums-traits.aex)...executed.
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:19: Package minted Error: You must have `pygmentize' installed to use this package.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \begin{document}
-                     
-Refer to the installation instructions in the minted documentation for more information.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
@@ -379,7 +427,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count311
 \scratchdimen=\dimen167
@@ -394,19 +443,26 @@ LaTeX Font Info:    ... okay on input line 19.
 \everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 \c@lstlisting=\count317
 Package hyperref Info: Link coloring OFF on input line 19.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
- (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count318
@@ -414,6 +470,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
+
+(./rust-enums-traits.out) (./rust-enums-traits.out)
 \@outlinefile=\write5
 \openout5 = `rust-enums-traits.out'.
 
@@ -425,303 +483,293 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 22.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rust-enums-traits.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+
+Overfull \hbox (6.27843pt too wide) in paragraph at lines 15--15
+ [][] [][]\OT1/cmr/m/n/10 Rust En-ums und die Ver-mei-dung von Nullpointer-Ausn
+ahmen[] [][]  
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.51 ... Implementierung}{22}{subsubsection.3.3.5}
+                                                  % [2
+
+])
 \tf@toc=\write6
 \openout6 = `rust-enums-traits.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.26 \newpage
-              [1
-
-]
+              [1]
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-rust-enums-traits/default.pygstyle)...disabled (restricted).
-
-
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package catchfile Error: File `_minted-rust-enums-traits/default.pygstyle' not found.
-
-See the catchfile package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 \end{minted}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-rust-enums-traits/default.pygstyle)...disabled (restricted).
-
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package catchfile Error: File `_minted-rust-enums-traits/default.pygstyle' not found.
-
-See the catchfile package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 \end{minted}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package minted Error: Cannot find Pygments style default.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 \end{minted}
-                 
-Cannot find Pygments style default
-
-runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/EBC4C43C39B4B76B230B87E99C1DB49BDD1E93C1FA72432E0EDA19D5D68E57E0.pygtex rust-enums-traits.pyg)...disabled (restricted).
-
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:42: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 \end{minted}
-                 
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+ (./_minted-rust-enums-traits/default.pygstyle)
+(./_minted-rust-enums-traits/DA20814BB281FFC00DDC5EC2379D43A6DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
+)
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/DA20814BB281FFC00DDC5EC2379D43A6DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:50: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 \end{minted}
-                 
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-rust-enums-traits/6C132982F40D3CBBFEC627EE0445AFEEDA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [1])
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/35AB0D9DB3DD617666FF52F4C166B298DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:76: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 \end{minted}
-                 
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-rust-enums-traits/2B199E5D434C7D0152BDA16207E37123DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/31BEFA60DA55398021776FAB3ADECE04DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:103: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-rust-enums-traits/9FC9AB56C83AA347F9B25640AC8C3B61DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/78F402233483E1DAF3502B0EC88EC514DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:134: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.134 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-rust-enums-traits/F67AA7D12DC58141C10D8968FD851F44DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [2])
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/52F831C09BBD2DCEB165156D34E5B1B3DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:167: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-rust-enums-traits/6908019CBBD21D183A3564EF4B3878C1DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/EDC57085EBF90F97EE0EF8635B2006E2DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:177: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.177 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
-Overfull \hbox (1.32877pt too wide) in paragraph at lines 178--178
-[]\OT1/cmr/bx/n/10 Verwendung des Rust En-ums zur Ver-mei-dung von Nullpointer-
- []
-
+(./_minted-rust-enums-traits/D41D8CD98F00B204E9800998ECF8427EDD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/CAEE6B1A51926286853C2B4BDD86C673DA9AEEC0A091E1E095CEC918FBF87377.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:205: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-[1]
+(./_minted-rust-enums-traits/31BEFA60DA55398021776FAB3ADECE04DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex) [3]
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l java -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/8DB0C30304683F34438D0D99E4B458D5DD1E93C1FA72432E0EDA19D5D68E57E0.pygtex rust-enums-traits.pyg)...disabled (restricted).
 
-
-
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:265: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.265 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-rust-enums-traits/EDC57085EBF90F97EE0EF8635B2006E2DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
-runsystem(pygmentize -l shell -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-rust-enums-traits/84C3FDDDA2173CDA30098A63148735D66399E595E3B1A76D1AD36407ED4A681D.pygtex rust-enums-traits.pyg)...disabled (restricted).
+
+(./_minted-rust-enums-traits/CAEE6B1A51926286853C2B4BDD86C673DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
 
 
-/home/mario/Desktop/seminararbeit/ausarbeitung/rust-enums-traits.tex:274: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
+(./_minted-rust-enums-traits/36F2553B9375FDF3BBA1010076E64058DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [4])
+\openout3 = `rust-enums-traits.pyg'.
 
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.274 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
 
-[2] (./rust-enums-traits.bbl
+(./_minted-rust-enums-traits/A9F12ADEABD9EFBDF7576E453698BEA2DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [3] (./rust-enums-traits.aux)
+(./_minted-rust-enums-traits/D41D8CD98F00B204E9800998ECF8427E6399E595E3B1A76D1A
+D36407ED4A681D.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
 
-Package rerunfilecheck Warning: File `rust-enums-traits.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `rust-enums-traits.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  865F7FAC9EEBA80B178B1180EF9CC1A6;6333.
-runsystem(rm rust-enums-traits.pyg)...disabled (restricted).
+(./_minted-rust-enums-traits/8BCEEDF2377ED4DD4F32053DBD3F9E96DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [5] [6])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/9E8C28B8B8507A50994192060FF5EB006399E595E3B1A76D1A
+D36407ED4A681D.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/52F831C09BBD2DCEB165156D34E5B1B3DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [7])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/8D1D5573523CC05634CF7223A0909C71DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/E497FDB032C8DA9B6AAB25FD82F6C3B0DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [8])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/77AB6001ADA6873929F64546FA0FE986DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [9])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/FC92F2E13418F5A5D06B40AF5BA0EE78DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [10])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/84C3FDDDA2173CDA30098A63148735D66399E595E3B1A76D1A
+D36407ED4A681D.pygtex) [11]
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/0C5A599253A82527FD3D9EEB6B737A81DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/2C86498E50BC23B555E8B1B2579EF4DEDA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [12])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/C3FA8979120F48A725C601AA9E06A052DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/A87266475339513732810F3513762D526399E595E3B1A76D1A
+D36407ED4A681D.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/07AC87787B126FCFD9FBDF08068D9F2DDA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/2B24EB67259F429FE001B4E25CAA9A00DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/AE674BD72B166407B5502CF39F1C0090DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [13])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/581B53A9A83BA21FD53A8CDF6BAB1C1FDA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/F0D4675CA681ABFD4F716A3DE47883D6DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/E35B983ACAB63895158DBE57B0143E71DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [14])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/7E303D37E3041354E90EC9BAE7FC8D36DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [15])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/80602B3AD5E6022925D9797592086D31DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/D6C444C0F8A83AFC22507BBED57BDA91DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [16])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/468A0312F379B8547B57D2956D5C15BEDA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/65573F6D026A951DB4674B2737D2E619DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [17])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/529943636ED6185B6FBB565FCBF06D81DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/00D3D6857E09E0BD19CFD7A95C3F4726DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [18])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/99A5DF26420E89F09300B34B1366302FDD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [19])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/15DCA9EA90FE6A26202B440547601C18DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/C237CE1B106514818A2C2ACAD4F6159C6399E595E3B1A76D1A
+D36407ED4A681D.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/290683204067F9A08B6198C4A696970BDD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [20])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/F51EFB90D3D09387427D5FFACFF8E70ADD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [21])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/F39B2C5091442F297B3F040F71DC4222DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex)
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/1C61BE2719CC1886499460EECC7BC936DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [22])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/7716196ACEF8C01A5FC9D83DCAF96B926399E595E3B1A76D1A
+D36407ED4A681D.pygtex) (./rust-enums-traits.bbl) [23] (./rust-enums-traits.aux)
+Package rerunfilecheck Info: File `rust-enums-traits.out' has not changed.
+(rerunfilecheck)             Checksum: 0E5F791DC07A04E0252043BE9FA2DD6F;9052.
+runsystem(rm rust-enums-traits.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 14396 strings out of 478287
- 247175 string characters out of 5849289
- 595989 words of memory out of 5000000
- 32351 multiletter control sequences out of 15000+600000
- 474456 words of font info for 45 fonts, out of 8000000 for 9000
+ 14853 strings out of 478287
+ 271720 string characters out of 5849290
+ 610763 words of memory out of 5000000
+ 32620 multiletter control sequences out of 15000+600000
+ 474792 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,67p,328b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on rust-enums-traits.pdf (5 pages, 101672 bytes).
+ 61i,6n,67p,591b,701s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on rust-enums-traits.pdf (26 pages, 163827 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 43 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 409 words of extra memory for PDF output out of 10000 (max. 10000000)
 
