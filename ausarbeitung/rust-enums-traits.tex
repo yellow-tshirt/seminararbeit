@@ -27,15 +27,16 @@
 \pagenumbering{arabic}
 \maketitle
 \begin{abstract}
+Traits und Enums in Rust sind Programmierkonzepte, die bereits aus Haskell unter Namen wie Typklassen oder ADTs bekannt sind. Die Konzepte einige Vorteile, gegenüber normalen Enums in Java sowie Interfaces und Vererbung, die versuchen ähnliche Probleme zu lösen.
+Manche Funktionalitäten lassen sich mittels Designpatterns, wie dem Adapter-Pattern oder dem Wrapper-Pattern  lösen, wobei diese Lösungen meist unnötig verbos erscheinen. Gewisse Funktionalitäten können Sprache wie Java aber auch gar nicht bereitstellen.
+Bezogen auf diese Konzepte ist Rust mit Java verglichen also syntaktisch prägnanter, lesbarer und stellenweise funktinell sogar überlegen.
 \end{abstract}
 \section{Einleitung}
-In der Welt der Programmiersprachen gibt es eine Vielzahl von Ansätzen, um Datenstrukturen zu modellieren und die Funktionalität zwischen verschiedenen Typen zu teilen. In diesem Vergleich werfen wir einen Blick auf zwei mächtige Konzepte: Enums und Traits in Rust im Vergleich zu den Möglichkeiten, die Java bietet.
-Rust, eine moderne und stark typisierte Programmiersprache, bietet mit Enums algebraische Datentypen, die es ermöglichen, eine begrenzte Anzahl von Varianten zu definieren. Im Gegensatz zu herkömmlichen Enumerationen in anderen Sprachen sind Rust Enums jedoch viel flexibler. Sie können komplexe Datenstrukturen darstellen und sind nicht auf einfache numerische Werte beschränkt.
-Ein bemerkenswertes Merkmal von Rust Enums ist das sogenannte Pattern Matching. Hierbei handelt es sich um einen Mechanismus, der sicherstellt, dass alle möglichen Fälle des Enums abgedeckt sind. Dies erhöht die Sicherheit des Codes, da der Compiler sicherstellt, dass keine unbehandelten Fälle auftreten können. Im Vergleich dazu bietet Java keine eingebaute Unterstützung für algebraische Datentypen oder Pattern Matching, was zu einer potenziell fehleranfälligeren Handhabung von Varianten führen kann.
-Ein weiteres mächtiges Konzept in Rust sind Traits. Diese können als Mengen über einem Typ betrachtet werden und ähneln in gewisser Weise den Interfaces und Vererbungskonzepten in Java. Durch die Verwendung von Traits können Funktionalitäten zwischen verschiedenen Datentypen geteilt werden, wodurch Code modularer und wiederverwendbarer wird.
-Traits dienen auch als Prädikate über einem Typen, indem sie bestimmte Verhaltensweisen oder Fähigkeiten definieren, die ein Typ haben muss, um ein bestimmtes Trait zu implementieren. Dies ermöglicht eine flexible Komposition von Funktionen und Verhalten, ohne eine starre Vererbungshierarchie zu erzwingen.
-Im weiteren Verlauf dieses Vergleichs werden wir detaillierter auf die Vorteile von Traits gegenüber Interfaces und Vererbung eingehen. Darüber hinaus werden wir prüfen, ob Java überhaupt in der Lage ist, die gleiche Funktionalität wie Rust zu bieten und welche Kompromisse möglicherweise gemacht werden müssen.
-Mit diesem Hintergrundwissen tauchen wir nun in den Vergleich der Enums und Traits in Rust mit den Möglichkeiten in Java ein, um die Stärken und potenziellen Unterschiede zwischen diesen beiden Sprachen genauer zu untersuchen.
+Die Programmiersprachen Rust und Java bieten Entwicklern eine Vielzahl von Werkzeugen und Sprachkonstrukten, um robusten und flexiblen Code zu schreiben. In diesem Vergleich konzentrieren wir uns auf zwei wichtige Konzepte: Enums und Traits. Wir werfen einen genauen Blick darauf, wie Rust und Java diese Konzepte implementieren und welche Möglichkeiten sie Entwicklern bieten, um Funktionalität zwischen verschiedenen Datentypen zu teilen.
+In Rust sind Enums algebraische Datentypen, die ursprünglich aus der funktionalen Programmiersprache Haskell stammen. Sie ermöglichen es, eine feste Anzahl von Varianten zu definieren, die jeweils spezifische Informationen enthalten können. Mit dem Pattern Matching-Mechanismus in Rust ist es möglich, auf die verschiedenen Varianten eines Enums zuzugreifen und sie zu verarbeiten. Ein bemerkenswertes Merkmal des Rust Enum Pattern Matching ist, dass es abgeschlossen ist, das heißt, jeder Fall des Enums muss abgedeckt werden. Dadurch wird vermieden, dass potenzielle Fehler unbemerkt bleiben und der Code robuster wird.
+Ein weiteres leistungsstarkes Konzept in Rust sind Traits. Diese können als Mengen über einem Typ betrachtet werden und ähneln den typklassen in Haskell. Ähnlich zu Interfaces und Vererbung in Java ermöglichen Traits in Rust eine Möglichkeit, Funktionalität zwischen verschiedenen Datentypen zu teilen. Sie dienen als Prädikate über einem Typen und erlauben es, bestimmte Verhaltensweisen zu deklarieren, ohne eine konkrete Implementierung vorzugeben. Dies fördert eine modulare Codebasis und ermöglicht eine flexible Kombination von Funktionen.
+Im Vergleich zu Java zeigen Traits in Rust einige bemerkenswerte Vorteile. Während Java Interfaces zwar eine ähnliche Funktion bieten, aber oft mit Einschränkungen verbunden sind und Vererbung komplexe Klassenhierarchien erfordert, erlauben Traits in Rust eine granulare und unabhängige Zusammenarbeit von Typen. Sie bieten eine hohe Flexibilität bei der Kombination von Funktionen und vermeiden unnötige Abhängigkeiten zwischen Klassen. Im weiteren Verlauf dieses Vergleichs werden wir detaillierter auf diese Unterschiede eingehen und untersuchen, ob Java, möglicherweise mithilfe von Design Patterns, in der Lage ist, ähnliche Funktionalitäten wie Rust zu gewährleisten.
+Mit diesem Hintergrundwissen über Enums und Traits in Rust im Vergleich zu Java können wir nun einen genaueren Blick auf diese Konzepte werfen und ihre Einsatzmöglichkeiten sowie ihre Vor- und Nachteile analysieren. Indem wir die Stärken und Schwächen dieser Sprachkonstrukte untersuchen, werden wir ein umfassendes Verständnis dafür entwickeln, wie sie die Entwicklung von robustem und wartbarem Code in den jeweiligen Sprachen unterstützen können.
 \newpage
 \section{Enums}
 Enums sind in der Programmierung eine Möglichkeit, eine begrenzte Anzahl von Varianten oder Optionen zu definieren. Sie dienen dazu, eine feste Menge von Werten darzustellen, die ein bestimmtes Konzept oder eine bestimmte Entität repräsentieren können. Enums ermöglichen es, den Code lesbarer zu gestalten, indem sie eine klar definierte Liste von möglichen Zuständen oder Varianten zur Verfügung stellen.
@@ -112,7 +113,14 @@ impl Animal{
 	\item Enumtypen sind Instanzen
 	\item Instanz statisch und final (per default)
 \end{itemize}
+In Java werden Enums als spezielle Klassen behandelt. Sie dienen dazu, eine fest definierte Menge von Optionen oder Zuständen zu repräsentieren. Im Gegensatz zu herkömmlichen Klassen erlaubt die Verwendung von Enums eine klarere und lesbarere Darstellung von möglichen Werten.
+Enumtypen in Java werden als Instanzen der jeweiligen Enumklasse behandelt. Jede Instanz repräsentiert dabei einen bestimmten Zustand oder eine Option. Dies ermöglicht eine einfache und intuitive Verwendung von Enums in Java.
+Eine wichtige Eigenschaft von Java Enums ist, dass ihre Instanzvariablen in der Regel als statisch und final deklariert werden. Dies bedeutet, dass die Werte der Instanzvariablen für jede einzelne Instanz des Enums gleich sind und nicht verändert werden können. Dadurch wird sichergestellt, dass Enums unveränderliche Optionen repräsentieren und konsistent bleiben.
+Durch die Verwendung von speziellen Klassen und Instanzen ermöglichen Java Enums eine effiziente und sichere Handhabung einer begrenzten Menge von Optionen. Die statischen und finalen Instanzvariablen gewährleisten dabei eine konsistente und unveränderliche Repräsentation der Optionen.
+Im Vergleich zu Rust Enums fehlen jedoch in Java einige der fortgeschritteneren Konzepte wie algebraische Datentypen und abgeschlossenes Pattern Matching. Dies kann dazu führen, dass die Handhabung und Verarbeitung von Enums in Java etwas umständlicher ist und es möglicherweise erforderlich ist, zusätzliche Überprüfungen und Maßnahmen zu ergreifen, um sicherzustellen, dass alle möglichen Varianten abgedeckt sind.
+Trotzdem bieten Java Enums eine solide Grundlage für die Modellierung und Verwendung einer begrenzten Anzahl von Optionen in Java-Programmen. Sie ermöglichen eine lesbarere und intuitivere Darstellung von Zuständen und Optionen und tragen so zur Verbesserung der Codequalität und -wartbarkeit bei.
 \subsubsection{Normale Enums}
+Enums funktionieren im einfachsten Fall funktionell und syntaktisch Analog zu Rust.
 \begin{minted}{java}
 enum Animal{
     Dog,
@@ -121,6 +129,8 @@ enum Animal{
 }
 \end{minted}
 \subsubsection{Enums mit Werten}
+Java koppelt zugehörige für die Enum-Optionen direkt an die Option selber.
+Hier ist zu beachten, dass die Werte immer statisch und final sind.
 \begin{minted}{java}
 enum Animal{
     Dog("Dog", 20),
@@ -155,8 +165,12 @@ enum Animal{
 \begin{minted}{java}
 minted\end{minted}
 \subsection{Mächtigkeit von Rust Enums}
+In diesem nächsten Kapitel werfen wir einen genaueren Blick auf die Mächtigkeit von Enums und die Vorzüge, die sie in der Programmierung bieten. Enums sind nicht nur eine einfache Möglichkeit, eine begrenzte Menge von Optionen darzustellen, sondern sie können auch eine Vielzahl von leistungsstarken Konzepten und Techniken bieten. Wir werden die Vorteile von Enums im Detail betrachten und untersuchen, wie sie dazu beitragen können, den Code lesbarer, flexibler und sicherer zu machen. Von den vielfältigen Anwendungsmöglichkeiten von Pattern Matching bis hin zur Modellierung komplexer Datenstrukturen - wir werden die Fülle an Möglichkeiten erkunden, die Enums in verschiedenen Programmiersprachen bieten. Seien Sie gespannt auf die spannenden Aspekte, die wir in Bezug auf die Mächtigkeit von Enums beleuchten werden und wie sie Ihr Verständnis und Ihre Fähigkeiten in der Programmierung erweitern können.
 \subsubsection{Der Enum als algebraischer Datentyp}
-- Algebraische Datentypen
+Algebraische Datentypen sind ein leistungsstarkes Konzept in der Programmierung, das es ermöglicht, komplexe Datenstrukturen auf elegante und präzise Weise zu modellieren. In Rust werden Enums als algebraische Datentypen betrachtet, da sie die Möglichkeit bieten, eine begrenzte Anzahl von Varianten oder Optionen zu definieren.
+Im gegebenen Beispiel wird die Enum-Struktur "Shape" als algebraischer Datentyp verwendet. Sie enthält zwei Varianten: "Square" und "Rectangle". Jede dieser Varianten kann verschiedene Informationen oder Daten enthalten, die spezifisch für die jeweilige Form sind. Im Fall des "Square" wird die Seitenlänge als einziger Parameter übergeben, während im Fall des "Rectangle" die Länge und Breite als separate Parameter angegeben werden.
+Die Implementierung der Methode "area" zeigt, wie algebraische Datentypen in Rust genutzt werden können. Mit dem Pattern Matching-Mechanismus werden die verschiedenen Varianten der Enum überprüft und entsprechende Berechnungen durchgeführt. Wenn das Enum-Objekt "self" die "Square"-Variante ist, wird die Fläche des Quadrats berechnet, indem die Seitenlänge mit sich selbst multipliziert wird. Wenn es sich um die "Rectangle"-Variante handelt, wird die Fläche des Rechtecks berechnet, indem die Länge mit der Breite multipliziert wird.
+Durch die Verwendung von algebraischen Datentypen in Rust können komplexe Datenstrukturen einfach und übersichtlich modelliert werden. Das Pattern Matching ermöglicht eine klare und umfassende Abdeckung aller möglichen Varianten, was zu robusterem und sichererem Code führt. In diesem konkreten Beispiel wird die Fläche einer Form berechnet, aber die Anwendungsmöglichkeiten von algebraischen Datentypen in Rust gehen weit über diese einfache Illustration hinaus. Sie bieten eine flexible und ausdrucksstarke Möglichkeit, Daten zu strukturieren und zu verarbeiten.
 \begin{minted}{rust}
 fn main() {
     let s1 = Shape::Square(16);
@@ -177,54 +191,25 @@ impl Shape{
     }
 }
 \end{minted}
-\begin{itemize}
-	\item beliebige Struktur
-	\item werte können sich verändern
-		\item flexibel
-	\item pattern matching lässt uns die einzelnen Werte benutzen
-\end{itemize}
 \subsubsection{Generische Enums}
-\begin{itemize}
-	\item Enums können mit generischen Werten generiert werden
-\end{itemize}
+In diesem aufregenden Kapitel werden wir uns mit generischen Enums in Rust beschäftigen, die eine leistungsstarke Möglichkeit bieten, flexible und parametrisierte Datenstrukturen zu modellieren. Ein herausragendes Beispiel für ein generisches Enum in Rust ist das "Option<T>"-Enum.
+Das "Option<T>"-Enum ist äußerst vielseitig und ermöglicht es uns, zwischen zwei Optionen zu wählen: "None" und "Some(T)". Die "None"-Option repräsentiert den Fall, in dem kein Wert vorhanden ist, während "Some(T)" einen Wert des generischen Typs "T" enthält. Durch die Verwendung von generischen Typen können wir das "Option<T>"-Enum an verschiedene Datentypen anpassen und eine große Bandbreite von Optionen abbilden.
+Das Beispiel verdeutlicht die Anwendung der generischen Enums anhand des "Option<T>"-Enums. Es bietet eine elegante Lösung für Situationen, in denen ein Wert optional sein kann. Durch die Verwendung des "Option<T>"-Enums können wir klar ausdrücken, dass ein Wert entweder vorhanden ist (durch "Some(T)") oder nicht vorhanden ist (durch "None").
+Die Verwendung von generischen Enums wie dem "Option<T>"-Enum bietet mehrere Vorteile. Sie ermöglichen eine typsichere Behandlung von Optionen, da der zugrunde liegende Typ "T" bei der Kompilierung überprüft wird. Dadurch wird vermieden, dass unbehandelte Fälle auftreten und Fehler durch den Zugriff auf nicht vorhandene Werte entstehen.
+Das Pattern Matching ist ein mächtiges Werkzeug, um generische Enums zu verarbeiten. Es erlaubt uns, die verschiedenen Optionen des Enums zu überprüfen und entsprechende Aktionen durchzuführen. Wir können leicht feststellen, ob eine Option "None" ist und dementsprechend reagieren, oder den Wert einer "Some(T)"-Option extrahieren und damit weiterarbeiten.
+Durch die Verwendung von generischen Enums eröffnen sich in Rust vielfältige Möglichkeiten zur Modellierung und Verarbeitung von Daten. Sie bieten Flexibilität und Parametrisierung, um verschiedene Datentypen zu unterstützen und maßgeschneiderte Lösungen zu ermöglichen. Im nächsten Kapitel werden wir noch tiefer in die Vorzüge und Anwendungsfälle generischer Enums eintauchen und ihre Stärken voll ausschöpfen.
 \begin{minted}{rust}
 enum Option<T> {
 	None,
 	Some(T),
 }
 \end{minted}
-\subsubsection{Rust Enums und die Vermeidung von Nullpointer-Ausnahmen}
-\begin{itemize}
-	\item Java hat ähnliches Konzept aber mit Klassen
-	\item Nullpointer, der große Milliarden € Fehler
-\end{itemize}
-\begin{minted}{rust}
-mintedfn main() {
-    match lookUpAnimal(1){
-        Some(Animal::Dog) => println!("Found pet was a dog"),
-        Some(_) => println!("Found pet with id 1"),
-        None => println!("Sadly no pet was found")
-    }
-}
-
-enum Animal{
-    Dog,
-    Cat,
-    Bird,
-}
-
-fn lookUpAnimal(id: i32) -> Option<Animal>{
-    if(id == 1){
-        return Some(Animal::Dog);
-    }else{
-        return None
-    }
-}
-\end{minted}
 \subsubsection{Rekursive Enums}
-\begin{enumerate}
-	\item Box needed
-\end{enumerate}
+In diesem spannenden Kapitel werden wir uns mit rekursiven Enums in Rust beschäftigen, die es uns ermöglichen, komplexe Datenstrukturen zu modellieren, die auf sich selbst verweisen. Ein Beispiel für ein rekursives Enum ist das "Exp"-Enum.
+Das "Exp"-Enum repräsentiert mathematische Ausdrücke und kann verschiedene Varianten enthalten. Es gibt eine Variante "Int", die einen einzelnen Ganzzahlwert enthält. Darüber hinaus gibt es die Varianten "Plus" und "Mult", die auf sich selbst verweisen, indem sie jeweils zwei Unterexpressions speichern. Diese rekursive Struktur ermöglicht die Modellierung komplexer mathematischer Ausdrücke.
+Beachten Sie, dass in den Varianten "Plus" und "Mult" das Schlüsselwort "Box" verwendet wird. Warum ist dies notwendig? Das liegt daran, dass rekursive Enums in Rust eine feste Größe benötigen, um den Speicherbedarf zur Kompilierzeit zu bestimmen. Durch die Verwendung von "Box" wird ein Zeiger auf den Heap erstellt, der die tatsächliche Größe des Enum-Objekts auf dem Stack verdeckt. Dies ermöglicht es uns, rekursive Strukturen zu erstellen, ohne dass das Enum eine unendliche Größe haben muss.
+Indem wir die Variablen "left" und "right" als "Box<Exp>" deklarieren, speichern wir Zeiger auf andere "Exp"-Objekte im Heap. Dies ermöglicht eine beliebige Verschachtelung von Ausdrücken und ermöglicht es uns, komplexe mathematische Formeln darzustellen.
+Die Verwendung von "Box" ist daher notwendig, um den rekursiven Bezug in unserem Enum zu realisieren und gleichzeitig eine feste Größe für das Enum-Objekt zur Kompilierzeit zu gewährleisten. Dadurch wird eine effiziente Speicherbelegung erreicht und die Leistung optimiert.
 \begin{minted}{rust}
 pub enum Exp {
     Int {
@@ -241,6 +226,12 @@ pub enum Exp {
 }
 \end{minted}
 \subsubsection{Match Statement}
+Im folgenden Codebeispiel illustrieren wir die Verwendung des Match-Statements anhand des "Exp"-Enums in Rust. Das Match-Statement bietet eine effektive Methode, um Enums zu überprüfen und entsprechende Aktionen basierend auf den verschiedenen Varianten auszuführen. Dabei garantiert Rust, dass die Enum-Cases immer wohldefiniert sind, was zu sicherem und zuverlässigem Code führt.
+Im gegebenen Codebeispiel erstellen wir ein "Exp"-Objekt namens "e", das die Addition zweier Ganzzahlen repräsentiert. Das "Exp"-Enum hat drei Varianten: "Int", "Plus" und "Mult". Jede Variante hat unterschiedliche Felder, die Informationen über den Ausdruck enthalten. In diesem Fall haben wir eine Instanz des "Plus"-Falls, bei dem die linke und rechte Unterexpression jeweils Ganzzahlen darstellen.
+Die Methode "eval" wird auf dem Enum-Objekt aufgerufen, um den Ausdruck auszuwerten. Das Match-Statement wird verwendet, um die verschiedenen Varianten des Enums zu überprüfen und die entsprechenden Aktionen auszuführen. Im vorliegenden Fall wird die "Plus"-Variante erkannt, und das Match-Statement ruft die "eval"-Methode für die linken und rechten Unterexpressionen auf und addiert die Ergebnisse.
+Eine wichtige Eigenschaft des Match-Statements in Rust ist, dass es eine vollständige Überprüfung der möglichen Fälle garantiert. Das bedeutet, dass jede Variante des Enums im Match-Statement abgedeckt sein muss, um sicherzustellen, dass keine Fälle vergessen werden. Dies führt zu sicherem Code, da alle möglichen Fälle behandelt werden und unerwartete Verhaltensweisen vermieden werden.
+Dank der Garantie von Rust, dass die Enum-Cases immer wohldefiniert sind, können wir uns darauf verlassen, dass das Match-Statement alle Fälle abdeckt und somit fehlerfreie Ergebnisse liefert. Dies trägt zur Robustheit und Stabilität unserer Programme bei.
+Das Match-Statement ist eine leistungsstarke Funktion in Rust, um mit Enums umzugehen und spezifische Aktionen basierend auf den Varianten durchzuführen. Es stellt sicher, dass die Enum-Cases wohldefiniert sind und ermöglicht eine umfassende Kontrolle über den Programmfluss. Im nächsten Kapitel werden wir uns weitere Anwendungsfälle und fortgeschrittene Techniken des Match-Statements ansehen, um sein volles Potenzial auszuschöpfen.
 \begin{minted}{rust}
 fn main(){
     let e:Exp = Exp::Plus { 
@@ -273,10 +264,14 @@ impl Exp{
    }
 }
 \end{minted}
-output
 \begin{minted}{shell}
 minted\end{minted}
-\subsubsection{Feste Enum Cases}
+\subsubsection{Hinzufügen einer neuen Enum Option}
+Im gegebenen Codebeispiel haben wir das bestehende "Exp"-Enum, das die Varianten "Int", "Plus" und "Mult" enthält. Nun möchten wir eine neue Variante "Div" hinzufügen, die eine Division repräsentiert. Dazu fügen wir den entsprechenden Code zur Enum-Definition hinzu.
+Nachdem wir die "Div"-Variante hinzugefügt haben, bleibt der Rest des Codes unverändert. Wir erstellen ein "Exp"-Objekt "e", das eine Addition zweier Ganzzahlen repräsentiert, und rufen die "eval"-Methode auf, um den Ausdruck auszuwerten.
+Das Match-Statement im "eval"-Block überprüft die verschiedenen Varianten des Enums und führt entsprechende Aktionen aus. Da wir die "Div"-Variante im Match-Statement nicht abgedeckt haben, wird der Compiler uns einen Fehler melden, da nicht alle möglichen Fälle behandelt sind.
+Um dieses Problem zu lösen, müssen wir das Match-Statement aktualisieren, um die "Div"-Variante zu berücksichtigen und ihre Auswertung zu implementieren. Indem wir die neue Variante hinzufügen und ihre logische Auswertung definieren, stellen wir sicher, dass alle Fälle im Match-Statement abgedeckt sind und der Code korrekt funktioniert.
+Dieses Beispiel zeigt die Stärke und Sicherheit von Rust bei der Arbeit mit Enums. Die Garantie, dass alle Varianten wohldefiniert sind, zwingt uns dazu, alle Fälle im Match-Statement abzudecken und mögliche unbehandelte Fälle zu vermeiden. Dadurch erhalten wir robusten und zuverlässigen Code.
 \begin{minted}{rust}
 fn main(){
     let e:Exp = Exp::Plus { 
@@ -335,7 +330,7 @@ impl Exp{
    }
 }
 \end{minted}
-output
+Beim Versuch den oben gezeigten Code zu kompilieren erhalten wir folgenden Fehler.
 \begin{minted}{shell}
 error[E0004]: non-exhaustive patterns: `&Exp::Div { .. }` not covered
   --> src/main.rs:27:14
@@ -361,9 +356,12 @@ help: ensure that all possible cases are being handled by adding a match arm wit
 For more information about this error, try `rustc --explain E0004`.
 \end{minted}
 \subsubsection{Nested Pattern Matching}
-\begin{itemize}
-	\item kann noch granulareres pattern matching betreiben
-\end{itemize}
+Das "Exp"-Enum repräsentiert arithmetische Ausdrücke und hat die Varianten "Int", "Plus" und "Mult". Wir haben auch die "eval"-Methode implementiert, die den Ausdruck auswertet und das Ergebnis zurückgibt.
+Im aktuellen Codebeispiel haben wir eine spezielle Anwendung des Match-Statements im "eval"-Block. Innerhalb des Match-Statements für die "Mult"-Variante führen wir ein weiteres Match-Statement aus, um die linke Unterexpression zu überprüfen. Wir verwenden das Doppelsternchen-Operator (**left), um auf den Inhalt der Box zuzugreifen.
+Innerhalb des inneren Match-Statements überprüfen wir, ob die linke Unterexpression ein "Int"-Objekt mit einem Wert von 0 ist. Wenn dies der Fall ist, wird sofort der Wert 0 zurückgegeben, da das Ergebnis der Multiplikation mit 0 immer 0 ist.
+Wenn die linke Unterexpression kein "Int"-Objekt mit dem Wert 0 ist, wird die Multiplikation der linken und rechten Unterexpressionen durchgeführt und das Ergebnis zurückgegeben.
+Das Beispiel verdeutlicht das Konzept des Nested Pattern Matching, bei dem wir innerhalb eines Match-Statements ein weiteres Match-Statement ausführen können, um die verschiedenen Varianten eines Enums weiter zu überprüfen. Durch das Verschachteln von Pattern Matches erhalten wir eine hohe Flexibilität bei der Handhabung komplexer Datenstrukturen.
+Die Verwendung von Nested Pattern Matching ermöglicht es uns, präzise Logik zu implementieren und spezifische Aktionen basierend auf verschiedenen Kombinationen von Varianten auszuführen. Es hilft auch, den Code lesbar und verständlich zu halten, da wir die Logik auf verschiedene Ebenen aufteilen können.
 \begin{minted}{rust}
 pub enum Exp {
     Int {
@@ -426,7 +424,13 @@ impl Exp{
    }
 }
 \end{minted}
-\subsection{Rust-Enum-Funktionalität in Java}
+\subsection{Funktionalität von Rust Enums in Java}
+In diesem Kapitel werden wir uns mit der spannenden Herausforderung befassen, wie wir die Funktionalität von Rust Enums in der Programmiersprache Java nachbilden können. Rust Enums sind algebraische Datentypen, die eine Vielzahl von Anwendungsmöglichkeiten bieten. Unser Ziel ist es, ähnliche Konzepte und Vorteile in Java zu erreichen.
+Java verfügt über Enum-Typen, die zur Definition einer festen Menge von Konstanten verwendet werden können. Diese Enums in Java sind jedoch begrenzt und bieten nicht die gleiche Flexibilität wie Rust Enums. Wir werden versuchen, die Funktionalität von Rust Enums in Java nachzubilden, um deren Leistungsfähigkeit und Ausdruckskraft zu erreichen.
+Eine Möglichkeit, Rust Enums in Java nachzubauen, besteht darin, benutzerdefinierte Klassen zu erstellen, die verschiedene Varianten repräsentieren. Diese Klassen können spezifische Eigenschaften und Methoden haben, um das Verhalten der einzelnen Varianten zu definieren. Durch den Einsatz von Vererbung und Polymorphie können wir eine ähnliche Struktur und Flexibilität wie in Rust Enums erreichen.
+Ein weiterer wichtiger Aspekt von Rust Enums ist das abgeschlossene Pattern Matching. Dies bedeutet, dass jede mögliche Variante des Enums in den entsprechenden Match-Blöcken abgedeckt werden muss. In Java können wir versuchen, eine ähnliche Funktionalität durch die Verwendung von Switch-Anweisungen und Fall-Through-Fällen zu erreichen. Indem wir sicherstellen, dass alle Varianten des Enums berücksichtigt werden, können wir eine ähnliche Garantie wie in Rust erhalten.
+Es ist wichtig anzumerken, dass Java und Rust unterschiedliche Programmiersprachen sind und jeweils ihre eigenen Stärken und Schwerpunkte haben. Daher kann es Herausforderungen geben, wenn man versucht, die volle Funktionalität von Rust Enums in Java nachzubilden. Dennoch bietet dieses Kapitel die Möglichkeit, kreative Lösungen zu finden und die Vorteile von Rust Enums auf Java-Anwendungen zu übertragen.
+Durch den Nachbau der Funktionalität von Rust Enums in Java können wir die Leistungsfähigkeit und Ausdruckskraft dieser Konstrukte nutzen und die Flexibilität unserer Java-Anwendungen verbessern. Es eröffnet uns neue Möglichkeiten und ermöglicht es uns, komplexe Datenstrukturen und Verhaltensweisen auf elegante und effektive Weise zu modellieren.
 \subsubsection{Switch Case vs Match}
 
 \begin{itemize}
@@ -435,6 +439,15 @@ impl Exp{
 \item Pattern Matching nur über weitere If/Else Abfragen Möglich
 \item nested pattern matching nur über weitere If Else Möglich
 \end{itemize}
+Im Kapitel "Switch Case vs. Match Statement" vergleichen wir die Verwendung von Switch Case in Java und dem Match Statement in Rust. Hier sind einige wichtige Punkte, auf die wir eingehen werden:
+In Java ist das Switch Case-Konstrukt eine Möglichkeit, verschiedene Fälle basierend auf einem Wert auszuwerten und entsprechenden Code auszuführen. Es ermöglicht das Vergleichen eines Werts mit verschiedenen Konstanten. Allerdings hat das Switch Case in Java einige Einschränkungen:
+- Die Verwendung von Switch Case ist auf primitive Datentypen wie Integer, Character oder Enums beschränkt. Es ist nicht möglich, komplexe Muster oder Strukturen effizient abzubilden.
+- Die Veränderung des Enums, das für den Switch Case verwendet wird, kann zu unerwartetem Verhalten führen, wenn neue Enum-Werte hinzugefügt werden. Der Compiler warnt nicht vor vergessenen Fällen oder nicht abgedeckten Werten.
+Im Gegensatz dazu bietet das Match Statement in Rust eine mächtigere und flexiblere Möglichkeit, Pattern Matching durchzuführen. Hier sind einige wichtige Aspekte:
+- Das Match Statement in Rust kann nicht nur auf Enums, sondern auch auf andere komplexe Datenstrukturen angewendet werden. Es erlaubt das Matching von Mustern, die viel komplexer sind als nur konstante Werte. Dies ermöglicht die Verarbeitung verschiedener Datenstrukturen auf eine deklarative und ausdrucksstarke Weise.
+- Das Match Statement in Rust garantiert, dass alle möglichen Fälle abgedeckt sind. Wenn ein Fall vergessen wird, gibt der Compiler einen Fehler aus. Dadurch wird vermieden, dass unbehandelte Fälle im Code auftreten und potenzielle Fehler verursachen.
+- In Java können komplexe Muster und verschachteltes Pattern Matching nur durch weitere If/Else-Abfragen erreicht werden. Dies führt oft zu umständlichem und schwer lesbarerem Code. Im Gegensatz dazu ermöglicht Rust mit dem Match Statement eine klare und gut strukturierte Handhabung von komplexen Mustern und verschachtelten Fällen.
+Insgesamt bietet das Match Statement in Rust eine leistungsstarke Möglichkeit, Muster und Fälle in Datenstrukturen effizient zu verarbeiten. Es ermöglicht eine sicherere und robustere Code-Entwicklung im Vergleich zum traditionellen Switch Case-Konstrukt in Java.
 \subsubsection{Expression-Logik in Java}
 Naiver Ansatz (Geht nicht)
 \begin{minted}{java}
@@ -587,7 +600,14 @@ new Dog Value
 new Dog Value
 new Cat value
 \end{minted}
+\newpage
 \section{Traits}
+Das Kapitel über Traits behandelt eine zentrale Funktion in Rust, mit der Entwickler Funktionalitäten zwischen verschiedenen Typen teilen können. Traits werden oft mit Interfaces in anderen Programmiersprachen verglichen, sind jedoch keine direkten Äquivalente.
+Ein Trait definiert eine Menge von Funktionen, die auf einen bestimmten Typ angewendet werden können. Es ermöglicht die gemeinsame Nutzung von Verhaltensweisen über verschiedene Typen hinweg. Im Wesentlichen legt ein Trait fest, welche Funktionen ein Typ bereitstellen muss, um als implementierendes Objekt des Traits zu gelten.
+Im Vergleich zu Interfaces sind Traits flexibler und leistungsfähiger. Während Interfaces in anderen Sprachen hauptsächlich die Schnittstelle eines Typs beschreiben, gehen Traits weiter und beschreiben eine Menge von Funktionen, die auf den Typ angewendet werden können. Traits können daher als Prädikat für einen Typ betrachtet werden - ein Typ wird nur akzeptiert, wenn er die Funktionen des Traits implementiert.
+Ein Trait ist mehr als nur ein Vertrag mit einem Typ; es ist eine Menge von Funktionen oder Verhalten, die über einen Typ verfügbar gemacht werden können. Traits sind Funktionssätze über einem Typen, während Interfaces in der Regel als eigenständige Typen betrachtet werden.
+Traits in Rust adressieren ähnliche Probleme wie Interfaces in anderen Sprachen, bieten jedoch eine größere Mächtigkeit und Flexibilität. Sie ermöglichen es Entwicklern, gemeinsame Funktionalitäten zu abstrahieren und wiederzuverwenden, indem sie Traits definieren und sie auf verschiedene Typen anwenden. Dadurch wird der Code modularer und flexibler.
+Zusammenfassend kann gesagt werden, dass Traits in Rust eine leistungsstarke Funktion sind, um geteilte Funktionalitäten zwischen verschiedenen Typen zu realisieren. Sie bieten eine flexiblere Alternative zu herkömmlichen Interfaces und ermöglichen es Entwicklern, abstrakte Konzepte zu modellieren. Durch die Verwendung von Traits können verschiedene Typen über gemeinsame Verhaltensweisen miteinander interagieren und die Wiederverwendbarkeit von Code verbessern.
 \subsection{Traits in Rust}
 \begin{enumerate}
 	\item geteilte funktionalität mit anderen Typen
@@ -600,7 +620,11 @@ new Cat value
 \begin{enumerate}
 		\item Prädikat auf einem Typen
 \end{enumerate}
-
+Der Trait "Shape" fungiert hier als Prädikat für die implementierenden Strukturen. Das bedeutet, dass eine Struktur nur dann als implementierendes Objekt des Traits gilt, wenn sie die Methode "area" implementiert.
+In dem gegebenen Beispiel werden zwei Strukturen, "Square" und "Rectangle", definiert, die beide den Trait "Shape" implementieren. Die Methode "area" wird jeweils für die Berechnung der Fläche des Quadrats und des Rechtecks implementiert.
+Durch die Implementierung des Traits "Shape" können wir nun auf die Methode "area" für Instanzen von "Square" und "Rectangle" zugreifen, unabhängig von der spezifischen Struktur. Dies ermöglicht es uns, die gleiche Funktionalität für verschiedene Formen zu verwenden und den Code zu vereinfachen.
+Der Trait "Shape" dient hier als Prädikat, das sicherstellt, dass eine Struktur über die erforderliche Funktionalität zur Berechnung der Fläche verfügt. Wenn eine Struktur den Trait "Shape" implementiert, garantieren wir, dass sie über die Methode "area" verfügt und somit als gültige geometrische Form betrachtet werden kann.
+Durch die Verwendung von Traits können wir gemeinsame Verhaltensweisen abstrahieren und wiederverwendbaren Code schreiben. In diesem Beispiel ermöglicht der Trait "Shape" die Bereitstellung einer allgemeinen Funktionalität zur Berechnung der Fläche, die von verschiedenen geometrischen Formen verwendet werden kann. Dies verbessert die Modularität und Flexibilität des Codes und ermöglicht es uns, denselben Code für verschiedene Formen zu verwenden, solange sie den Trait "Shape" implementieren.
 \begin{minted}{rust}
 trait Shape{
     fn area(s: &Self) ->i32;
@@ -748,9 +772,10 @@ impl TransformAB for Machine{
 }
 \end{minted}
 \subsubsection{Supertraits}
-\begin{itemize}
-	\item man kann hirarchie nachbauen
-\end{itemize}
+Das Kapitel Supertraits behandelt die Verwendung von Supertraits in Rust. Supertraits ermöglichen es uns, Traits zu definieren, die von anderen Traits erben. Dadurch können wir eine Hierarchie von Traits erstellen und sicherstellen, dass eine Struktur alle Anforderungen der vererbten Traits erfüllt.
+In dem gegebenen Beispiel werden mehrere Traits definiert, darunter Person, Student, Programmer und CompSciStudent. Der Trait CompSciStudent erbt von den Traits Programmer und Student, was bedeutet, dass eine Struktur, die den Trait CompSciStudent implementiert, auch die Anforderungen der vererbten Traits erfüllen muss.
+In diesem Beispiel wird die Struktur HskaStudent erstellt, die den Traits Person, Student, Programmer und CompSciStudent entspricht. Die Implementierungen der Methoden für die Traits verwenden die Felder der Struktur, um die entsprechenden Werte zurückzugeben.
+Durch die Verwendung von Supertraits können wir sicherstellen, dass eine Struktur alle Anforderungen erfüllt, die von den vererbten Traits festgelegt werden. Dies ermöglicht eine verbesserte Modularität und Wiederverwendbarkeit von Code, da wir auf vererbte Methoden und Eigenschaften zugreifen können, ohne sie erneut implementieren zu müssen.
 \begin{minted}{rust}
 fn main() {
     let s = HskaStudent{name:"Mario", university:"hska", fav_language:"rust", git_username:"yellow-tshirt"};
@@ -800,8 +825,12 @@ impl CompSciStudent for HskaStudent{
 }
 \end{minted}
 \subsection{Mächtigkeit von Traits}
+Wie bereits erwähnt besitzen Traits gewissen Vorteile gegenüber Interfaces, die ich nun anhand einiger einfacher Beispiele erläutern werden.
+Man sollte anmerken, dass noch mehr Vorteile gibt, also die, die hier aufgeführt sind.
 \subsubsection{Gleiche Methodensignatur}
-- kurzschreibweise geht hier nicht
+Mit Traits ist es möglich, mehrere geteilte Funktionalitäten über einem Typ zu bilden, selbst wenn diese die gleiche Signatur haben.
+Das Beispiel unten würde sich über Interfaces nicht einfach so implementieren lassen, da ein Signaturkonflikt entstehen würde. Dazu aber später mehr.
+Beim Methodenaufruf wird man jedoch dazu gezwungen, auf die Kurzschreibeweise zu verzichten, da der Aufruf sonst ambigiös wäre.
 \begin{minted}{rust}
 fn main() {
    let x = some_struct{};
@@ -838,6 +867,9 @@ impl boardgame for some_struct {
 }
 \end{minted}
 \subsubsection{Generische Mehrfachimplementierung}
+Traits erlauben es uns den selben Trait mehrfach mit unterschiedlichen generischen Parametern zu implementieren.
+In Java ist mit Interfaces nicht möglich. Später werden wir noch sehen wie wir auch dieses Problem in Java lösen kann.
+Da Rust nur Funktionsmengen definiert gibt es keinen Konflikt, solange eindeutig ist welche Funktion beim aufruf benutzt wird.
 \begin{minted}{rust}
 fn main() {
     let s : some_struct = some_struct{};
@@ -863,6 +895,8 @@ impl generic<String> for some_struct {
 }
 \end{minted}
 \subsubsection{Referenzierung des eigenen Typen}
+Traits sin in der Lage mittels Self, den Typen zu referenzieren, für den man ihn implementiert.
+Dies ist wie im Beispiel Clone wichtig, da wir den eigenen Typen für beliebe Structs zurückgeben möchten.
 \begin{minted}{rust}
 trait genCopy{
     fn genCopy(s: &Self) -> Self;
@@ -889,6 +923,9 @@ impl genCopy for Cat{
 }
 \end{minted}
 \subsubsection{Funktionalität für Third-Party-Datentypen}
+Ein Problem, bei Java ist auch, dass man nicht ohne weiteres Funktionalität externer Klassen erweitern kann ohne diese zu verändern.
+Würden wird eine Parser Dependency importieren, bei der wird intern aber möchten, dass sie eine sleep Methode unterstützt geht dies nicht.
+Bei Traits implementiert man einfach für den fremden Datentyp mittels des impl Blocks den gewünschten Trait.
 \begin{minted}{rust}
 use std::thread;
 use std::time::Duration;
@@ -908,8 +945,11 @@ impl Sleep for thiryparty_struct {
     }
 }
 \end{minted}
-\subsubsection{Referenzierung des eigenen Typen}
 \subsubsection{Konditionelle Implementierung}
+Via Trait Bounds ist Rust in der Lage implementationen nur für Teilmengen structs zu definieren, falls diese von einem generischen Parameter abhängig sind.
+Im Beispielcode wird dies mittels der Pair structs illustriert. Dieses stellt die Methode cmp\_display, die die Werte des Paares vergleicht und den größeren auf der Kommandozeile ausgibt.
+Das coole daran ist, dass diese Funktionalit nur zur Verfügung steht, wenn T die Traits Display und PartialOrd zur Verfügung stellt, da wir diese sonst nicht vergleichen und ausgeben könnten.
+Dies ist in Java unmöglich. Wir könnten nur T komplett beschränken und erlauben dass es nur Paare von Typen geben kann, die ausgebbar und partiell geordnet sind.
 \begin{minted}{rust}
 struct Pair<T> {
     x: T,
@@ -938,12 +978,16 @@ impl<T: Display + PartialOrd> Pair<T> {
 }
 \end{minted}
 \subsection{Traitfunktionalität in Java}
+Es ist möglich manche der Funktionalitäten von Rust Traits in Java zu haben.
+design pattern\cite{websitedesignpatterns} helfen uns an dieser stelle. gewisse funktionalitäten wie bspw. konditionelle Implementierung, sind aber gar nicht möglich.
 \subsubsection{Gleiche Methodensignatur}
-Geht nicht, weil nicht eindeutig (Signaturkonflikt)
+In Java ist es nicht möglich mehrere Interfaces zu implementieren, die eine gleiche Signatur haben.
+Bei Vererbung kann dies nicht passieren, da man immer nur eine Super Klasse hat und falls man die gleiche Methode nochmal implementiert, die aus der Super-Klasse überschreiben muss.
+Hier nochmal das Beispiel von oben aber in Java. Dies führt zur Compile-Zeit zu einem Error.
 \begin{minted}{java}
-class SomeClass implements musicplayer, boardgame{
+class someclass implements musicplayer, boardgame{
    public void play(){
-       System.out.println("You are playing");
+       system.out.println("you are playing");
    }
 }
 interface musicplayer{
@@ -953,10 +997,13 @@ interface boardgame{
    public void play();
 }
 \end{minted}
-\paragraph{Lösung via Adapterpattern}
+\paragraph{Lösung:}
+
+Falls wir aber trotzdem beide Schnittstellen anbieten müssen hilft uns das sogenannte Adapter-Pattern.
+Es stellt die gewünschte Schnittstelle anstelle der eigentlichen Klasse zur Verfügung und managt den Methodenaufruf.
 \begin{minted}{java}
-public class AdapterCompatible {
-    public static void main(String[] args) {
+public class adaptercompatible {
+    public static void main(string[] args) {
         SomeClass sc = new SomeClass();
         MusicPlayerAdapter ma = new MusicPlayerAdapter(sc);
         BoardGameAdapter ba = new BoardGameAdapter(sc);
@@ -1004,8 +1051,8 @@ class BoardGameAdapter implements BoardGame {
 }
 \end{minted}
 \subsubsection{Generische Mehrfachimplementierung}
-- Interface kann nicht mehr als einmal implementiert werden
-- Wieder Adapter
+Ähnlich wie oben gibt es einen Konflikt zwischen den Interfaces die man implementieren möchte.
+Das konkrete Problem hier, ist dass man das gleiche Interface nicht mehrmals implementieren darf, selbst wenn es der generische Parameter unterschiedlich ist und es keinen Signaturkonflikt gibt.
 \begin{minted}{java}
 public class SomeClass implements Generic<Integer>, Generic<String> {
     public static void main(String[] args) {
@@ -1022,7 +1069,9 @@ output
 SomeClass.java:1: error: Generic cannot be inherited with
 different arguments: <java.lang.Integer> and <java.lang.String>
 \end{minted}
-\paragraph{Lösung}
+\paragraph{Lösung:}
+Verwenden wir aber jeweils einen Adapter, der das jeweilige generische Interface implementiert gibt es kein Problem.
+An dieser Stelle ist zu erwähnen, dass generell alle Probleme, die durch einen Konflikt zweier Interfaces auftreten sich über das Adapter-Pattern lösen lassen.
 \begin{minted}{java}
 public class SomeClass {
     public static void main(String[] args) {
@@ -1061,6 +1110,11 @@ class GenericStringAdapter implements Generic<String> {
 }
 \end{minted}
 \subsubsection{Funktionalität für Third-Party-Datentypen}
+Da bei Java die Klasse und ihre Funktionen sehr stark gekoppelt sind, ist es nicht ohne weiteres möglich eine Funktionalität bereitzustellen ohne die Klasse selbst zu verändern.
+Obwohl dies ein häufig auftretendes Problem ist, gibt es auch hierfür ein einfaches Design Pattern.
+Das Wrapper-Pattern\cite{websitedesignpatterns}, erlaubt es uns eine Hülle um die eigentliche Klasse zu legen, die dann die eigentliche Funktion zur Verfügung stellt.
+Falls man in diesem Kontext mit dem Objekt der umhüllten Klasse interagieren möchte, geschiet der Zugriff nur indirekt über die Wrapper-Klasse.
+Im Beispiel stellen wir der Klasse ThirdParty mittels WrapperClass, indirekt die zusätzliche Funktionalit von Sleep zur Verfügung.
 \begin{minted}{java}
 public class ThirdParty {
     public static void main(String[] args) {
@@ -1097,6 +1151,8 @@ class WrapperClass {
 }
 \end{minted}
 \subsubsection{Referenzierung des eigenen Typens}
+Dieses Problem wird häufig mittels generischen Interfaces oder Klassen gelöst.
+Als übergebenen generischen Typ kann man einfach die Klasse selbst übergeben.
 \begin{minted}{java}
 public class SameInputOutput{
     public static void main(String[] args) {
@@ -1114,7 +1170,9 @@ class Dog implements sameObject<Dog>{
 }
 \end{minted}
 \subsubsection{Konditionelle Implementierung}
-Ein bisschen anders, da das Pair jetzt nur werte zulässt die von der Abstrakten Klasse comparable erben
+Wie bereits im Kapitel über Rusts konditionelle Implementierung ist dies in Java nicht möglich.
+Wir könnten nur wie im bereits beschrieben, den generischen Parameter aller Paare beschränken.
+Wenn wir wie im Beispiel das Hunde-Paar instanziieren möchten bekommen wir einen Fehler zur Compile-Zeit.
 \begin{minted}{java}
 public class Conditional {
     public static void main(String[] args) {
@@ -1158,7 +1216,7 @@ T extends Comparable<T> declared in class Pair
 Conditional.java:4: error: incompatible types: Dog cannot be converted to Comparable
 Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
 \end{minted}
-Eine Idee wäre noch dynamisches Checken mit instance of, das ist aber Fehleranfällig. 
+\newpage
 \section{Vergleich}
 \subsection{Enums}
 \begin{itemize}

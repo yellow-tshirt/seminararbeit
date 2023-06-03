@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.2)  2 JUN 2023 17:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.2)  3 JUN 2023 16:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -488,17 +488,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 4.
-
-Overfull \hbox (6.27843pt too wide) in paragraph at lines 15--15
- [][] [][]\OT1/cmr/m/n/10 Rust En-ums und die Ver-mei-dung von Nullpointer-Ausn
-ahmen[] [][]  
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.51 ... Implementierung}{24}{subsubsection.3.3.5}
+l.51 ...numberline {4.1}Enums}{34}{subsection.4.1}
                                                   % [2
 
 ])
@@ -510,7 +504,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.26 \newpage
-              [1] [1]
+              [1] [1] [2]
 \openout3 = `rust-enums-traits.pyg'.
 
  (./_minted-rust-enums-traits/default.pygstyle)
@@ -523,12 +517,12 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 
 
 (./_minted-rust-enums-traits/6C132982F40D3CBBFEC627EE0445AFEEDA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [2])
+CEC918FBF87377.pygtex [3])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/2B199E5D434C7D0152BDA16207E37123DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex) [3]
+CEC918FBF87377.pygtex) [4]
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -538,7 +532,7 @@ DA19D5D68E57E0.pygtex)
 
 
 (./_minted-rust-enums-traits/F67AA7D12DC58141C10D8968FD851F44DD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex)
+DA19D5D68E57E0.pygtex [5])
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -553,27 +547,28 @@ DA19D5D68E57E0.pygtex)
 
 
 (./_minted-rust-enums-traits/31BEFA60DA55398021776FAB3ADECE04DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [4])
+CEC918FBF87377.pygtex [6])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/EDC57085EBF90F97EE0EF8635B2006E2DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex)
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/CAEE6B1A51926286853C2B4BDD86C673DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [5])
+CEC918FBF87377.pygtex [7])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/36F2553B9375FDF3BBA1010076E64058DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex)
+CEC918FBF87377.pygtex [8])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/A9F12ADEABD9EFBDF7576E453698BEA2DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [6])
+CEC918FBF87377.pygtex
+Overfull \hbox (2.00055pt too wide) in paragraph at lines 226--1
+\OT1/cmr/m/n/10 Im fol-gen-den Co-de-bei-spiel il-lu-strie-ren wir die Ver-wen-
+dung des Match-Statements
+ []
+
+[9])
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -583,57 +578,69 @@ D36407ED4A681D.pygtex)
 
 
 (./_minted-rust-enums-traits/8BCEEDF2377ED4DD4F32053DBD3F9E96DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [7])
+CEC918FBF87377.pygtex
+Overfull \hbox (21.77846pt too wide) in paragraph at lines 267--1
+\OT1/cmr/m/n/10 ten []Int", PP-lus[]und MM-ult^^?enth[]alt. Nun m[]ochten wir e
+i-ne neue Va-ri-an-te "Div"hinzuf[]ugen,
+ []
+
+
+Overfull \hbox (1.8618pt too wide) in paragraph at lines 267--1
+\OT1/cmr/m/n/10 Enum-Definition hin-zu. Nach-dem wir die "Div-Va-ri-an-te hin-z
+u-gef[]ugt ha-ben, bleibt
+ []
+
+[10] [11])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/9E8C28B8B8507A50994192060FF5EB006399E595E3B1A76D1A
-D36407ED4A681D.pygtex [8])
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/52F831C09BBD2DCEB165156D34E5B1B3DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex)
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/8D1D5573523CC05634CF7223A0909C71DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [9])
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/E497FDB032C8DA9B6AAB25FD82F6C3B0DD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [10])
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/77AB6001ADA6873929F64546FA0FE986DD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [11])
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/FC92F2E13418F5A5D06B40AF5BA0EE78DD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [12])
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/84C3FDDDA2173CDA30098A63148735D66399E595E3B1A76D1A
 D36407ED4A681D.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
+(./_minted-rust-enums-traits/52F831C09BBD2DCEB165156D34E5B1B3DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [12])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/8D1D5573523CC05634CF7223A0909C71DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [13]) [14]
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/E497FDB032C8DA9B6AAB25FD82F6C3B0DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [15])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/77AB6001ADA6873929F64546FA0FE986DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [16])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/FC92F2E13418F5A5D06B40AF5BA0EE78DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [17])
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/84C3FDDDA2173CDA30098A63148735D66399E595E3B1A76D1A
+D36407ED4A681D.pygtex) [18]
+\openout3 = `rust-enums-traits.pyg'.
+
+
 (./_minted-rust-enums-traits/0C5A599253A82527FD3D9EEB6B737A81DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [13])
+CEC918FBF87377.pygtex [19])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/2C86498E50BC23B555E8B1B2579EF4DEDA9AEEC0A091E1E095
-CEC918FBF87377.pygtex)
+CEC918FBF87377.pygtex [20])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/C3FA8979120F48A725C601AA9E06A052DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [14])
+CEC918FBF87377.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -653,7 +660,7 @@ CEC918FBF87377.pygtex)
 
 
 (./_minted-rust-enums-traits/AE674BD72B166407B5502CF39F1C0090DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex)
+CEC918FBF87377.pygtex [21])
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -663,27 +670,27 @@ CEC918FBF87377.pygtex)
 
 
 (./_minted-rust-enums-traits/F0D4675CA681ABFD4F716A3DE47883D6DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [15])
-\openout3 = `rust-enums-traits.pyg'.
-
-
-(./_minted-rust-enums-traits/E35B983ACAB63895158DBE57B0143E71DA9AEEC0A091E1E095
 CEC918FBF87377.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
+(./_minted-rust-enums-traits/E35B983ACAB63895158DBE57B0143E71DA9AEEC0A091E1E095
+CEC918FBF87377.pygtex [22])
+\openout3 = `rust-enums-traits.pyg'.
+
+
 (./_minted-rust-enums-traits/7E303D37E3041354E90EC9BAE7FC8D36DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [16])
+CEC918FBF87377.pygtex [23])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/80602B3AD5E6022925D9797592086D31DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [17])
+CEC918FBF87377.pygtex [24])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/D6C444C0F8A83AFC22507BBED57BDA91DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [18])
+CEC918FBF87377.pygtex [25])
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -693,27 +700,27 @@ CEC918FBF87377.pygtex)
 
 
 (./_minted-rust-enums-traits/65573F6D026A951DB4674B2737D2E619DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex)
+CEC918FBF87377.pygtex [26])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/529943636ED6185B6FBB565FCBF06D81DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [19])
+CEC918FBF87377.pygtex [27])
 \openout3 = `rust-enums-traits.pyg'.
 
 
-(./_minted-rust-enums-traits/00D3D6857E09E0BD19CFD7A95C3F4726DD1E93C1FA72432E0E
+(./_minted-rust-enums-traits/BE4950A5F78BD2B9C35CFEAB64389E02DD1E93C1FA72432E0E
 DA19D5D68E57E0.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
-(./_minted-rust-enums-traits/99A5DF26420E89F09300B34B1366302FDD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [20])
+(./_minted-rust-enums-traits/22BC4F6B9076641F864036EA06831152DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex [28])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/15DCA9EA90FE6A26202B440547601C18DD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [21])
+DA19D5D68E57E0.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -723,17 +730,17 @@ D36407ED4A681D.pygtex)
 
 
 (./_minted-rust-enums-traits/290683204067F9A08B6198C4A696970BDD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [22])
+DA19D5D68E57E0.pygtex [29])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/F51EFB90D3D09387427D5FFACFF8E70ADD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex)
+DA19D5D68E57E0.pygtex [30])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/F39B2C5091442F297B3F040F71DC4222DD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [23])
+DA19D5D68E57E0.pygtex [31])
 \openout3 = `rust-enums-traits.pyg'.
 
 
@@ -743,21 +750,21 @@ DA19D5D68E57E0.pygtex)
 
 
 (./_minted-rust-enums-traits/7716196ACEF8C01A5FC9D83DCAF96B926399E595E3B1A76D1A
-D36407ED4A681D.pygtex) [24] (./rust-enums-traits.bbl) [25]
+D36407ED4A681D.pygtex [32]) [33] (./rust-enums-traits.bbl) [34]
 (./rust-enums-traits.aux)
 Package rerunfilecheck Info: File `rust-enums-traits.out' has not changed.
-(rerunfilecheck)             Checksum: 0E5F791DC07A04E0252043BE9FA2DD6F;9052.
+(rerunfilecheck)             Checksum: DFEC450DED4A3D0B338E78E028D12CD4;8587.
 runsystem(rm rust-enums-traits.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 14857 strings out of 478287
- 271759 string characters out of 5849290
- 610794 words of memory out of 5000000
- 32621 multiletter control sequences out of 15000+600000
+ 14872 strings out of 478287
+ 271423 string characters out of 5849290
+ 610721 words of memory out of 5000000
+ 32633 multiletter control sequences out of 15000+600000
  474792 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,67p,591b,701s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,6n,67p,970b,701s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -766,11 +773,12 @@ t/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts
 1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on rust-enums-traits.pdf (28 pages, 171197 bytes).
+cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on rust-enums-traits.pdf (37 pages, 222023 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 94 named destinations out of 1000 (max. 500000)
- 409 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 509 PDF objects out of 1000 (max. 8388607)
+ 445 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 393 words of extra memory for PDF output out of 10000 (max. 10000000)
 
