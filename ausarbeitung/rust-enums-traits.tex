@@ -32,11 +32,11 @@ Manche Funktionalitäten lassen sich mittels Designpatterns, wie dem Adapter-Pat
 Bezogen auf diese Konzepte ist Rust mit Java verglichen also syntaktisch prägnanter, lesbarer und stellenweise funktinell sogar überlegen.
 \end{abstract}
 \section{Einleitung}
-Die Programmiersprachen Rust und Java bieten Entwicklern eine Vielzahl von Werkzeugen und Sprachkonstrukten, um robusten und flexiblen Code zu schreiben. In diesem Vergleich konzentrieren wir uns auf zwei wichtige Konzepte: Enums und Traits. Wir werfen einen genauen Blick darauf, wie Rust und Java diese Konzepte implementieren und welche Möglichkeiten sie Entwicklern bieten, um Funktionalität zwischen verschiedenen Datentypen zu teilen.
-In Rust sind Enums algebraische Datentypen, die ursprünglich aus der funktionalen Programmiersprache Haskell stammen. Sie ermöglichen es, eine feste Anzahl von Varianten zu definieren, die jeweils spezifische Informationen enthalten können. Mit dem Pattern Matching-Mechanismus in Rust ist es möglich, auf die verschiedenen Varianten eines Enums zuzugreifen und sie zu verarbeiten. Ein bemerkenswertes Merkmal des Rust Enum Pattern Matching ist, dass es abgeschlossen ist, das heißt, jeder Fall des Enums muss abgedeckt werden. Dadurch wird vermieden, dass potenzielle Fehler unbemerkt bleiben und der Code robuster wird.
-Ein weiteres leistungsstarkes Konzept in Rust sind Traits. Diese können als Mengen über einem Typ betrachtet werden und ähneln den typklassen in Haskell. Ähnlich zu Interfaces und Vererbung in Java ermöglichen Traits in Rust eine Möglichkeit, Funktionalität zwischen verschiedenen Datentypen zu teilen. Sie dienen als Prädikate über einem Typen und erlauben es, bestimmte Verhaltensweisen zu deklarieren, ohne eine konkrete Implementierung vorzugeben. Dies fördert eine modulare Codebasis und ermöglicht eine flexible Kombination von Funktionen.
-Im Vergleich zu Java zeigen Traits in Rust einige bemerkenswerte Vorteile. Während Java Interfaces zwar eine ähnliche Funktion bieten, aber oft mit Einschränkungen verbunden sind und Vererbung komplexe Klassenhierarchien erfordert, erlauben Traits in Rust eine granulare und unabhängige Zusammenarbeit von Typen. Sie bieten eine hohe Flexibilität bei der Kombination von Funktionen und vermeiden unnötige Abhängigkeiten zwischen Klassen. Im weiteren Verlauf dieses Vergleichs werden wir detaillierter auf diese Unterschiede eingehen und untersuchen, ob Java, möglicherweise mithilfe von Design Patterns, in der Lage ist, ähnliche Funktionalitäten wie Rust zu gewährleisten.
-Mit diesem Hintergrundwissen über Enums und Traits in Rust im Vergleich zu Java können wir nun einen genaueren Blick auf diese Konzepte werfen und ihre Einsatzmöglichkeiten sowie ihre Vor- und Nachteile analysieren. Indem wir die Stärken und Schwächen dieser Sprachkonstrukte untersuchen, werden wir ein umfassendes Verständnis dafür entwickeln, wie sie die Entwicklung von robustem und wartbarem Code in den jeweiligen Sprachen unterstützen können.
+Die Programmiersprachen Rust und Java bieten Entwicklern eine Vielzahl von Programmierkonzepten, um robusten und flexiblen Code zu schreiben. In diesem Vergleich konzentrieren wir uns auf zwei wichtige Konzepte: Enums und Traits. 
+Da Java nicht mit Traits arbeitet werden stattdessen die zur Verfügung stehenden Möglichkeiten mit Interfaces und Klassen-Hirarchie verglichen werden, da diese ähnliche Probleme wie Traits adressieren.
+In Rust sind Enums algebraische Datentypen, die ursprünglich aus der funktionalen Programmiersprache Haskell stammen. Sie ermöglichen es, eine feste Anzahl von Varianten zu definieren, die jeweils spezifische Informationen enthalten können. Mit Pattern Matching ist es in Rust möglich, auf die verschiedenen Varianten eines Enums zuzugreifen und sie zu verarbeiten. Ein bemerkenswertes Merkmal des Rust Enum Pattern Matching ist, dass es abgeschlossen ist, das heißt, jeder Fall des Enums muss abgedeckt werden. Dadurch wird vermieden, dass potenzielle Fehler unbemerkt bleiben und der Code robuster wird.
+Ein weiteres leistungsstarkes Konzept in Rust sind Traits. Diese können als Mengen über einem Typ betrachtet werden und verhalten sich Typklassen in Haskell. Ähnlich zu Interfaces und Vererbung in Java ermöglichen Traits in Rust eine Möglichkeit, Funktionalität zwischen verschiedenen Datentypen zu teilen. Sie dienen als Prädikate über einem Typen und erlauben es, bestimmte Verhaltensweisen zu festzulegen, ohne eine konkrete Implementierung vorzugeben. Dies ermöglicht uns flexiblen und modularen Code zu schreiben.
+Im Vergleich zu Java zeigen Traits in Rust einige bemerkenswerte Vorteile. Während Java Interfaces zwar eine ähnliche Funktion bieten, aber oft mit Einschränkungen verbunden sind und Vererbung komplexe Klassenhierarchien erfordert, erlauben Traits in Rust eine granulare und unabhängige Zusammenarbeit von Typen. Sie bieten eine hohe Flexibilität bei der Kombination von Funktionen und vermeiden unnötige Abhängigkeiten zwischen Klassen. Später werden wir detaillierter auf diese Unterschiede eingehen und untersuchen, ob Java in der Lage ist, ähnliche Funktionalitäten wie Rust zu gewährleisten.
 \newpage
 \section{Enums}
 Enums sind in der Programmierung eine Möglichkeit, eine begrenzte Anzahl von Varianten oder Optionen zu definieren. Sie dienen dazu, eine feste Menge von Werten darzustellen, die ein bestimmtes Konzept oder eine bestimmte Entität repräsentieren können. Enums ermöglichen es, den Code lesbarer zu gestalten, indem sie eine klar definierte Liste von möglichen Zuständen oder Varianten zur Verfügung stellen.
@@ -128,37 +128,65 @@ enum Animal{
     Bird
 }
 \end{minted}
+\newpage
 \subsubsection{Enums mit Werten}
 Java koppelt zugehörige für die Enum-Optionen direkt an die Option selber.
-Hier ist zu beachten, dass die Werte immer statisch und final sind.
 \begin{minted}{java}
 enum Animal{
     Dog("Dog", 20),
     Cat("Dog", 10),
     Bird("Bird", 1);
 
-    public final String label;
-    public final int weight;
+    public String label;
+    public int weight;
 
-    private Animal(String label, int weight){
+    private Animal(String label, int weight)
         this.label= label;
         this.weight = weight;
     }
 }
 \end{minted}
+Hier ist zu beachten, dass die Werte der jeweiligen Option Statisch sind.
+Alle Vögel haben also immer das gleiche Gewicht.
+Deswegn würde folgender Code auch für die Ausgabe der Werte von e2 die veränderten Werte von e1 ausgeben.
+\begin{minted}{java}
+public class playground{
+	public static void main(String[] args) {
+		Animal e1 = Animal.Bird;
+		Animal e2 = Animal.Bird;
+		e1.weight = 9;		
+		e1.label = "Newbird";
+		System.out.println(e2.label);
+		System.out.println(e2.weight);
+	}
+	
+}
+\end{minted}
+\paragraph{Output}
+\begin{minted}{shell}
+Newbird
+9
+\end{minted}
+\newpage
 \subsubsection{Enum mit Funktionen}
+In Java werden Funktionen auf dem Enum im Enum definiert. Abgesehen vom Konstruktor, könnte man diese aber auch an einer anderen Stelle definieren.
+Interessant ist auch, dass wir bei der Abfrage anders als beim Pattern-Matching immer einen default Case der Abfrage brauchen, da Java zur Compile-Zeit schon nicht weiß, dass die Funktion schon wohl definiert ist. Hierzu aber später mehr.
 \begin{minted}{rust}
 enum Animal{
-    Dog
-    Cat
+    Dog,
+    Cat,
     Bird;
 
     public boolean isCat(){
         if (this == Animal.Cat){
             return true;
-        }else{
+        }else if(this == Animal.Dog){
             return false;
-        }
+        }else if(this == Anima.Bird){
+            return false;
+		}else{
+            return false;
+		}
     }
 }
 \end{minted}

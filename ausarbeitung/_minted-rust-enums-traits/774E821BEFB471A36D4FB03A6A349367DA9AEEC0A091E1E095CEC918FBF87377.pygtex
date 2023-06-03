@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{enum} \PYG{n+nc}{Animal}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Dog}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Cat}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Bird}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n}{public}\PYG{+w}{ }\PYG{n}{boolean}\PYG{+w}{ }\PYG{n}{isCat}\PYG{p}{()\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{this}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{.}\PYG{n}{Cat}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n}{this}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{.}\PYG{n}{Dog}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n}{this}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{Anima}\PYG{p}{.}\PYG{n}{Bird}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

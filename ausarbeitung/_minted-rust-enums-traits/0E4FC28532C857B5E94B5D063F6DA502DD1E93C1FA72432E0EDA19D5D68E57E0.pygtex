@@ -4,10 +4,10 @@
 \PYG{+w}{    }\PYG{n}{Cat}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Dog\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{),}
 \PYG{+w}{    }\PYG{n}{Bird}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Bird\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
 
-\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{;}
-\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{;}
 
-\PYG{+w}{    }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{n+nf}{Animal}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{n+nf}{Animal}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{)}
 \PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{label}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{label}\PYG{p}{;}
 \PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{weight}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{;}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}

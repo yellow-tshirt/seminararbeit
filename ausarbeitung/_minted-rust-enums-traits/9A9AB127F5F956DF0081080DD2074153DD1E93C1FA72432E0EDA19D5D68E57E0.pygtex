@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{playground}\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{Animal}\PYG{+w}{ }\PYG{n}{e1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{.}\PYG{n+na}{Bird}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{Animal}\PYG{+w}{ }\PYG{n}{e2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{.}\PYG{n+na}{Bird}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{e1}\PYG{p}{.}\PYG{n+na}{weight}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{9}\PYG{p}{;}\PYG{+w}{		}
+\PYG{+w}{		}\PYG{n}{e1}\PYG{p}{.}\PYG{n+na}{label}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Newbird\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{n}{e2}\PYG{p}{.}\PYG{n+na}{label}\PYG{p}{);}
+\PYG{+w}{		}\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{n}{e2}\PYG{p}{.}\PYG{n+na}{weight}\PYG{p}{);}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

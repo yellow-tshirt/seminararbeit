@@ -1,13 +1,14 @@
 \babel@toc {german}{}\relax 
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
-\contentsline {section}{\numberline {2}Enums}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Enums in Rust}{3}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Normale Enums}{3}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Enum mit Werten}{3}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Enum mit Funktionen}{4}{subsubsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.2}Enums in Java}{5}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Normale Enums}{5}{subsubsection.2.2.1}%
+\contentsline {section}{\numberline {2}Enums}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Enums in Rust}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Normale Enums}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Enum mit Werten}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Enum mit Funktionen}{3}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Enums in Java}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Normale Enums}{4}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Enums mit Werten}{5}{subsubsection.2.2.2}%
+\contentsline {paragraph}{Output}{5}{section*.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Enum mit Funktionen}{6}{subsubsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.3}Mächtigkeit von Rust Enums}{6}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Der Enum als algebraischer Datentyp}{6}{subsubsection.2.3.1}%
@@ -41,9 +42,9 @@
 \contentsline {subsubsection}{\numberline {3.2.5}Konditionelle Implementierung}{27}{subsubsection.3.2.5}%
 \contentsline {subsection}{\numberline {3.3}Traitfunktionalität in Java}{28}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Gleiche Methodensignatur}{28}{subsubsection.3.3.1}%
-\contentsline {paragraph}{Lösung:}{28}{section*.2}%
+\contentsline {paragraph}{Lösung:}{28}{section*.3}%
 \contentsline {subsubsection}{\numberline {3.3.2}Generische Mehrfachimplementierung}{29}{subsubsection.3.3.2}%
-\contentsline {paragraph}{Lösung:}{30}{section*.3}%
+\contentsline {paragraph}{Lösung:}{30}{section*.4}%
 \contentsline {subsubsection}{\numberline {3.3.3}Funktionalität für Third-Party-Datentypen}{30}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}Referenzierung des eigenen Typens}{31}{subsubsection.3.3.4}%
 \contentsline {subsubsection}{\numberline {3.3.5}Konditionelle Implementierung}{32}{subsubsection.3.3.5}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.2)  3 JUN 2023 16:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.2)  3 JUN 2023 18:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -492,7 +492,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.51 ...numberline {4.1}Enums}{34}{subsection.4.1}
+l.52 ...numberline {4.1}Enums}{35}{subsection.4.1}
                                                   % [2
 
 ])
@@ -504,7 +504,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.26 \newpage
-              [1] [1] [2]
+              [1] [1]
 \openout3 = `rust-enums-traits.pyg'.
 
  (./_minted-rust-enums-traits/default.pygstyle)
@@ -517,26 +517,36 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 
 
 (./_minted-rust-enums-traits/6C132982F40D3CBBFEC627EE0445AFEEDA9AEEC0A091E1E095
-CEC918FBF87377.pygtex [3])
+CEC918FBF87377.pygtex [2])
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/2B199E5D434C7D0152BDA16207E37123DA9AEEC0A091E1E095
-CEC918FBF87377.pygtex) [4]
+CEC918FBF87377.pygtex) [3]
 \openout3 = `rust-enums-traits.pyg'.
 
 
 (./_minted-rust-enums-traits/9FC9AB56C83AA347F9B25640AC8C3B61DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex) [4]
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/0E4FC28532C857B5E94B5D063F6DA502DD1E93C1FA72432E0E
 DA19D5D68E57E0.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
-(./_minted-rust-enums-traits/F67AA7D12DC58141C10D8968FD851F44DD1E93C1FA72432E0E
-DA19D5D68E57E0.pygtex [5])
+(./_minted-rust-enums-traits/9A9AB127F5F956DF0081080DD2074153DD1E93C1FA72432E0E
+DA19D5D68E57E0.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
 
-(./_minted-rust-enums-traits/6908019CBBD21D183A3564EF4B3878C1DA9AEEC0A091E1E095
+(./_minted-rust-enums-traits/9CB8C736412BA83ED7C37543ECE6B6C86399E595E3B1A76D1A
+D36407ED4A681D.pygtex) [5]
+\openout3 = `rust-enums-traits.pyg'.
+
+
+(./_minted-rust-enums-traits/774E821BEFB471A36D4FB03A6A349367DA9AEEC0A091E1E095
 CEC918FBF87377.pygtex)
 \openout3 = `rust-enums-traits.pyg'.
 
@@ -563,7 +573,7 @@ CEC918FBF87377.pygtex [8])
 
 (./_minted-rust-enums-traits/A9F12ADEABD9EFBDF7576E453698BEA2DA9AEEC0A091E1E095
 CEC918FBF87377.pygtex
-Overfull \hbox (2.00055pt too wide) in paragraph at lines 226--1
+Overfull \hbox (2.00055pt too wide) in paragraph at lines 257--1
 \OT1/cmr/m/n/10 Im fol-gen-den Co-de-bei-spiel il-lu-strie-ren wir die Ver-wen-
 dung des Match-Statements
  []
@@ -579,13 +589,13 @@ D36407ED4A681D.pygtex)
 
 (./_minted-rust-enums-traits/8BCEEDF2377ED4DD4F32053DBD3F9E96DA9AEEC0A091E1E095
 CEC918FBF87377.pygtex
-Overfull \hbox (21.77846pt too wide) in paragraph at lines 267--1
+Overfull \hbox (21.77846pt too wide) in paragraph at lines 298--1
 \OT1/cmr/m/n/10 ten []Int", PP-lus[]und MM-ult^^?enth[]alt. Nun m[]ochten wir e
 i-ne neue Va-ri-an-te "Div"hinzuf[]ugen,
  []
 
 
-Overfull \hbox (1.8618pt too wide) in paragraph at lines 267--1
+Overfull \hbox (1.8618pt too wide) in paragraph at lines 298--1
 \OT1/cmr/m/n/10 Enum-Definition hin-zu. Nach-dem wir die "Div-Va-ri-an-te hin-z
 u-gef[]ugt ha-ben, bleibt
  []
@@ -758,10 +768,10 @@ runsystem(rm rust-enums-traits.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 14872 strings out of 478287
- 271423 string characters out of 5849290
- 610721 words of memory out of 5000000
- 32633 multiletter control sequences out of 15000+600000
+ 14885 strings out of 478287
+ 272535 string characters out of 5849290
+ 610867 words of memory out of 5000000
+ 32639 multiletter control sequences out of 15000+600000
  474792 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,6n,67p,970b,701s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -775,10 +785,10 @@ c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on rust-enums-traits.pdf (37 pages, 222023 bytes).
+Output written on rust-enums-traits.pdf (37 pages, 222763 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 445 compressed objects within 5 object streams
- 100 named destinations out of 1000 (max. 500000)
+ 510 PDF objects out of 1000 (max. 8388607)
+ 446 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
  393 words of extra memory for PDF output out of 10000 (max. 10000000)
 
