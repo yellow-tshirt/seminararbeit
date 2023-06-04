@@ -4,12 +4,12 @@
 \contentsline {subsection}{\numberline {2.1}Enums in Rust}{2}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Normale Enums}{2}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Enums mit Werten}{3}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Enum mit Funktionen}{4}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.3}Enums mit Funktionen}{4}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Enums in Java}{4}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Normale Enums}{4}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Enums mit Werten}{5}{subsubsection.2.2.2}%
 \contentsline {paragraph}{Output}{5}{section*.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Enum mit Funktionen}{6}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3}Enums mit Funktionen}{6}{subsubsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.3}Mächtigkeit von Rust Enums}{6}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Der Enum als algebraischer Datentyp}{6}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Generische Enums}{7}{subsubsection.2.3.2}%

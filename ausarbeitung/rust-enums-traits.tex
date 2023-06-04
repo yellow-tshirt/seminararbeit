@@ -89,8 +89,8 @@ impl Animal{
 
 \end{minted}
 \newpage
-\subsubsection{Enum mit Funktionen}
-Das definieren von Funktionen über einem Enumtypen funktioniert analog wie mit den hinzufügen von Werten.
+\subsubsection{Enums mit Funktionen}
+Das Definieren von Funktionen über einem Enumtypen funktioniert analog wie das Hinzufügen von Werten.
 \begin{minted}{rust}
 enum Animal {
     Dog,
@@ -115,7 +115,7 @@ Eine wichtige Eigenschaft von Java Enums ist, dass ihre Instanzvariablen statisc
 Durch die Verwendung von speziellen Klassen und Instanzen ermöglichen Java Enums eine effiziente und sichere Handhabung einer begrenzten Menge von Optionen. 
 Im Vergleich zu Rust Enums fehlen jedoch in Java einige der fortgeschritteneren Konzepte wie algebraische Datentypen und abgeschlossenes Pattern Matching. Dies kann dazu führen, dass die Handhabung und Verarbeitung von Enums in Java etwas umständlicher ist und es möglicherweise erforderlich ist, zusätzliche Überprüfungen und Maßnahmen zu ergreifen, um sicherzustellen, dass alle möglichen Varianten abgedeckt sind.
 \subsubsection{Normale Enums}
-Enums funktionieren im einfachsten Fall funktionell und syntaktisch Analog zu Rust.
+Enums funktionieren im einfachsten Fall funktionell und syntaktisch analog zu Rust.
 \begin{minted}{java}
 enum Animal{
     Dog,
@@ -125,7 +125,7 @@ enum Animal{
 \end{minted}
 \newpage
 \subsubsection{Enums mit Werten}
-Java koppelt zugehörige für die Enum-Optionen direkt an die Option selber.
+Java koppelt zugehörige Werte der Enum-Optionen direkt an die Optionen.
 \begin{minted}{java}
 enum Animal{
     Dog("Dog", 20),
@@ -163,8 +163,8 @@ Newbird
 9
 \end{minted}
 \newpage
-\subsubsection{Enum mit Funktionen}
-In Java werden Funktionen auf dem Enum im Enum definiert. Abgesehen vom Konstruktor, könnte man diese aber auch an einer anderen Stelle definieren.
+\subsubsection{Enums mit Funktionen}
+In Java werden Funktionen auf dem Enum im Enum definiert. Abgesehen vom Konstruktor könnte man diese aber auch an einer anderen Stelle definieren.
 \begin{minted}{rust}
 enum Animal{
     Dog,
