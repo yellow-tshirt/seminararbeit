@@ -938,11 +938,11 @@ impl<T: Display + PartialOrd> Pair<T> {
 \end{minted}
 \subsection{Traitfunktionalität in Java}
 Es ist möglich, manche der Funktionalitäten von Rust Traits in Java zu haben.
-Designpatterns\cite{websitedesignpatterns} helfen uns an dieser stelle. gewisse funktionalitäten wie bspw. konditionelle Implementierung, sind aber gar nicht möglich.
+Designpatterns\cite{websitedesignpatterns} helfen uns an dieser Stelle. Gewisse Funktionalitäten wie konditionelle Implementierung sind aber nicht möglich.
 \subsubsection{Gleiche Methodensignatur}
-In Java ist es nicht möglich mehrere Interfaces zu implementieren, die eine gleiche Signatur haben.
-Bei Vererbung kann dies nicht passieren, da man immer nur eine Super Klasse hat und falls man die gleiche Methode nochmal implementiert, die aus der Super-Klasse überschreiben muss.
-Hier nochmal das Beispiel von oben aber in Java. Dies führt zur Compile-Zeit zu einem Error.
+In Java ist es nicht möglich, mehrere Interfaces zu implementieren, die eine gleiche Signatur haben.
+Bei Vererbung kann dies nicht passieren, da man immer nur eine super-klasse hat. Falls man die gleiche methode noch einmal in der Unterklasse implementiert, wird damit die Methode aus der Superklasse überschrieben und ist damit nicht ambig.
+Hier noch einmal das Beispiel von oben in java. Dies führt zu einem Fehler bei der Kompilierzeit.
 \begin{minted}{java}
 class someclass implements musicplayer, boardgame{
    public void play(){
@@ -957,21 +957,21 @@ interface boardgame{
 }
 \end{minted}
 \paragraph{Lösung:}
-Falls wir aber trotzdem beide Schnittstellen anbieten müssen hilft uns das sogenannte Adapter-Pattern\cite{websitedesignpatterns}.
+Falls wir aber trotzdem beide Schnittstellen anbieten müssen, hilft uns das sogenannte Adapter-Pattern\cite{websitedesignpatterns}.
 Es stellt die gewünschte Schnittstelle anstelle der eigentlichen Klasse zur Verfügung und managt den Methodenaufruf.
 \begin{minted}{java}
 public class adaptercompatible {
     public static void main(string[] args) {
-        SomeClass sc = new SomeClass();
-        MusicPlayerAdapter ma = new MusicPlayerAdapter(sc);
-        BoardGameAdapter ba = new BoardGameAdapter(sc);
+        someclass sc = new someclass();
+        musicplayeradapter ma = new musicplayeradapter(sc);
+        boardgameadapter ba = new boardgameadapter(sc);
         ma.play();
         ba.play();
     }
 }
-class SomeClass{
-    public void playMusic(){
-        System.out.println("Playing music");
+class someclass{
+    public void playmusic(){
+        system.out.println("playing music");
     }
     public void playBoardGame(){
         System.out.println("Playing boardgame");
@@ -1008,10 +1008,10 @@ class BoardGameAdapter implements BoardGame {
     }
 }
 \end{minted}
-Der Text durch das benötigen von mehreren Klassen viel verboser und unübersichtlicher. Des weiteren muss man sich mit Design Pattern auseinandersetzen. Insgesamt also sehr viel Aufwand, für die gleiche Funktionalität.
+Der Text wird durch das Benötigen von mehreren Klassen viel verboser und unübersichtlicher. Des weiteren muss man sich mit Design Pattern auseinandersetzen, was Insgesamt für sehr viel Aufwand für die gleiche Funktionalität sorgt.
 \subsubsection{Generische Mehrfachimplementierung}
-Ähnlich wie oben gibt es einen Konflikt zwischen den Interfaces die man implementieren möchte.
-Das konkrete Problem hier, ist dass man das gleiche Interface nicht mehrmals implementieren darf, selbst wenn es der generische Parameter unterschiedlich ist und es keinen Signaturkonflikt gibt.
+Ähnlich wie Oben gibt es einen Konflikt zwischen den Interfaces, die man implementieren möchte.
+Das konkrete Problem hier ist, dass man das gleiche Interface nicht mehrmals implementieren darf, selbst wenn der generische Parameter unterschiedlich ist und es keinen Signaturkonflikt gibt.
 \begin{minted}{java}
 public class SomeClass implements Generic<Integer>, Generic<String> {
     public static void main(String[] args) {
@@ -1023,14 +1023,15 @@ interface Generic<T> {
     public T mygenvalue();
 }
 \end{minted}
-output
+\paragraph{Output:}
 \begin{minted}{shell}
 SomeClass.java:1: error: Generic cannot be inherited with
 different arguments: <java.lang.Integer> and <java.lang.String>
 \end{minted}
+\newpage
 \paragraph{Lösung:}
-Verwenden wir aber jeweils einen Adapter, der das jeweilige generische Interface implementiert gibt es kein Problem.
-An dieser Stelle ist zu erwähnen, dass generell alle Probleme, die durch einen Konflikt zweier Interfaces auftreten sich über das Adapter-Pattern lösen lassen.
+Verwenden wir aber jeweils einen Adapter, der das jeweilige generische Interface implementiert, tritt das Problem nicht auf.
+An dieser Stelle ist zu erwähnen, dass generell alle Probleme, die durch einen Konflikt zweier Interfaces auftreten, sich über das Adapter-Pattern lösen lassen.
 \begin{minted}{java}
 public class SomeClass {
     public static void main(String[] args) {
@@ -1069,11 +1070,10 @@ class GenericStringAdapter implements Generic<String> {
 }
 \end{minted}
 \subsubsection{Funktionalität für Third-Party-Datentypen}
-Da bei Java die Klasse und ihre Funktionen sehr stark gekoppelt sind, ist es nicht ohne weiteres möglich eine Funktionalität bereitzustellen ohne die Klasse selbst zu verändern.
-Obwohl dies ein häufig auftretendes Problem ist, gibt es auch hierfür ein einfaches Design Pattern.
-Das Wrapper-Pattern\cite{websitedesignpatterns}, erlaubt es uns eine Hülle um die eigentliche Klasse zu legen, die dann die eigentliche Funktion zur Verfügung stellt.
-Falls man in diesem Kontext mit dem Objekt der umhüllten Klasse interagieren möchte, geschiet der Zugriff nur indirekt über die Wrapper-Klasse.
-Im Beispiel stellen wir der Klasse ThirdParty mittels WrapperClass, indirekt die zusätzliche Funktionalit von Sleep zur Verfügung.
+Da bei Java die Klasse und ihre Funktionen sehr stark gekoppelt sind, ist es nicht ohne weiteres möglich, eine Funktionalität bereitzustellen, ohne die Klasse selbst zu verändern.
+Das Wrapper-Pattern\cite{websitedesignpatterns} erlaubt es uns, eine Hülle um die eigentliche Klasse zu legen, die dann die eigentliche Funktion zur Verfügung stellt.
+Falls man in diesem Kontext mit dem Objekt der umhüllten Klasse interagieren möchte, geschieht der Zugriff nur indirekt über die Wrapper-Klasse.
+Im Beispiel stellen wir der Klasse ThirdParty mittels Wrapper-Klasse indirekt die zusätzliche Funktionalit von Sleep zur Verfügung.
 \begin{minted}{java}
 public class ThirdParty {
     public static void main(String[] args) {
@@ -1109,9 +1109,9 @@ class WrapperClass {
     }
 }
 \end{minted}
-\subsubsection{Referenzierung des eigenen Typens}
-Dieses Problem wird häufig mittels generischen Interfaces oder Klassen gelöst.
-Als übergebenen generischen Typ kann man einfach die Klasse selbst übergeben. Der einzige Nachteil ist, dass es sich nicht so schön liest und die Information reduntant erscheint.
+\subsubsection{Referenzierung des eigenen Typen}
+Dieses Problem wird häufig mittels generischer Interfaces oder Klassen gelöst.
+Als generischen Typen kann man einfach die Klasse selbst übergeben. Der einzige Nachteil ist, dass die Information reduntant erscheint.
 \begin{minted}{java}
 public class SameInputOutput{
     public static void main(String[] args) {
@@ -1129,9 +1129,9 @@ class Dog implements sameObject<Dog>{
 }
 \end{minted}
 \subsubsection{Konditionelle Implementierung}
-Wie bereits im Kapitel über Rusts konditionelle Implementierung ist dies in Java nicht möglich.
-Wir könnten nur wie im bereits beschrieben, den generischen Parameter aller Paare beschränken.
-Wenn wir wie im Beispiel das Hunde-Paar instanziieren möchten bekommen wir einen Fehler zur Compile-Zeit.
+Wie bereits im Kapitel über Rusts konditionelle Implementierung erwähnt, ist diese in Java nicht möglich.
+Es ist lediglich möglich, den generischen Parameter selbst zu beschränken.
+Wenn wir wie im Beispiel das Hunde-Paar instanziieren möchten, bekommen wir einen Fehler zur Kompilierzeit.
 \begin{minted}{java}
 public class Conditional {
     public static void main(String[] args) {
@@ -1175,7 +1175,7 @@ T extends Comparable<T> declared in class Pair
 Conditional.java:4: error: incompatible types: Dog cannot be converted to Comparable
 Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
 \end{minted}
-Es ist jedoch möglich Über Vererbung unterschiedliche Typen von Pair darzustellen, bei denen Die Unterklassen einen eingeschränkten generische Parameter T haben. Im Beispielcode unten aktzeptiert Pair alle Parameter T, die Klasse Specified Pair jedoch aktzeptiert nur Klassen, die das Interface 'IGiveHelloString' implementieren.
+Es ist jedoch möglich, über Vererbung unterschiedliche Typen von Pair darzustellen, bei denen die Unterklassen einen eingeschränkten generischen Parameter T hat. Im Beispielcode unten aktzeptiert Pair alle Parameter T. Die Klasse SpecifiedPair jedoch aktzeptiert nur Klassen, die das Interface 'IGiveHelloString' implementieren.
 \begin{minted}{java}
 public class PairExample2
     public static void main(String[] args) {
@@ -1229,16 +1229,15 @@ class NoHello{
 \newpage
 \section{Vergleich}
 \subsection{Enums}
-Rust deckt alle Funktionalitäten von Java Enums ab und bietet darüber hinaus, mit algebraischen Datentypen und Pattern Matching mächtige Programmierkonzepte. Java ist es zwar möglich über Klassen eine ähnliches Maß an Funktionalität zu erreichen, ist aber weitaus verboser und weniger lesbar.
-In Sachen Pattern-Matching ähnlich mächtige eine ähnliches Maß an Funktionalität zu erreichen, ist aber weitaus verboser und weniger lesbar.
-In Sachen Pattern-Matching ähnlich mächtige Funktionalität zu gewährleisten.
-Um Funktionalität von Enums zu erweitern müssen wir in Java das Enums elbst anpassen, wohingegen wir in Rust vollkommen entkoppelt Funktionen für das Enum bereitstellen können.
-In Java erweitern wir also Klassen, während die Funktionen selbst nicht erweiterbar sind. In Rust werden die Funktionen, die auf dem Enum operieren erweitert.
-Zusammenfassend kann man also sagen, dass Java kommt ans gleiche Ziel, ist aber unnötig verbos und anfälliger für Fehler, da es nicht erkennt ob eine Operation abgeschlossen ist. 
+Rust deckt alle Funktionalitäten von Java Enums ab und bietet darüber hinaus mit algebraischen Datentypen und Pattern Matching mächtige Programmierkonzepte. In Java ist es zwar möglich, über Klassen eine ähnliches Maß an Funktionalität zu erreichen, der Code ist aber weitaus verboser und weniger lesbar.
+Es ist nicht möglich, abgeschlossenes Pattern Matching und Nested Pattern Matching in Java über Switch-Case zu realisieren. Switch-Case lässt insbesondere keine komplexen Datentypen zu.
+Um Funktionalität von Enums zu erweitern, müssen wir in Java Enums selbst anpassen, wohingegen wir in Rust vollkommen entkoppelt Funktionen für das Enum bereitstellen können.
+In Java erweitern wir also Klassen, während die Funktionen selbst nicht erweiterbar sind. In Rust werden die Funktionen, die auf dem Enum operieren, erweitert.
+Zusammenfassend kann man also sagen, dass Java zwar oft ans gleiche Ziel kommt, aber unnötig verbos und anfälliger für Fehler ist.
 
 \subsection{Traits}
 Traits in Rust bieten uns mächtiges Programmierkonzept, bei dem wir entkoppelt vom Typen selber gemeinsames Verhalten beschreiben können. In Java erweitern wir Klassen mit Funktionen, wohingegen wir in Rust eine Menge von Funktionen bereitstellen können.
-Da Rust Traits Prädikate auf Typen sind lassen sich damit eigene Logiken aufbauen. Darüber hinaus können sie mit dynamischen wie Interface / Typen benutzt werden und decken so alle Funktionalitäten dieser gleichermaßen  ab. Java ist es nichts destro trotz möglich Funktionalitäten wie Generische Mehrfachimplementierung oder Hinzufügen von Funktionalität für Third-Party-Datentypen durch geschicktes Einsetzen von Designpatterns zu erreichen. Dies geschieht auf wieder auf Kosten der Lesbarkeit und Prägnanz des Codes. Die Funktionalität der konditionellen Implementierung von Funktionen lässt sich durch geschicktes Ausnutzen von Vererbung ebenfalls annähern. Jedoch müssen für alle verwendeten Trait Bounds eigene Unterklassen erstellt werden um sie so granular einzugrenzen. 
+Da Rust Traits Prädikate auf Typen sind, lassen sich damit eigene Logiken aufbauen. Darüber hinaus können sie mit dynamischen Traits wie Interface / Typen benutzt werden und decken so alle Funktionalitäten dieser gleichermaßen  ab. In Java ist es dennoch möglich, Funktionalitäten wie generische Mehrfachimplementierung oder Hinzufügen von Funktionalität für Third-Party-Datentypen durch geschicktes Einsetzen von Designpatterns zu erreichen. Dies geschieht jedoch auf Kosten der Lesbarkeit und Prägnanz des Codes. Die Funktionalität der konditionellen Implementierung von Funktionen lässt sich durch geschicktes Ausnutzen von Vererbung ebenfalls annähern. Jedoch müssen für alle verwendeten Trait Bounds eigene Unterklassen erstellt werden, um sie so granular einzugrenzen. 
 
 \bibliographystyle{plain}
 \bibliography{bib}

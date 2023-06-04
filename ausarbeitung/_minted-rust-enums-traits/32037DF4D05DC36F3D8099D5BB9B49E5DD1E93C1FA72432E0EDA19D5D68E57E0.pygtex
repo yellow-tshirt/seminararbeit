@@ -1,16 +1,16 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{adaptercompatible}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{string}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{        }\PYG{n}{SomeClass}\PYG{+w}{ }\PYG{n}{sc}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{SomeClass}\PYG{p}{();}
-\PYG{+w}{        }\PYG{n}{MusicPlayerAdapter}\PYG{+w}{ }\PYG{n}{ma}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{MusicPlayerAdapter}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{);}
-\PYG{+w}{        }\PYG{n}{BoardGameAdapter}\PYG{+w}{ }\PYG{n}{ba}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{BoardGameAdapter}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{someclass}\PYG{+w}{ }\PYG{n}{sc}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{someclass}\PYG{p}{();}
+\PYG{+w}{        }\PYG{n}{musicplayeradapter}\PYG{+w}{ }\PYG{n}{ma}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{musicplayeradapter}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{boardgameadapter}\PYG{+w}{ }\PYG{n}{ba}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{boardgameadapter}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{);}
 \PYG{+w}{        }\PYG{n}{ma}\PYG{p}{.}\PYG{n+na}{play}\PYG{p}{();}
 \PYG{+w}{        }\PYG{n}{ba}\PYG{p}{.}\PYG{n+na}{play}\PYG{p}{();}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{}}
-\PYG{k+kd}{class} \PYG{n+nc}{SomeClass}\PYG{p}{\PYGZob{}}
-\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{playMusic}\PYG{p}{()\PYGZob{}}
-\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Playing music\PYGZdq{}}\PYG{p}{);}
+\PYG{k+kd}{class} \PYG{n+nc}{someclass}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{playmusic}\PYG{p}{()\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{system}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}playing music\PYGZdq{}}\PYG{p}{);}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}
 \PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{playBoardGame}\PYG{p}{()\PYGZob{}}
 \PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Playing boardgame\PYGZdq{}}\PYG{p}{);}

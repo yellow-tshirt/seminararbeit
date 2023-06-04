@@ -45,11 +45,12 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Gleiche Methodensignatur}{26}{subsubsection.3.3.1}%
 \contentsline {paragraph}{Lösung:}{26}{section*.5}%
 \contentsline {subsubsection}{\numberline {3.3.2}Generische Mehrfachimplementierung}{27}{subsubsection.3.3.2}%
-\contentsline {paragraph}{Lösung:}{27}{section*.6}%
+\contentsline {paragraph}{Output:}{27}{section*.6}%
+\contentsline {paragraph}{Lösung:}{28}{section*.7}%
 \contentsline {subsubsection}{\numberline {3.3.3}Funktionalität für Third-Party-Datentypen}{28}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Referenzierung des eigenen Typens}{29}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.4}Referenzierung des eigenen Typen}{29}{subsubsection.3.3.4}%
 \contentsline {subsubsection}{\numberline {3.3.5}Konditionelle Implementierung}{30}{subsubsection.3.3.5}%
-\contentsline {paragraph}{Output:}{30}{section*.7}%
+\contentsline {paragraph}{Output:}{30}{section*.8}%
 \contentsline {section}{\numberline {4}Vergleich}{33}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Enums}{33}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Traits}{33}{subsection.4.2}%
