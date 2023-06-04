@@ -1,0 +1,50 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{PairExample2}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{c+c1}{//Accepted}
+\PYG{+w}{        }\PYG{n}{Pair}\PYG{o}{\PYGZlt{}}\PYG{n}{NoHello}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{normalPair}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Pair}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{NoHello}\PYG{p}{(),}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{NoHello}\PYG{p}{());}
+\PYG{+w}{        }\PYG{c+c1}{//Not accepted}
+\PYG{+w}{        }\PYG{n}{SpecificPair}\PYG{o}{\PYGZlt{}}\PYG{n}{NoHello}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{deniedspecificPair}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{		}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{SpecificPair}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{NoHello}\PYG{p}{(),}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{NoHello}\PYG{p}{());}
+\PYG{+w}{        }\PYG{c+c1}{//Accpeted}
+\PYG{+w}{        }\PYG{n}{SpecificPair}\PYG{o}{\PYGZlt{}}\PYG{n}{Hello}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{acceptedSpecificPair}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{		}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{SpecificPair}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Hello}\PYG{p}{(),}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Hello}\PYG{p}{());}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{class} \PYG{n+nc}{Pair}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n+nf}{Pair}\PYG{p}{(}\PYG{n}{T}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{class} \PYG{n+nc}{SpecificPair}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{+w}{ }\PYG{k+kd}{extends}\PYG{+w}{ }\PYG{n}{IGiveHelloString}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{k+kd}{extends}\PYG{+w}{ }\PYG{n}{Pair}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n+nf}{SpecificPair}\PYG{p}{(}\PYG{n}{T}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{super}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{PrintBothHelloString}\PYG{p}{()\PYGZob{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{class} \PYG{n+nc}{NoHello}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n+nf}{NoHello}\PYG{p}{()\PYGZob{}\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{Hello}\PYG{+w}{ }\PYG{k+kd}{implements}\PYG{+w}{ }\PYG{n}{IGiveHelloString}\PYG{p}{\PYGZob{}}
+
+\PYG{+w}{    }\PYG{n+nd}{@Override}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n+nf}{sayHello}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Hello\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+
+
+\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{ }\PYG{k+kd}{interface} \PYG{n+nc}{IGiveHelloString}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n+nf}{sayHello}\PYG{p}{();}
+\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

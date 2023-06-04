@@ -50,6 +50,6 @@
 \contentsline {subsubsection}{\numberline {3.3.4}Referenzierung des eigenen Typens}{29}{subsubsection.3.3.4}%
 \contentsline {subsubsection}{\numberline {3.3.5}Konditionelle Implementierung}{30}{subsubsection.3.3.5}%
 \contentsline {paragraph}{Output:}{30}{section*.7}%
-\contentsline {section}{\numberline {4}Vergleich}{32}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Enums}{32}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Traits}{32}{subsection.4.2}%
+\contentsline {section}{\numberline {4}Vergleich}{33}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Enums}{33}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Traits}{33}{subsection.4.2}%

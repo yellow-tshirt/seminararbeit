@@ -14,7 +14,6 @@ struct Machine{}
 impl TransformAB for Machine{
     type A = i8;
     type B = i32;
-    const TIMES:u8 = 50;
     fn transform(s: &Self, a: Self::A) -> Vec<Self::B>{
         let mut v = Vec::new();
         let a32 = i32::from(a);

@@ -1181,15 +1181,70 @@ T extends Comparable<T> declared in class Pair
 Conditional.java:4: error: incompatible types: Dog cannot be converted to Comparable
 Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
 \end{minted}
-Dies beschränkt den Typ jedoch zu sehr. Eine Möglichkeit ist es aber über multiple generische Interfaces und dem Adapter-Pattern unterchiedliche Arten von Paar wie 'Pair' oder 'PartiallyOrderedPair' anzubieten.
+Es ist jedoch möglich Über Vererbung unterschiedliche Typen von Pair darzustellen, bei denen Die Unterklassen einen eingeschränkten generische Parameter T haben. Im Beispielcode unten aktzeptiert Pair alle Parameter T, die Klasse Specified Pair jedoch aktzeptiert nur Klassen, die das Interface 'IGiveHelloString' implementieren.
+\begin{minted}{java}
+public class PairExample2
+    public static void main(String[] args) {
+		//Accepted
+        Pair<NoHello> normalPair = new Pair(new NoHello(), new NoHello());
+        //Not accepted
+        SpecificPair<NoHello> deniedspecificPair =
+		new SpecificPair(new NoHello(), new NoHello());
+        //Accpeted
+        SpecificPair<Hello> acceptedSpecificPair =
+		new SpecificPair(new Hello(), new Hello());
+    }
+}
+
+class Pair<T>{
+    T x;
+    T y;
+    public Pair(T x, T y){
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class SpecificPair<T extends IGiveHelloString> extends Pair{
+    public SpecificPair(T x, T y){
+        super(x,y);
+    }
+
+    public void PrintBothHelloString(){
+    }
+}
+
+class NoHello{
+    public NoHello(){}
+}
+ class Hello implements IGiveHelloString{
+
+    @Override
+    public String sayHello() {
+        return "Hello";
+    }
+
+   
+
+ }
+
+ interface IGiveHelloString{
+    public String sayHello();
+ }
+\end{minted}
 \newpage
 \section{Vergleich}
 \subsection{Enums}
-\begin{itemize}
-	\item Enums kombiniert mit Klassen kann Alle Enums nachbauen
-\end{itemize}
-\subsection{Traits}
+Rust deckt alle Funktionalitäten von Java Enums ab und bietet darüber hinaus, mit algebraischen Datentypen und Pattern Matching mächtige Programmierkonzepte. Java ist es zwar möglich über Klassen eine ähnliches Maß an Funktionalität zu erreichen, ist aber weitaus verboser und weniger lesbar.
+In Sachen Pattern-Matching ähnlich mächtige eine ähnliches Maß an Funktionalität zu erreichen, ist aber weitaus verboser und weniger lesbar.
+In Sachen Pattern-Matching ähnlich mächtige Funktionalität zu gewährleisten.
+Um Funktionalität von Enums zu erweitern müssen wir in Java das Enums elbst anpassen, wohingegen wir in Rust vollkommen entkoppelt Funktionen für das Enum bereitstellen können.
+In Java erweitern wir also Klassen, während die Funktionen selbst nicht erweiterbar sind. In Rust werden die Funktionen, die auf dem Enum operieren erweitert.
+Zusammenfassend kann man also sagen, dass Java kommt ans gleiche Ziel, ist aber unnötig verbos und anfälliger für Fehler, da es nicht erkennt ob eine Operation abgeschlossen ist. 
 
+\subsection{Traits}
+Traits in Rust bieten uns mächtiges Programmierkonzept, bei dem wir entkoppelt vom Typen selber gemeinsames Verhalten beschreiben können. In Java erweitern wir Klassen mit Funktionen, wohingegen wir in Rust eine Menge von Funktionen bereitstellen können.
+Da Rust Traits Prädikate auf Typen sind lassen sich damit eigene Logiken aufbauen. Darüber hinaus können sie mit dynamischen wie Interface / Typen benutzt werden und decken so alle Funktionalitäten dieser gleichermaßen  ab. Java ist es nichts destro trotz möglich Funktionalitäten wie Generische Mehrfachimplementierung oder Hinzufügen von Funktionalität für Third-Party-Datentypen durch geschicktes Einsetzen von Designpatterns zu erreichen. Dies geschieht auf wieder auf Kosten der Lesbarkeit und Prägnanz des Codes. Die Funktionalität der konditionellen Implementierung von Funktionen lässt sich durch geschicktes Ausnutzen von Vererbung ebenfalls annähern. Jedoch müssen für alle verwendeten Trait Bounds eigene Unterklassen erstellt werden um sie so granular einzugrenzen.
 \bibliographystyle{plain}
 \bibliography{bib}
 
