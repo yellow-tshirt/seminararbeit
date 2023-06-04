@@ -188,10 +188,10 @@ enum Animal{
 minted\end{minted}
 \subsection{Mächtigkeit von Rust Enums}
 In diesem Kapitel werfen wir einen genaueren Blick auf die Mächtigkeit von Rust Enums und die Vorzüge, die sie in der Programmierung bieten. Enums sind nicht nur eine einfache Möglichkeit, eine begrenzte Menge von Optionen darzustellen, sondern sie können auch eine Vielzahl von leistungsstarken Konzepten und Techniken bieten. Wir werden die Vorteile von Enums im Detail betrachten und untersuchen, wie sie dazu beitragen können, den Code lesbarer, flexibler und sicherer zu machen. Wir werden die Fülle an Möglichkeiten von Pattern Matching bis hin zur Modellierung komplexer Datenstrukturen erkunden, die Enums in verschiedenen Programmiersprachen bieten. 
-\subsubsection{Der Enum als algebraischer Datentyp}
-Algebraische Datentypen sind ein Programmierkonzepte, das auch in der funktionellen Programmiersprache Haskell verwendet wird, das es ermöglicht, komplexe Datenstrukturen auf elegante und präzise Weise zu modellieren. 
-Im gegebenen Beispiel wird die Enum-Struktur "Shape" als algebraischer Datentyp verwendet. Sie enthält zwei Varianten: "Square" und "Rectangle". Jede dieser Varianten kann verschiedene Informationen oder Daten enthalten, die spezifisch für die jeweilige Form sind. Im Fall des "Square" wird die Seitenlänge als einziger Parameter übergeben, während im Fall des "Rectangle" die Länge und Breite als separate Parameter angegeben werden.
-Die Implementierung der Methode "area" zeigt, wie algebraische Datentypen in Rust genutzt werden können. Mit dem Pattern Matching-Mechanismus werden die verschiedenen Varianten der Enum überprüft und entsprechende Berechnungen durchgeführt. Wenn das Enum-Objekt "self" die "Square"-Variante ist, wird die Fläche des Quadrats berechnet, indem die Seitenlänge mit sich selbst multipliziert wird. Wenn es sich um die "Rectangle"-Variante handelt, wird die Fläche des Rechtecks berechnet, indem die Länge mit der Breite multipliziert wird.
+\subsubsection{Das Enum als algebraischer Datentyp}
+Algebraische Datentypen sind ein Programmierkonzept, das auch in der funktionellen Programmiersprache Haskell verwendet wird und es ermöglicht, komplexe Datenstrukturen auf elegante und präzise Weise zu modellieren. 
+Im gegebenen Beispiel wird die Enum-Struktur Shape als algebraischer Datentyp verwendet. Sie enthält zwei Varianten: Square und Rectangle. Jede dieser Varianten kann verschiedene Informationen oder Daten enthalten, die spezifisch für die jeweilige Form sind. Im Fall des Square wird die Seitenlänge als einziger Parameter übergeben, während im Fall des Rectangle die Länge und Breite als separate Parameter angegeben werden.
+Die Implementierung der Methode area zeigt, wie algebraische Datentypen in Rust genutzt werden können. Mit dem Pattern Matching-Mechanismus werden die verschiedenen Varianten des Enums überprüft und entsprechende Berechnungen durchgeführt. Wenn das Enum-Objekt self die Square-Variante ist, wird die Fläche des Quadrats berechnet, indem die Seitenlänge mit sich selbst multipliziert wird. Wenn es sich um die Rectangle-Variante handelt, wird die Fläche des Rechtecks berechnet, indem die Länge mit der Breite multipliziert wird.
 Das Pattern Matching ermöglicht eine klare und umfassende Abdeckung aller möglichen Varianten, was zu robusterem und sichererem Code führt. In diesem konkreten Beispiel wird die Fläche einer Form berechnet, aber die Anwendungsmöglichkeiten von algebraischen Datentypen in Rust gehen weit über diese einfache Beispiel hinaus. Sie bieten eine flexible und ausdrucksstarke Möglichkeit, Daten zu strukturieren und zu verarbeiten.
 \begin{minted}{rust}
 fn main() {
@@ -215,16 +215,15 @@ impl Shape{
 \end{minted}
 \subsubsection{Generische Enums}
 Ein Beispiel für ein generisches Enum in Rust ist das Option-Enum.
-Das Option<T>-Enum ist äußerst vielseitig und ermöglicht es uns, zwischen zwei Optionen zu wählen: None und Some(T). Die None-Option repräsentiert den Fall, in dem kein Wert vorhanden ist, während Some(T) einen Wert des generischen Typs T enthält. Durch die Verwendung von generischen Typen können wir das Option Enum an verschiedene Datentypen anpassen und eine große Bandbreite von Optionen abbilden.
+Das Option-Enum ist äußerst vielseitig und ermöglicht es uns, zwischen zwei Optionen zu wählen: None und Some(T). Die None-Option repräsentiert den Fall, in dem kein Wert vorhanden ist, während Some(T) einen Wert des generischen Typs T enthält. Durch die Verwendung von generischen Typen können wir das Option Enum an verschiedene Datentypen anpassen und eine große Bandbreite von Optionen abbilden.
 \begin{minted}{rust}
 enum Option<T> {
 	None,
 	Some(T),
 }
 \end{minted}
-
-Die interessante Einsatzmöglichkeit des Option Enums ist die Vermeidung von Nullpointer-Exceptions wie in diesem Beispiele
-Falls die Funktion lookUpAnimal etwas findet wird es mit der some Option zurückgegebe, falls nicht nicht geben wir None zurück. Mit None kann so der Fall, in dem nichts gefunden wird explizit behandelt werden.
+Die interessante Einsatzmöglichkeit des Option Enums ist die Vermeidung von Nullpointer-Exceptionsi, wie im folgendem Beispiel.
+Falls die Funktion look-UpAnimal etwas findet, wird es mit der some Option zurückgegeben, falls nicht, geben wir None zurück. Mit None kann so der Fall, in dem nichts gefunden wird, explizit behandelt werden.
 \begin{minted}{rust}
 fn main() {
     match lookUpAnimal(1){
