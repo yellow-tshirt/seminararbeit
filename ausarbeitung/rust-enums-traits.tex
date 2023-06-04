@@ -17,6 +17,7 @@
 \singlespacing
 
 \begin{document}
+\nocite{*}
 \pagenumbering{gobble} 
 \maketitle
 \newpage
@@ -27,7 +28,7 @@
 \pagenumbering{arabic}
 \maketitle
 \begin{abstract}
-Traits und Enums in Rust sind Programmierkonzepte, die bereits aus Haskell unter Namen wie Typklassen oder ADTs bekannt sind. Die Konzepte haben einige Vorteile gegenüber normalen Enums in Java sowie Interfaces und Vererbung, da diese ähnliche Probleme zu lösen versuchen.
+		Traits und Enums in Rust sind Programmierkonzepte, die bereits aus Haskell unter Namen wie Typklassen oder ADTs bekannt sind\cite{haskellslides}. Die Konzepte haben einige Vorteile gegenüber normalen Enums in Java sowie Interfaces und Vererbung, da diese ähnliche Probleme zu lösen versuchen.
 Manche Funktionalitäten lassen sich mittels Designpatterns, wie dem Adapter-Pattern oder dem Wrapper-Pattern, lösen, wobei diese Lösungen meist unnötig verbos erscheinen. Gewisse Funktionalitäten können Sprachen wie Java aber auch gar nicht bereitstellen.
 Bezogen auf diese Konzepte ist Rust mit Java verglichen also syntaktisch prägnanter, lesbarer und stellenweise funktionell sogar überlegen.
 \end{abstract}
@@ -35,7 +36,7 @@ Bezogen auf diese Konzepte ist Rust mit Java verglichen also syntaktisch prägna
 Die Programmiersprachen Rust und Java bieten Entwicklern eine Vielzahl von Programmierkonzepten, um robusten und flexiblen Code zu schreiben. In diesem Vergleich konzentrieren wir uns auf zwei wichtige Konzepte: Enums und Traits. 
 Da Java nicht mit Traits arbeitet, werden stattdessen die zur Verfügung stehenden Möglichkeiten mit Interfaces und Klassen-Hirarchie verglichen werden, da diese ähnliche Probleme wie Traits adressieren.\\
 In Rust sind Enums algebraische Datentypen, die ursprünglich aus der funktionalen Programmiersprache Haskell stammen. Sie ermöglichen es, eine feste Anzahl von Varianten zu definieren, die jeweils spezifische Informationen enthalten können. Mit Pattern Matching ist es in Rust möglich, auf die verschiedenen Varianten eines Enums zuzugreifen und sie zu verarbeiten. Ein bemerkenswertes Merkmal des Rust Enum Pattern Matching ist, dass es abgeschlossen ist, das heißt, jeder Fall des Enums muss abgedeckt werden. Dadurch wird vermieden, dass potenzielle Fehler unbemerkt bleiben, und der Code wird robuster.
-Ein weiteres leistungsstarkes Konzept in Rust sind Traits. Diese können als Mengen über einem Typ betrachtet werden und verhalten sich Typklassen in Haskell. Ähnlich zu Interfaces und Vererbung in Java ermöglichen Traits in Rust eine Möglichkeit, Funktionalität zwischen verschiedenen Datentypen zu teilen. Sie dienen als Prädikate über einem Typen und erlauben es, bestimmte Verhaltensweisen festzulegen, ohne eine konkrete Implementierung vorzugeben. Dies ermöglicht uns, flexiblen und modularen Code zu schreiben.
+Ein weiteres leistungsstarkes Konzept in Rust sind Traits. Diese können als Mengen über einem Typ betrachtet werden und verhalten sich Typklassen in Haskell. Ähnlich zu Interfaces und Vererbung in Java ermöglichen Traits in Rust eine Möglichkeit, Funktionalität zwischen verschiedenen Datentypen zu teilen. Sie dienen als Prädikate für Typen\cite{rustslides} und erlauben es, bestimmte Verhaltensweisen festzulegen, ohne eine konkrete Implementierung vorzugeben. Dies ermöglicht uns, flexiblen und modularen Code zu schreiben.
 Im Vergleich zu Java zeigen Traits in Rust einige bemerkenswerte Vorteile. Während Java Interfaces zwar eine ähnliche Funktion bieten, aber oft mit Einschränkungen verbunden sind und Vererbung komplexe Klassenhierarchien erfordert, erlauben Traits in Rust eine granulare und unabhängige Zusammenarbeit von Typen. Sie bieten eine hohe Flexibilität bei der Kombination von Funktionen und vermeiden unnötige Abhängigkeiten zwischen Klassen. Später werden wir detaillierter auf diese Unterschiede eingehen und untersuchen, ob Java in der Lage ist, ähnliche Funktionalitäten wie Rust zu gewährleisten.
 \newpage
 \section{Enums}
