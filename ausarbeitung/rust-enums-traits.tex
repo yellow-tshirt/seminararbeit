@@ -27,9 +27,9 @@
 \pagenumbering{arabic}
 \maketitle
 \begin{abstract}
-Traits und Enums in Rust sind Programmierkonzepte, die bereits aus Haskell unter Namen wie Typklassen oder ADTs bekannt sind. Die Konzepte einige Vorteile, gegenüber normalen Enums in Java sowie Interfaces und Vererbung, die versuchen ähnliche Probleme zu lösen.
-Manche Funktionalitäten lassen sich mittels Designpatterns, wie dem Adapter-Pattern oder dem Wrapper-Pattern  lösen, wobei diese Lösungen meist unnötig verbos erscheinen. Gewisse Funktionalitäten können Sprache wie Java aber auch gar nicht bereitstellen.
-Bezogen auf diese Konzepte ist Rust mit Java verglichen also syntaktisch prägnanter, lesbarer und stellenweise funktinell sogar überlegen.
+Traits und Enums in Rust sind Programmierkonzepte, die bereits aus Haskell unter Namen wie Typklassen oder ADTs bekannt sind. Die Konzepte haben einige Vorteile gegenüber normalen Enums in Java sowie Interfaces und Vererbung, da diese ähnliche Probleme zu lösen versuchen.
+Manche Funktionalitäten lassen sich mittels Designpatterns, wie dem Adapter-Pattern oder dem Wrapper-Pattern, lösen, wobei diese Lösungen meist unnötig verbos erscheinen. Gewisse Funktionalitäten können Sprachen wie Java aber auch gar nicht bereitstellen.
+Bezogen auf diese Konzepte ist Rust mit Java verglichen also syntaktisch prägnanter, lesbarer und stellenweise funktionell sogar überlegen.
 \end{abstract}
 \section{Einleitung}
 Die Programmiersprachen Rust und Java bieten Entwicklern eine Vielzahl von Programmierkonzepten, um robusten und flexiblen Code zu schreiben. In diesem Vergleich konzentrieren wir uns auf zwei wichtige Konzepte: Enums und Traits. 
@@ -1244,7 +1244,8 @@ Zusammenfassend kann man also sagen, dass Java kommt ans gleiche Ziel, ist aber 
 
 \subsection{Traits}
 Traits in Rust bieten uns mächtiges Programmierkonzept, bei dem wir entkoppelt vom Typen selber gemeinsames Verhalten beschreiben können. In Java erweitern wir Klassen mit Funktionen, wohingegen wir in Rust eine Menge von Funktionen bereitstellen können.
-Da Rust Traits Prädikate auf Typen sind lassen sich damit eigene Logiken aufbauen. Darüber hinaus können sie mit dynamischen wie Interface / Typen benutzt werden und decken so alle Funktionalitäten dieser gleichermaßen  ab. Java ist es nichts destro trotz möglich Funktionalitäten wie Generische Mehrfachimplementierung oder Hinzufügen von Funktionalität für Third-Party-Datentypen durch geschicktes Einsetzen von Designpatterns zu erreichen. Dies geschieht auf wieder auf Kosten der Lesbarkeit und Prägnanz des Codes. Die Funktionalität der konditionellen Implementierung von Funktionen lässt sich durch geschicktes Ausnutzen von Vererbung ebenfalls annähern. Jedoch müssen für alle verwendeten Trait Bounds eigene Unterklassen erstellt werden um sie so granular einzugrenzen.
+Da Rust Traits Prädikate auf Typen sind lassen sich damit eigene Logiken aufbauen. Darüber hinaus können sie mit dynamischen wie Interface / Typen benutzt werden und decken so alle Funktionalitäten dieser gleichermaßen  ab. Java ist es nichts destro trotz möglich Funktionalitäten wie Generische Mehrfachimplementierung oder Hinzufügen von Funktionalität für Third-Party-Datentypen durch geschicktes Einsetzen von Designpatterns zu erreichen. Dies geschieht auf wieder auf Kosten der Lesbarkeit und Prägnanz des Codes. Die Funktionalität der konditionellen Implementierung von Funktionen lässt sich durch geschicktes Ausnutzen von Vererbung ebenfalls annähern. Jedoch müssen für alle verwendeten Trait Bounds eigene Unterklassen erstellt werden um sie so granular einzugrenzen. 
+
 \bibliographystyle{plain}
 \bibliography{bib}
 
