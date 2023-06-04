@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{AnimalSwitchCase}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Animal}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{.}\PYG{n+na}{Bird}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{switch}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{a}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{case}\PYG{+w}{ }\PYG{n}{Dog}\PYG{p}{:}
+\PYG{+w}{                }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}It\PYGZsq{}s a Dog\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                }\PYG{k}{break}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{case}\PYG{+w}{ }\PYG{n}{Bird}\PYG{p}{:}
+\PYG{+w}{                }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}It\PYGZsq{}s a Bird\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                }\PYG{k}{break}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{case}\PYG{+w}{ }\PYG{n}{Cat}\PYG{p}{:}
+\PYG{+w}{                }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}It\PYGZsq{}s a Dog\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{                }\PYG{k}{break}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{default}\PYG{p}{:}
+\PYG{+w}{                }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}This Animal wasn\PYGZsq{}t expected\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{enum}\PYG{+w}{ }\PYG{n}{Animal}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Dog}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Cat}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Bird}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -3,8 +3,8 @@
 \contentsline {section}{\numberline {2}Enums}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Enums in Rust}{2}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Normale Enums}{2}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Enum mit Werten}{2}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Enum mit Funktionen}{3}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.2}Enum mit Werten}{3}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Enum mit Funktionen}{4}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Enums in Java}{4}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Normale Enums}{4}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Enums mit Werten}{5}{subsubsection.2.2.2}%
@@ -16,38 +16,38 @@
 \contentsline {subsubsection}{\numberline {2.3.3}Rekursive Enums}{8}{subsubsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.4}Match Statement}{9}{subsubsection.2.3.4}%
 \contentsline {subsubsection}{\numberline {2.3.5}Hinzufügen einer neuen Enum Option}{10}{subsubsection.2.3.5}%
+\contentsline {paragraph}{Output}{11}{section*.3}%
 \contentsline {subsubsection}{\numberline {2.3.6}Nested Pattern Matching}{12}{subsubsection.2.3.6}%
 \contentsline {subsubsection}{\numberline {2.3.7}Erweiterbare Funktionen für Enums}{13}{subsubsection.2.3.7}%
 \contentsline {subsection}{\numberline {2.4}Funktionalität von Rust Enums in Java}{14}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Switch Case vs Match}{15}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Expression-Logik in Java}{15}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}Java Enums am Limit}{17}{subsubsection.2.4.3}%
-\contentsline {section}{\numberline {3}Traits}{19}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Traits in Rust}{19}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Einfacher Trait}{19}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Shorthand Schreibweise}{20}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Default-Implementationen}{21}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Trait Bounds}{21}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Multiples Binding}{21}{subsubsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.6}Dynamische Traits}{22}{subsubsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.7}Kurzschreibweise für dynamische Traits}{22}{subsubsection.3.1.7}%
-\contentsline {subsubsection}{\numberline {3.1.8}Platzhaltertypen}{22}{subsubsection.3.1.8}%
-\contentsline {subsubsection}{\numberline {3.1.9}Assoziierte Konstanten}{22}{subsubsection.3.1.9}%
-\contentsline {subsubsection}{\numberline {3.1.10}Supertraits}{23}{subsubsection.3.1.10}%
-\contentsline {subsection}{\numberline {3.2}Mächtigkeit von Traits}{24}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Gleiche Methodensignatur}{24}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Generische Mehrfachimplementierung}{25}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Referenzierung des eigenen Typen}{26}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Funktionalität für Third-Party-Datentypen}{26}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Konditionelle Implementierung}{27}{subsubsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.3}Traitfunktionalität in Java}{28}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Gleiche Methodensignatur}{28}{subsubsection.3.3.1}%
-\contentsline {paragraph}{Lösung:}{28}{section*.3}%
-\contentsline {subsubsection}{\numberline {3.3.2}Generische Mehrfachimplementierung}{29}{subsubsection.3.3.2}%
-\contentsline {paragraph}{Lösung:}{30}{section*.4}%
-\contentsline {subsubsection}{\numberline {3.3.3}Funktionalität für Third-Party-Datentypen}{30}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Referenzierung des eigenen Typens}{31}{subsubsection.3.3.4}%
-\contentsline {subsubsection}{\numberline {3.3.5}Konditionelle Implementierung}{32}{subsubsection.3.3.5}%
-\contentsline {section}{\numberline {4}Vergleich}{34}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Enums}{34}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Traits}{34}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.1}Expression-Logik in Java}{14}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Match Statement in Java}{15}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Traits}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Traits in Rust}{17}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Einfacher Trait}{17}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Shorthand Schreibweise}{18}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Default-Implementationen}{19}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Trait Bounds}{19}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Multiples Binding}{19}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Dynamische Traits}{20}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}Kurzschreibweise für dynamische Traits}{20}{subsubsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.8}Platzhaltertypen}{20}{subsubsection.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.1.9}Assoziierte Konstanten}{20}{subsubsection.3.1.9}%
+\contentsline {subsubsection}{\numberline {3.1.10}Supertraits}{21}{subsubsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.2}Mächtigkeit von Traits}{22}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Gleiche Methodensignatur}{22}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Generische Mehrfachimplementierung}{23}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Referenzierung des eigenen Typen}{24}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Funktionalität für Third-Party-Datentypen}{24}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Konditionelle Implementierung}{25}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}Traitfunktionalität in Java}{26}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Gleiche Methodensignatur}{26}{subsubsection.3.3.1}%
+\contentsline {paragraph}{Lösung:}{26}{section*.4}%
+\contentsline {subsubsection}{\numberline {3.3.2}Generische Mehrfachimplementierung}{27}{subsubsection.3.3.2}%
+\contentsline {paragraph}{Lösung:}{28}{section*.5}%
+\contentsline {subsubsection}{\numberline {3.3.3}Funktionalität für Third-Party-Datentypen}{28}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Referenzierung des eigenen Typens}{29}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Konditionelle Implementierung}{30}{subsubsection.3.3.5}%
+\contentsline {section}{\numberline {4}Vergleich}{32}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Enums}{32}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Traits}{32}{subsection.4.2}%
