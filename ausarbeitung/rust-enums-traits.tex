@@ -224,6 +224,7 @@ enum Option<T> {
 \end{minted}
 Die interessante Einsatzmöglichkeit des Option Enums ist die Vermeidung von Nullpointer-Exceptionsi, wie im folgendem Beispiel.
 Falls die Funktion look-UpAnimal etwas findet, wird es mit der some Option zurückgegeben, falls nicht, geben wir None zurück. Mit None kann so der Fall, in dem nichts gefunden wird, explizit behandelt werden.
+\newpage
 \begin{minted}{rust}
 fn main() {
     match lookUpAnimal(1){
@@ -248,10 +249,10 @@ fn lookUpAnimal(id: i32) -> Option<Animal>{
 }
 \end{minted}
 \subsubsection{Rekursive Enums}
-In diesem Kapitel geht es um rekursiven Enums, die es uns ermöglichen, komplexe Datenstrukturen zu modellieren, die auf sich selbst verweisen. 
-Hier ein einfaches Beispiel mit einem Enum, das Mathematische Ausdrücke modelliert.
-An dieser Stelle ist wichtig, dass in den Varianten Plus und Mult das Schlüsselwort Box verwenden. Das ist notwendig, damit rekursive Enums in Rust eine feste Größe benötigen, um den Speicherbedarf zur Kompilierzeit zu bestimmen. Durch die Verwendung von Box wird ein Zeiger auf den Heap erstellt, der die tatsächliche Größe des Enum-Objekts auf dem Stack verdeckt. Dies ermöglicht es uns, rekursive Strukturen zu erstellen, ohne dass das Enum eine unendliche Größe haben muss.
-Indem wir die Variablen left und right als Box<Exp>" eklarieren, speichern wir Zeiger auf andere Exp-Objekte im Heap. Dies ermöglicht eine beliebige Verschachtelung von Ausdrücken und ermöglicht es uns, komplexe mathematische Formeln darzustellen.
+In diesem Kapitel geht es um rekursive Enums, die es uns ermöglichen, komplexe Datenstrukturen zu modellieren, die auf sich selbst verweisen. 
+Hier ein einfaches Beispiel mit einem Enum, das mathematische Ausdrücke modelliert.
+An dieser Stelle ist wichtig, dass die Optionen Plus und Mult das Schlüsselwort Box verwenden. Das ist notwendig, da Enums in Rust eine feste Größe benötigen, um den Speicherbedarf zur Kompilierzeit zu bestimmen. Durch die Verwendung von Box wird ein Zeiger erstellt, der auf die Stelle im Heap verweist, an dem die Option liegt und die tatsächliche Größe des Enum-Objekts auf dem Stack verdeckt. Dies ermöglicht es uns, rekursive Strukturen zu erstellen, ohne dass das Enum eine unendliche Größe haben muss.
+Indem wir die Variablen left und right als Box\textless Exp\textgreater deklarieren, speichern wir Zeiger auf andere Exp-Objekte im Heap. Dies ermöglicht eine beliebige Verschachtelung von Ausdrücken und die Darstellung von komplexen mathematischen Formeln.
 Die Verwendung von Box ist daher notwendig, um den rekursiven Bezug in unserem Enum zu realisieren und gleichzeitig eine feste Größe für das Enum-Objekt zur Kompilierzeit zu gewährleisten. 
 \newpage
 \begin{minted}{rust}
@@ -270,9 +271,9 @@ pub enum Exp {
 }
 \end{minted}
 \subsubsection{Match Statement}
-Im folgenden Codebeispiel illustrieren wir die Verwendung des Match-Statements anhand des Exp-Enums in Rust. Das Match-Statement bietet eine effektive Methode, um Enums zu überprüfen und entsprechende Aktionen basierend auf den verschiedenen Varianten auszuführen. Dabei garantiert Rust, dass die Enum-Cases immer abgeschlossen sind, was zu sicherem und zuverlässigem Code führt.
-Im Beispiel hat jede Option unterschiedliche Felder, die Informationen über den Ausdruck enthalten. In diesem Fall haben wir eine Instanz des Plus-Falls, bei dem die linke und rechte Unterexpression jeweils Ganzzahlen darstellen.
-Die Methode eval wird auf dem Enum-Objekt aufgerufen, um den Ausdruck auszuwerten.  Im vorliegenden Fall wird die Plus-Variante erkannt, und das Match-Statement ruft die eval-Methode für die linken und rechten Unterexpressionen auf und addiert die Ergebnisse.
+Im folgenden Codebeispiel illustrieren wir die Verwendung des Match-Statements anhand des Exp-Enums in Rust. Das Match-Statement bietet eine effektive Methode, um Enums zu überprüfen und entsprechende Aktionen basierend auf den verschiedenen Optionen auszuführen. Dabei garantiert Rust, dass die Enum-Cases immer abgeschlossen sind, was zu sicherem und zuverlässigem Code führt.
+Im Beispiel hat jede Option unterschiedliche Felder, die Informationen über den Ausdruck enthalten. In diesem Fall haben wir eine Instanz des Plus-Falls, bei dem die linke und rechte Unterexpression jeweils Int-Expression sind.
+Die Methode eval wird auf dem Enum-Objekt aufgerufen, um den Ausdruck auszuwerten. Im vorliegenden Fall wird die Plus-Variante erkannt, und das Match-Statement ruft die eval-Methode für die linken und rechten Unterexpressionen auf und addiert die Ergebnisse.
 Dank der Garantie von Rust, dass die Enum-Cases immer abgeschlossen sind, können wir uns darauf verlassen, dass das Match-Statement alle Fälle abdeckt und somit fehlerfreie Ergebnisse liefert. Dies trägt zur Robustheit und Stabilität unserer Programme bei.
 \begin{minted}{rust}
 fn main(){
@@ -309,7 +310,7 @@ impl Exp{
 \begin{minted}{shell}
 minted\end{minted}
 \subsubsection{Hinzufügen einer neuen Enum Option}
-Im gegebenen Codebeispiel haben wir das Exp-Enum aus dem vorherigen Beispiel. Um die abgeschlossenheit zu illustrieren wird das Enum nun um die neue Option Div ergänzt, der Rest bleibt unverändert.
+Im gegebenen Codebeispiel haben wir das Exp-Enum aus dem vorherigen Beispiel. Um die Abgeschlossenheit zu illustrieren, wird das Enum nun um die neue Option Div ergänzt. Der Rest bleibt unverändert.
 Da wir die Div-Variante im Match-Statement nicht abgedeckt haben, wird der Compiler uns einen Fehler melden.
 Um dieses Problem zu lösen, müssen wir das Match-Statement aktualisieren und die Div-Variante berücksichtigen. 
 Dieses Beispiel zeigt die Stärke und Sicherheit von Rust bei der Arbeit mit Enums. Dadurch erhalten wir robusten und zuverlässigen Code.
@@ -398,10 +399,10 @@ arm with a wildcard pattern or an explicit pattern as shown
 For more information about this error, try `rustc --explain E0004`.
 \end{minted}
 \subsubsection{Nested Pattern Matching}
-In diesem Codebeispiel wird das Konzepte von Nested Pattern Matching illustriert. Innerhalb des Match-Statements für die Mult-Variante führen wir ein weiteres Match-Statement aus, um die linke Unterexpression zu überprüfen. Wir verwenden das Doppelsternchen-Operator (**left), um auf den Inhalt der Box zuzugreifen.
-Innerhalb des inneren Match-Statements überprüfen wir, ob die linke Unterexpression ein Int-Objekt mit einem Wert von 0 ist. Wenn dies der Fall ist, wird sofort der Wert 0 zurückgegeben, da das Ergebnis der Multiplikation mit 0 immer 0 ist.
+In diesem Codebeispiel wird das Konzept von Nested Pattern Matching illustriert. Innerhalb des Match-Statements für die Mult-Variante führen wir ein weiteres Match-Statement aus, um die linke Unterexpression zu überprüfen. Wir verwenden das Doppelsternchen-Operator (**left), um auf den Inhalt der Box zuzugreifen.
+Innerhalb des inneren Match-Statements überprüfen wir, ob die linke Unterexpression ein Int-Objekt den Wert 0 hat. Wenn dies der Fall ist, wird sofort der Wert 0 zurückgegeben, da das Ergebnis der Multiplikation mit 0 immer 0 ist und wir uns so das Evaluieren des rechten Ausdrucks sparen.
 Wenn die linke Unterexpression kein Int-Objekt mit dem Wert 0 ist, wird die Multiplikation der linken und rechten Unterexpressionen durchgeführt und das Ergebnis zurückgegeben.
-Die Verwendung von Nested Pattern Matching ermöglicht es uns, präzise Logik zu implementieren und spezifische Aktionen basierend auf verschiedenen Kombinationen von Varianten auszuführen. Es hilft auch, den Code lesbar und verständlich zu halten. Die alternative zu Nested Pattern Matching wäre eine If/Else-Abfrage. Diese werden aber mit wachsender Komplexität der Abfrage sehr verbos und fehleranfällig.
+Die Verwendung von Nested Pattern Matching ermöglicht es uns, präzise Logik zu implementieren und spezifische Aktionen basierend auf verschiedenen Kombinationen von Varianten auszuführen. Es hilft auch, den Code lesbar und verständlich zu halten. Die Alternative zu Nested Pattern Matching wäre eine If/Else-Abfrage. Diese werden aber mit wachsender Komplexität der Abfrage sehr verbos und fehleranfällig.
 \begin{minted}{rust}
 pub enum Exp {
     Int {
@@ -432,8 +433,8 @@ impl Exp{
 }
 \end{minted}
 \subsubsection{Erweiterbare Funktionen für Enums}
-Mittels des impl Blocks ist es sehr einfach neue Funktionalitäten für Enums (oder auch Strcuts) bereitzustellen ohne diese selbst zu ändern.
-Im Beispiel fügen wir die neue Funktion treeHeight zum Enum hinzu, die die Tiefe unseres Expressin-Trees errechnet.
+Mittels des impl Blocks ist es sehr einfach, neue Funktionalitäten für Enums (oder auch Structs) bereitzustellen, ohne diese selbst zu ändern.
+Im Beispiel fügen wir die neue Funktion treeHeight zum Enum hinzu, die die Tiefe unseres Expression-Trees errechnet.
 \begin{minted}{rust}
 pub enum Exp {
     Int {
@@ -469,15 +470,15 @@ impl Exp{
 \newpage
 \subsection{Funktionalität von Rust Enums in Java}
 In diesem Kapitel werden wir uns mit der Herausforderung befassen, wie man die Funktionalität von Rust Enums in der Programmiersprache Java nachbilden kann.
-Eine Möglichkeit, Rust Enums in Java nachzubauen, besteht darin, Klassen zu erstellen, die verschiedene Varianten repräsentieren. Diese Klassen können spezifische Eigenschaften und Methoden haben, um das Verhalten der einzelnen Varianten zu definieren. Durch den Einsatz von Vererbung und Polymorphie können wir eine ähnliche Struktur und Flexibilität wie in Rust Enums erreichen.
-Ein weiterer wichtiger Aspekt von Rust Enums ist das abgeschlossene Pattern Matching. Dies bedeutet, dass jede mögliche Variante des Enums in den entsprechenden Match-Blöcken abgedeckt werden muss. In Java können wir versuchen, eine ähnliche Funktionalität durch die Verwendung von Switch-Anweisungen und Fall-Through-Fällen zu erreichen. Es ist zu beachten, dass Fall-Through-Fälle eventuell trotzdem zu ungeplanten Ergebnissen führen können.
+Eine Möglichkeit, Rust Enums in Java nachzubauen, besteht darin, Klassen zu erstellen, die verschiedene Optionen repräsentieren. Diese Klassen können spezifische Eigenschaften und Methoden haben, um das Verhalten der einzelnen Optionen zu definieren. Durch den Einsatz von Vererbung und Polymorphie können wir eine ähnliche Struktur und Flexibilität wie in Rust Enums erreichen.
+Ein weiterer wichtiger Aspekt von Rust Enums ist das abgeschlossene Pattern Matching. Dies bedeutet, dass jede mögliche Option des Enums in den entsprechenden Match-Blöcken abgedeckt werden muss. In Java können wir versuchen, eine ähnliche Funktionalität durch die Verwendung von Switch-Anweisungen und Fall-Through-Fällen zu erreichen. Es ist zu beachten, dass Fall-Through-Fälle eventuell trotzdem zu ungeplanten Ergebnissen führen können.
 Es ist wichtig anzumerken, dass Java und Rust unterschiedliche Programmiersprachen sind und jeweils ihre eigenen Stärken und Schwerpunkte haben. Daher kann es Herausforderungen geben, wenn man versucht, die volle Funktionalität von Rust Enums in Java nachzubilden. Dennoch bietet dieses Kapitel die Möglichkeit, kreative Lösungen zu finden und die Vorteile von Rust Enums auf Java-Anwendungen zu übertragen.
 \subsubsection{Expression-Logik in Java}
-Der Beispielcode zeigt das vorherige Beispiel mit den Mathematischen Ausdrücken, diesmal aber in Java mit Klassen realisiert. Da jeder Ausdruck eine andere Form hat ist dies notwendig um die Struktur zu beschreiben.
-Realisiert wurde es konkret durch das benutzen einer Abstrakten Klasse, die eine implementation der eval-Funktion fordert.
-An dieser Stelle ist interessant, dass kein Switch-Case benutzt wird, da die eval-Funktionen mit ihrem entsprechenden Typ fest gekoppelt sind
-Switch-Case wäre an dieser Stelle, aus den oben genannten Gründen, für eine Typunterscheidung gar nicht in der Lage die unterschiedlichen Klassen zu unterscheiden. 
-Falls man die eval-Funktion aus den Klassen bspw. herauslagern möchte müsste man für die Unterscheidung mit dem instanceof alle möglichen Fälle abdecken.
+Der Beispielcode zeigt das vorherige Beispiel mit den mathematischen Ausdrücken, diesmal aber in Java mit Klassen realisiert. Da jeder Ausdruck eine andere Form hat, ist dies notwendig, um die Struktur zu beschreiben.
+Realisiert wurde es konkret durch das Benutzen einer abstrakten Klasse, die eine Implementation der eval-Funktion fordert.
+An dieser Stelle ist interessant, dass kein Switch-Case benutzt wird, da die eval-Funktionen mit ihrem entsprechenden Typ fest gekoppelt sind.
+Switch-Case wäre an dieser Stelle, aus den oben genannten Gründen, für eine Typunterscheidung gar nicht in der Lage, die unterschiedlichen Klassen zu unterscheiden. 
+Falls man die eval-Funktion aus den Klassen bspw. auslagern möchte, müsste man für die Unterscheidung mit dem instanceof Operator alle möglichen Fälle abdecken.
 \begin{minted}{java}
 public class Expression {
     public static void main(String[] args) {
@@ -526,14 +527,13 @@ class MultExp extends Exp{
 }
 \end{minted}
 \subsubsection{Match Statement in Java}
-In Java ist das Switch Case-Konstrukt eine Möglichkeit, verschiedene Fälle basierend auf einem Wert auszuwerten und entsprechenden Code auszuführen. Es ermöglicht das Vergleichen eines Werts mit verschiedenen Konstanten. Allerdings hat das Switch Case in Java einige Einschränkungen verglichen mit Match:
+In Java ist das Switch Case-Konstrukt eine Möglichkeit, verschiedene Fälle basierend auf einem Wert auszuwerten und entsprechenden Code auszuführen. Es ermöglicht das Vergleichen eines Werts mit verschiedenen Konstanten. Allerdings hat der Switch Case in Java einige Einschränkungen verglichen mit Match:
 \begin{itemize}
 	\item Die Verwendung von Switch Case ist auf primitive Datentypen oder Enums beschränkt. Es ist nicht möglich, komplexe Muster oder Strukturen effizient abzubilden.
 	\item Die Veränderung des Enums, das für den Switch Case verwendet wird, kann zu unerwartetem Verhalten führen. Der Compiler warnt nicht vor vergessenen Fällen oder nicht abgedeckten Werten. 
-	\item 
 \end{itemize}
 Des Weiteren können in Java komplexe Muster und verschachteltes Pattern Matching nur durch weitere If/Else-Abfragen erreicht werden. Dies führt oft zu umständlichem und schwer lesbarerem Code.
-All das sind Eigenschaften, die sich auch nicht über cleveres ausnutzen von Datenstrukturen oder Designpatterns lösen lassen.
+All das sind Eigenschaften, die sich auch nicht über cleveres Ausnutzen von Datenstrukturen oder Designpatterns lösen lassen.
 Im Beispielcode findet man eine Abfragelogik, die via Switch-Case implementiert ist.
 \begin{minted}{java}
 public class AnimalSwitchCase {
@@ -560,7 +560,7 @@ enum Animal{
     Bird
 }
 \end{minted}
-Pattern Matching und Nested Pattern Matchin ist an sich ist nur durch explizite If/Else Abfragen möglich. Da Enums sich aber nicht verändern und die Werte bei jeder Option gleich sind ist das einzige Pattern, das man unterscheiden könnte die Option des Enums selber. Die granularere Unterscheidung tritt bei Klassen auf.
+Pattern Matching und Nested Pattern Matching sind an sich nur durch explizite If/Else Abfragen möglich. Da Enums sich aber nicht verändern und die Werte bei jeder Option gleich sind, ist das einzige Pattern, das man unterscheiden könnte, die Option des Enums selbst. Eine genauere Unterscheidung tritt bei Klassen auf.
 \newpage
 \section{Traits}
 Traits behandeln eine zentrale Funktion in Rust, mit der Entwickler Funktionalitäten zwischen verschiedenen Typen teilen können. Traits werden oft mit Interfaces in anderen Programmiersprachen verglichen, sind jedoch keine direkten Äquivalente.
