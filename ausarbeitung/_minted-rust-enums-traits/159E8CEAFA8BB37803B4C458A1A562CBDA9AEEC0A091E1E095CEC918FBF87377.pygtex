@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{someFunc}\PYG{o}{\PYGZlt{}}\PYG{n}{A}:\PYG{n+nc}{Shape}\PYG{o}{+}\PYG{n}{OtherTrait}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{A}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{	}\PYG{o}{..}\PYG{p}{.}
+\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

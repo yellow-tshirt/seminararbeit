@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{fn} \PYG{n+nf}{sum\PYGZus{}area}\PYG{o}{\PYGZlt{}}\PYG{n}{A}:\PYG{n+nc}{Shape}\PYG{o}{+}\PYG{n}{OtherTraits}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }: \PYG{k+kp}{\PYGZam{}}\PYG{o}{+}\PYG{n}{OtherTraits}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32} \PYG{p}{\PYGZob{}}
-\PYG{+w}{	}\PYG{o}{..}\PYG{p}{.}
-\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

@@ -1,5 +1,4 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{//Das Shape Prädikat muss für A und für B gelten}
 \PYG{k}{fn} \PYG{n+nf}{sum\PYGZus{}area}\PYG{o}{\PYGZlt{}}\PYG{n}{A}:\PYG{n+nc}{Shape}\PYG{p}{,}\PYG{n}{B}:\PYG{n+nc}{Shape}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{A}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{B}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32} \PYG{p}{\PYGZob{}}
 \PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{area}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{area}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
 \PYG{+w}{ }\PYG{p}{\PYGZcb{}}

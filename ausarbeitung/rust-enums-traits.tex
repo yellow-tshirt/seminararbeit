@@ -561,35 +561,23 @@ enum Animal{
     Bird
 }
 \end{minted}
-Pattern Matching und Nested Pattern Matchin ist an sich ist nur durch explizite If/Else Abfragen möglich so wie in diesem konstruierten Fall.
-\begin{minted}{java}
-
-\end{minted}
+Pattern Matching und Nested Pattern Matchin ist an sich ist nur durch explizite If/Else Abfragen möglich. Da Enums sich aber nicht verändern und die Werte bei jeder Option gleich sind ist das einzige Pattern, das man unterscheiden könnte die Option des Enums selber. Die granularere Unterscheidung tritt bei Klassen auf.
 \newpage
 \section{Traits}
-Das Kapitel über Traits behandelt eine zentrale Funktion in Rust, mit der Entwickler Funktionalitäten zwischen verschiedenen Typen teilen können. Traits werden oft mit Interfaces in anderen Programmiersprachen verglichen, sind jedoch keine direkten Äquivalente.
+Traits behandeln eine zentrale Funktion in Rust, mit der Entwickler Funktionalitäten zwischen verschiedenen Typen teilen können. Traits werden oft mit Interfaces in anderen Programmiersprachen verglichen, sind jedoch keine direkten Äquivalente.
 Ein Trait definiert eine Menge von Funktionen, die auf einen bestimmten Typ angewendet werden können. Es ermöglicht die gemeinsame Nutzung von Verhaltensweisen über verschiedene Typen hinweg. Im Wesentlichen legt ein Trait fest, welche Funktionen ein Typ bereitstellen muss, um als implementierendes Objekt des Traits zu gelten.
-Im Vergleich zu Interfaces sind Traits flexibler und leistungsfähiger. Während Interfaces in anderen Sprachen hauptsächlich die Schnittstelle eines Typs beschreiben, gehen Traits weiter und beschreiben eine Menge von Funktionen, die auf den Typ angewendet werden können. Traits können daher als Prädikat für einen Typ betrachtet werden - ein Typ wird nur akzeptiert, wenn er die Funktionen des Traits implementiert.
-Ein Trait ist mehr als nur ein Vertrag mit einem Typ; es ist eine Menge von Funktionen oder Verhalten, die über einen Typ verfügbar gemacht werden können. Traits sind Funktionssätze über einem Typen, während Interfaces in der Regel als eigenständige Typen betrachtet werden.
-Traits in Rust adressieren ähnliche Probleme wie Interfaces in anderen Sprachen, bieten jedoch eine größere Mächtigkeit und Flexibilität. Sie ermöglichen es Entwicklern, gemeinsame Funktionalitäten zu abstrahieren und wiederzuverwenden, indem sie Traits definieren und sie auf verschiedene Typen anwenden. Dadurch wird der Code modularer und flexibler.
-Zusammenfassend kann gesagt werden, dass Traits in Rust eine leistungsstarke Funktion sind, um geteilte Funktionalitäten zwischen verschiedenen Typen zu realisieren. Sie bieten eine flexiblere Alternative zu herkömmlichen Interfaces und ermöglichen es Entwicklern, abstrakte Konzepte zu modellieren. Durch die Verwendung von Traits können verschiedene Typen über gemeinsame Verhaltensweisen miteinander interagieren und die Wiederverwendbarkeit von Code verbessern.
+Im Vergleich zu Interfaces sind Traits flexibler und leistungsfähiger. Während Interfaces in anderen Sprachen hauptsächlich die Schnittstelle eines Typs beschreiben, gehen Traits weiter und beschreiben eine Menge von Funktionen, die auf den Typ angewendet werden können. Traits können daher als Prädikat für einen Typ betrachtet werden, bei dem ein Typ wird nur akzeptiert, wenn er die Funktionen des Traits implementiert. Wohingegen Interfaces ein eigener Typ sind.
+Traits ermöglichen es Entwicklern, gemeinsame Funktionalitäten zu abstrahieren und wiederzuverwenden, indem sie Traits definieren und sie auf verschiedene Typen anwenden. Dadurch wird der Code modularer und flexibler.
 \subsection{Traits in Rust}
-\begin{enumerate}
-	\item geteilte funktionalität mit anderen Typen
-	\item Funktionsmenge über einem Typen
-	\item Oft mit Interfaces verglichen, sind aber keine Interfaces
-	\item interfaces sind Typen
-	\item adressieren ähnliche Probleme, traits aber mächtiger
-\end{enumerate}
 \subsubsection{Einfacher Trait}
 \begin{enumerate}
 		\item Prädikat auf einem Typen
 \end{enumerate}
-Der Trait "Shape" fungiert hier als Prädikat für die implementierenden Strukturen. Das bedeutet, dass eine Struktur nur dann als implementierendes Objekt des Traits gilt, wenn sie die Methode "area" implementiert.
-In dem gegebenen Beispiel werden zwei Strukturen, "Square" und "Rectangle", definiert, die beide den Trait "Shape" implementieren. Die Methode "area" wird jeweils für die Berechnung der Fläche des Quadrats und des Rechtecks implementiert.
-Durch die Implementierung des Traits "Shape" können wir nun auf die Methode "area" für Instanzen von "Square" und "Rectangle" zugreifen, unabhängig von der spezifischen Struktur. Dies ermöglicht es uns, die gleiche Funktionalität für verschiedene Formen zu verwenden und den Code zu vereinfachen.
-Der Trait "Shape" dient hier als Prädikat, das sicherstellt, dass eine Struktur über die erforderliche Funktionalität zur Berechnung der Fläche verfügt. Wenn eine Struktur den Trait "Shape" implementiert, garantieren wir, dass sie über die Methode "area" verfügt und somit als gültige geometrische Form betrachtet werden kann.
-Durch die Verwendung von Traits können wir gemeinsame Verhaltensweisen abstrahieren und wiederverwendbaren Code schreiben. In diesem Beispiel ermöglicht der Trait "Shape" die Bereitstellung einer allgemeinen Funktionalität zur Berechnung der Fläche, die von verschiedenen geometrischen Formen verwendet werden kann. Dies verbessert die Modularität und Flexibilität des Codes und ermöglicht es uns, denselben Code für verschiedene Formen zu verwenden, solange sie den Trait "Shape" implementieren.
+Der Trait Shape fungiert hier als Prädikat für die implementierenden Strukturen. Das bedeutet, dass eine Struktur nur dann als implementierendes Objekt des Traits gilt, wenn sie die Methode area implementiert.
+Die Methode area wird jeweils für die Berechnung der Fläche des Quadrats und des Rechtecks implementiert.
+Durch die Implementierung des Traits Shape können wir nun auf die Methode area für Instanzen von Square und Rectangle zugreifen, unabhängig von der spezifischen Struktur. Dies ermöglicht es uns, die gleiche Funktionalität für verschiedene Formen zu verwenden und den Code zu vereinfachen.
+ Wenn eine Struktur den Trait Shape implementiert, garantieren wir, dass sie über die Methode area verfügt und somit als gültige geometrische Form betrachtet werden kann.
+ In diesem Beispiel ermöglicht der Trait Shape die Bereitstellung einer allgemeinen Funktionalität zur Berechnung der Fläche, die von verschiedenen geometrischen Formen verwendet werden kann.
 \begin{minted}{rust}
 trait Shape{
     fn area(s: &Self) ->i32;
@@ -618,7 +606,7 @@ impl Shape for Rectangle {
 
 \end{minted}
 \subsubsection{Shorthand Schreibweise}
-Andere Schreibweise, so kann man die Funktion auf einer Instanz des Structs aufrufen
+Durch diese Schreibweise Schreibweise ist es möglich die Funktionen wie auf einem Objekt aufzurufen. In beiden Fällen ist der erste Parameter der Funktion einfach der Instanz des Typens selber.
 \begin{minted}{rust}
 trait Shape{
    fn area(&self) -> String;
@@ -636,9 +624,8 @@ fn main() {
 }
 \end{minted}
 \subsubsection{Default-Implementationen}
-\begin{enumerate}
-	\item geht in java auch
-\end{enumerate}
+Traits erlauben es wie Interfaces und Abstrakte Klassen ein Standartverhalten bereitzustellen, das nicht expliziert implementiert werden muss.
+Das heißt mit der der Zeile 'impl Animal for Cat{}' gilt das Prädikat schon als erfüllt.
 \begin{minted}{rust}
 fn main() {
     let c1:Cat  = Cat{};
@@ -653,39 +640,48 @@ trait Animal{
 struct Cat{}
 impl Animal for Cat{}
 \end{minted}
-When running main yields
+Führt man das Programm aus, so erhält man folgendes.
+\paragraph{Output:}
 \begin{minted}{shell}
 The Animal made a noise
 \end{minted}
 \subsubsection{Trait Bounds}
+Beim definieren von Funktionen können wir die Traits benutzen um Typen einzuschränken. Diese Einschränkung nennt man auch Trait Bound.
+Im Beispiel wird vom Typen A und B  verlangt, dass sie das Prädikat Shape erfüllen, um sicherzugehen, dass sie Zugriff die notwendige Area-Methode haben.
 \begin{minted}{rust}
-//Das Shape Prädikat muss für A und für B gelten
 fn sum_area<A:Shape,B:Shape>(x : &A, y : &B) -> i32 {
     return area(x) + area(y)
  }
 \end{minted}
 \subsubsection{Multiples Binding}
-Man kann auch Prädikate/Traits verunden
+Es ist auch mögliche mehrere Anforderungen an einen Typ zu stellen.
+Dies kommt der logischen Verundung von Prädikaten gleich.
+Sprich ein Typ Typ A wird nur aktzeptiert, wenn es eine Implementation von Shape und OtherTrait für diesen Typen gibt.
 \begin{minted}{rust}
-fn sum_area<A:Shape+OtherTraits>(x : &+OtherTraits) -> i32 {
+fn someFunc<A:Shape+OtherTrait>(x : &A){
 	...
  }
 \end{minted}
 \subsubsection{Dynamische Traits}
 Repräsentieren von Interfaces in Rust \\
-Können Konkrete Typen als Parameter und Rückgabewerte nutzen
+Dynamische Typen ermöglichen es uns Interfaces zu imitieren.
+Box ist notwendig, da unsere Typen, die den Trait implementieren theoretisch beliebig groß sein können.
+Dies erlaubt es uns Konkrete Typen als Parameter und Rückgabewerte anzugeben die eine Implementation für den Trait haben müssen.
 \begin{minted}{rust}
 fn sum_area(x : Box<dyn Shape>, y: Box<dyn Shape>) -> i32 {
     return area(x) + area(y)
  }
 \end{minted}
 \subsubsection{Kurzschreibweise für dynamische Traits}
+Oft sieht man auch diese etwas kürzere Schreibweise, die die Verwendung von Box für uns versteckt.
 \begin{minted}{rust}
 fn sum_area(x : &(impl Shape), y: &(impl Shape)) -> i32 {
     return area(x) + area(y)
  }
 \end{minted}
 \subsubsection{Platzhaltertypen}
+Platzhaltertypen ermöglichen es uns für jede Implementierung eines Traitseine Reihe von Typen für die Implementation festzulegen.
+Im Beispiel von TransformAB gibt man den Typen A an, der über eine Funktion in Typ B umgewandelt wird. Dies ist auch über Generische Traits möglich, mit dem Unterschied, dass man generische Traits mehrmals implementieren kann. 
 \begin{minted}{rust}
 fn main(){
     let m = Machine{};
@@ -708,6 +704,8 @@ impl TransformAB for Machine{
 }
 \end{minted}
 \subsubsection{Assoziierte Konstanten}
+Ähnliche wie bei Platzhaltertypen kann man für jede Implementierung des Traits gewisse konstanten Festlegen. In diesem erweiterten Beispiel des TransformAB Traits, findet die Umformung in einen Vektor statt, der das umgewandelte Struct so oft enthält, wie man es in der konstante angegeben hat.
+Es ist wichtig anzumerken, dass es keine assoziierten Variablen gibt. Nur Konstanten sind erlaubt.
 \begin{minted}{rust}
 fn main(){
     let m = Machine{};
@@ -737,10 +735,11 @@ impl TransformAB for Machine{
 }
 \end{minted}
 \subsubsection{Supertraits}
-Das Kapitel Supertraits behandelt die Verwendung von Supertraits in Rust. Supertraits ermöglichen es uns, Traits zu definieren, die von anderen Traits erben. Dadurch können wir eine Hierarchie von Traits erstellen und sicherstellen, dass eine Struktur alle Anforderungen der vererbten Traits erfüllt.
-In dem gegebenen Beispiel werden mehrere Traits definiert, darunter Person, Student, Programmer und CompSciStudent. Der Trait CompSciStudent erbt von den Traits Programmer und Student, was bedeutet, dass eine Struktur, die den Trait CompSciStudent implementiert, auch die Anforderungen der vererbten Traits erfüllen muss.
-In diesem Beispiel wird die Struktur HskaStudent erstellt, die den Traits Person, Student, Programmer und CompSciStudent entspricht. Die Implementierungen der Methoden für die Traits verwenden die Felder der Struktur, um die entsprechenden Werte zurückzugeben.
-Durch die Verwendung von Supertraits können wir sicherstellen, dass eine Struktur alle Anforderungen erfüllt, die von den vererbten Traits festgelegt werden. Dies ermöglicht eine verbesserte Modularität und Wiederverwendbarkeit von Code, da wir auf vererbte Methoden und Eigenschaften zugreifen können, ohne sie erneut implementieren zu müssen.
+Supertraits ermöglichen es uns, Traits zu definieren, die von anderen Traits erben. Dadurch können wir eine Hierarchie von Traits erstellen und sicherstellen, dass eine Struktur alle Anforderungen der vererbten Traits erfüllt.
+In dem gegebenen Beispiel werden mehrere Traits definiert, darunter Person, Student, Programmer und CompSciStudent. Der Trait CompSciStudent erbt von den Traits Programmer und Student, was bedeutet, dass eine Struktur, die den Trait CompSciStudent implementiert, auch eine Implementation der anderen Traits erfüllen muss.
+ Die Implementierungen der Methoden für die Traits verwenden die Felder der Struktur, um die entsprechenden Werte zurückzugeben.
+So ist es möglich mit einem einzelnen Trait Bound eine personalisierte Ausgabe zu machen.
+Supertraits ermöglichen es uns Klassenhirarchisch ähnliche Strukturen aufzubauen. 
 \begin{minted}{rust}
 fn main() {
     let s = HskaStudent{name:"Mario", university:"hska", fav_language:"rust", git_username:"yellow-tshirt"};
@@ -791,7 +790,7 @@ impl CompSciStudent for HskaStudent{
 \end{minted}
 \subsection{Mächtigkeit von Traits}
 Wie bereits erwähnt besitzen Traits gewissen Vorteile gegenüber Interfaces, die ich nun anhand einiger einfacher Beispiele erläutern werden.
-Man sollte anmerken, dass noch mehr Vorteile gibt, also die, die hier aufgeführt sind.
+Man sollte anmerken, dass noch mehr Vorteile gibt, als die, die hier aufgeführt sind.
 \subsubsection{Gleiche Methodensignatur}
 Mit Traits ist es möglich, mehrere geteilte Funktionalitäten über einem Typ zu bilden, selbst wenn diese die gleiche Signatur haben.
 Das Beispiel unten würde sich über Interfaces nicht einfach so implementieren lassen, da ein Signaturkonflikt entstehen würde. Dazu aber später mehr.
@@ -834,7 +833,7 @@ impl boardgame for some_struct {
 \subsubsection{Generische Mehrfachimplementierung}
 Traits erlauben es uns den selben Trait mehrfach mit unterschiedlichen generischen Parametern zu implementieren.
 In Java ist mit Interfaces nicht möglich. Später werden wir noch sehen wie wir auch dieses Problem in Java lösen kann.
-Da Rust nur Funktionsmengen definiert gibt es keinen Konflikt, solange eindeutig ist welche Funktion beim aufruf benutzt wird.
+Da Rust nur Funktionsmengen definiert gibt es keinen Konflikt, solange eindeutig ist welche Funktion beim Aufruf benutzt wird.
 \begin{minted}{rust}
 fn main() {
     let s : some_struct = some_struct{};
@@ -860,7 +859,7 @@ impl generic<String> for some_struct {
 }
 \end{minted}
 \subsubsection{Referenzierung des eigenen Typen}
-Traits sin in der Lage mittels Self, den Typen zu referenzieren, für den man ihn implementiert.
+Traits sind in der Lage mittels Self, den Typen zu referenzieren, für den man ihn implementiert.
 Dies ist wie im Beispiel Clone wichtig, da wir den eigenen Typen für beliebe Structs zurückgeben möchten.
 \begin{minted}{rust}
 trait genCopy{
@@ -891,6 +890,7 @@ impl genCopy for Cat{
 Ein Problem, bei Java ist auch, dass man nicht ohne weiteres Funktionalität externer Klassen erweitern kann ohne diese zu verändern.
 Würden wird eine Parser Dependency importieren, bei der wird intern aber möchten, dass sie eine sleep Methode unterstützt geht dies nicht.
 Bei Traits implementiert man einfach für den fremden Datentyp mittels des impl Blocks den gewünschten Trait.
+Hier anhand des Beispiels einer Sleep-Funktionalität.
 \begin{minted}{rust}
 use std::thread;
 use std::time::Duration;
@@ -911,7 +911,7 @@ impl Sleep for thiryparty_struct {
 }
 \end{minted}
 \subsubsection{Konditionelle Implementierung}
-Via Trait Bounds ist Rust in der Lage implementationen nur für Teilmengen structs zu definieren, falls diese von einem generischen Parameter abhängig sind.
+Via Trait Bounds ist Rust in der Lage implementationen nur für Teilmengen Structs zu definieren, falls diese von einem generischen Parameter abhängig sind.
 Im Beispielcode wird dies mittels der Pair structs illustriert. Dieses stellt die Methode cmp\_display, die die Werte des Paares vergleicht und den größeren auf der Kommandozeile ausgibt.
 Das coole daran ist, dass diese Funktionalit nur zur Verfügung steht, wenn T die Traits Display und PartialOrd zur Verfügung stellt, da wir diese sonst nicht vergleichen und ausgeben könnten.
 Dies ist in Java unmöglich. Wir könnten nur T komplett beschränken und erlauben dass es nur Paare von Typen geben kann, die ausgebbar und partiell geordnet sind.
@@ -963,8 +963,7 @@ interface boardgame{
 }
 \end{minted}
 \paragraph{Lösung:}
-
-Falls wir aber trotzdem beide Schnittstellen anbieten müssen hilft uns das sogenannte Adapter-Pattern.
+Falls wir aber trotzdem beide Schnittstellen anbieten müssen hilft uns das sogenannte Adapter-Pattern\cite{websitedesignpatterns}.
 Es stellt die gewünschte Schnittstelle anstelle der eigentlichen Klasse zur Verfügung und managt den Methodenaufruf.
 \begin{minted}{java}
 public class adaptercompatible {
@@ -1015,6 +1014,7 @@ class BoardGameAdapter implements BoardGame {
     }
 }
 \end{minted}
+Der Text durch das benötigen von mehreren Klassen viel verboser und unübersichtlicher. Des weiteren muss man sich mit Design Pattern auseinandersetzen. Insgesamt also sehr viel Aufwand, für die gleiche Funktionalität.
 \subsubsection{Generische Mehrfachimplementierung}
 Ähnlich wie oben gibt es einen Konflikt zwischen den Interfaces die man implementieren möchte.
 Das konkrete Problem hier, ist dass man das gleiche Interface nicht mehrmals implementieren darf, selbst wenn es der generische Parameter unterschiedlich ist und es keinen Signaturkonflikt gibt.
@@ -1117,7 +1117,7 @@ class WrapperClass {
 \end{minted}
 \subsubsection{Referenzierung des eigenen Typens}
 Dieses Problem wird häufig mittels generischen Interfaces oder Klassen gelöst.
-Als übergebenen generischen Typ kann man einfach die Klasse selbst übergeben.
+Als übergebenen generischen Typ kann man einfach die Klasse selbst übergeben. Der einzige Nachteil ist, dass es sich nicht so schön liest und die Information reduntant erscheint.
 \begin{minted}{java}
 public class SameInputOutput{
     public static void main(String[] args) {
@@ -1171,7 +1171,7 @@ class Dog{
     }
 }
 \end{minted}
-compiler output
+\paragraph{Output:}
 \begin{minted}{shell}
 Conditional.java:4: error: type argument Dog is not within bounds of type-variable T
 Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
@@ -1181,6 +1181,7 @@ T extends Comparable<T> declared in class Pair
 Conditional.java:4: error: incompatible types: Dog cannot be converted to Comparable
 Pair<Dog> dogpair = new Pair(new Dog("Ben"), new Dog("Albert"));
 \end{minted}
+Dies beschränkt den Typ jedoch zu sehr. Eine Möglichkeit ist es aber über multiple generische Interfaces und dem Adapter-Pattern unterchiedliche Arten von Paar wie 'Pair' oder 'PartiallyOrderedPair' anzubieten.
 \newpage
 \section{Vergleich}
 \subsection{Enums}
