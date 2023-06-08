@@ -1112,7 +1112,7 @@ class WrapperClass {
 \end{minted}
 \subsubsection{Referenzierung des eigenen Typen}
 Dieses Problem wird häufig mittels generischer Interfaces oder Klassen gelöst.
-Als generischen Typen kann man einfach die Klasse selbst übergeben. Der einzige Nachteil ist, dass die Information reduntant erscheint.
+Als generischen Typen kann man einfach die Klasse selbst übergeben. Der einzige Nachteil ist, dass die Information redundant erscheint.
 \begin{minted}{java}
 public class SameInputOutput{
     public static void main(String[] args) {
@@ -1203,7 +1203,7 @@ class Pair<T>{
 class SpecificPair<T extends IGiveHelloString> extends Pair{
     public SpecificPair(T x, T y){
         super(x,y);
-    }
+
 
     public void PrintBothHelloString(){
     }
@@ -1230,16 +1230,60 @@ class NoHello{
 \newpage
 \section{Vergleich}
 \subsection{Enums}
-Rust deckt alle Funktionalitäten von Java Enums ab und bietet darüber hinaus mit algebraischen Datentypen und Pattern Matching mächtige Programmierkonzepte. In Java ist es zwar möglich, über Klassen eine ähnliches Maß an Funktionalität zu erreichen, der Code ist aber weitaus verboser und weniger lesbar.
-Es ist nicht möglich, abgeschlossenes Pattern Matching und Nested Pattern Matching in Java über Switch-Case zu realisieren. Switch-Case lässt insbesondere keine komplexen Datentypen zu.
-Um Funktionalität von Enums zu erweitern, müssen wir in Java Enums selbst anpassen, wohingegen wir in Rust vollkommen entkoppelt Funktionen für das Enum bereitstellen können.
-In Java erweitern wir also Klassen, während die Funktionen selbst nicht erweiterbar sind. In Rust werden die Funktionen, die auf dem Enum operieren, erweitert.
-Zusammenfassend kann man also sagen, dass Java zwar oft ans gleiche Ziel kommt, aber unnötig verbos und anfälliger für Fehler ist.
-
+\subsubsection{Rust Enums Vorteile}
+\begin{itemize}
+		\item Algebraische Datentypen: Da Rust Enums algebraische Datentypen sind, erlauben sie es uns unterschiedliche Strukturen für die Varianten anzugeben.
+		Obwohl die Datentypen so unterschiedlich sind, macht das Verwenden des Enums, die Beziehung, in der sie zueinander stehen deutlich.
+		\item Starke Typsicherheit: Der Compiler stellt sicher, dass alle Varianten eines Enum im Pattern Matching abgedeckt sind. 
+		Da jeder Fall genau abgedeckt ist können hiermit Laufzeitfehler vermieden werden.
+		\item Nested Parrern Matching: Mit Nested Pattern Matching lassen sich komplexere Typen, die Referenzen auf andere Datentypen oder gar sich selber verwalten, sehr präzise zerlegen und dem entsprechenden Fall zuordnen.
+		\item Erweiterbarkeit der Funktionalität eines Enums: Es ist möglich Funktionen die auf einem Enum arbeiten, mittels impl Blöcken zu erweitern.
+Die Funktionalität ist somit zwar unabhängig vom Enum aber doch direkt zugeordnet.
+Dies hilft den Code zu organisieren und flexibel zu halten.
+		\item Generics: Enums in Rust können generisch sein, was bedeutet, dass sie Typ-Parameter haben können. Dies ermöglicht wiederverwendbaren und flexiblen Code.
+\end{itemize}
+\subsubsection{Rust Enums Nachteile}
+\begin{itemize}
+	\item Hinzufügen und Entfernen von Varianten: Das Hinzufügen einer neuen Variante erfordert oft eine Überprüfung und Anpassung des gesamten Codes, der das Pattern Matching verwendet.
+	\item Komplexität des Pattern Matchings: Das Pattern Matching mag für einfache Fälle sehr übersichtlich sein, jedoch
+kann die Verwendung von Pattern Matching für sehr komplexe Hierarchien zu einer erhöhten Komplexität und Unübersichtlichkeit führen.
+Wenn sich die Varianten eines Enums verändern, ist es oft kompliziert das Pattern Matching entsprechend anzupassen.
+\end{itemize}
+\subsubsection{Java Klassen und virtuelle Methoden Vorteile}
+\begin{itemize}
+	\item Erweiterbarkeit: Es ist einfacher, neue Klassen hinzuzufügen, ohne den bestehenden Code zu ändern.
+	\item Funktionalität teilbar: Durch Klassen ist es möglich implementierte Methode Methoden an andere Klassen zu vererben.
+Dadurch lässt sich Redundanz des Codes vermeiden.
+\item Funktionalität an Klassen gekoppelt: Da die Funktionalität an die Klasse direkt gekoppelt ist, teilt sich die Komplexität der Logik auf die einzelnen Klassen auf.
+\end{itemize}
+\subsubsection{Java Klassen und virtuelle Methoden Nachteile}
+\begin{itemize}
+	\item Mehr Boilerplate: Java Klassen haben viel Boiletplate Code. Dies macht den Code an sich oft unnötig verbos, für die Logik die er abbildet.
+	\item Typfehler zur Laufzeit: Das Typsystem von Java ist weniger streng als das von Rust, was zu  Fehlern führen kann.
+\end{itemize}
 \subsection{Traits}
-Traits in Rust bieten uns mächtiges Programmierkonzept, bei dem wir entkoppelt vom Typen selber gemeinsames Verhalten beschreiben können. In Java erweitern wir Klassen mit Funktionen, wohingegen wir in Rust eine Menge von Funktionen bereitstellen können.
-Da Rust Traits Prädikate auf Typen sind, lassen sich damit eigene Logiken aufbauen. Darüber hinaus können sie mit dynamischen Traits wie Interface / Typen benutzt werden und decken so alle Funktionalitäten dieser gleichermaßen  ab. In Java ist es dennoch möglich, Funktionalitäten wie generische Mehrfachimplementierung oder Hinzufügen von Funktionalität für Third-Party-Datentypen durch geschicktes Einsetzen von Designpatterns zu erreichen. Dies geschieht jedoch auf Kosten der Lesbarkeit und Prägnanz des Codes. Die Funktionalität der konditionellen Implementierung von Funktionen lässt sich durch geschicktes Ausnutzen von Vererbung ebenfalls annähern. Jedoch müssen für alle verwendeten Trait Bounds eigene Unterklassen erstellt werden, um sie so granular einzugrenzen. 
-
+\subsubsection{Traits Vorteile}
+\begin{itemize}
+	\item Beliebige funktionelle Erweiterung von Structs: Mit Traits in Rust kann man Methoden zu  Structs hinzufügen, ohne den ursprünglichen Code zu verändern. 
+	\item Erweiterung von 3rd Party Structs: Da wir nur Funktionsmengen für Typen definieren ist es egal ob wir direkten ZUgriff auf den Typen haben oder nicht. Deswegen können wir auch für Typen, die wir nicht selbst geschrieben habe Funktionalität und Verhalten definieren.
+	\item Konditionelle Implementierung mit Trait Bounds möglich: Es ist möglich Funktionalität nur dann zu implementieren, wenn bestimmte Trait-Bounds erfüllt werden. Das ist spezielle Funktionalität für bestimmte Teilmengen des Typens bereitstellen möchte, den Typ selber aber allgemein halten will.
+\end{itemize}
+\subsubsection{Traits Nachteile}
+\begin{itemize}
+	\item Implementation von Traits zwischen Typen nicht teilbar: Es ist nicht möglich die Implementation eines Traits mit einem Trait zu teilen der von ihm erbt. Der Untertrait muss trotzdem seine eigene Implementation schreiben um das Prädikat des Traits zu erfüllen. Dies führt ggf. zu redundantem Code.
+	\item Keine statischen Konstanten zwischen Implementationen: Es ist nicht möglich dass es Konstanten gibt, auf die alle Implementation des Traits zugreifen können
+\end{itemize}
+\subsubsection{Interfaces Vorteile}
+\begin{itemize}
+	\item Vererbung von Datenfeldern und Funktionen möglich.
+	\item Überschreiben von Funktionen in Unterklasse möglich.
+\end{itemize}
+\subsubsection{Interfaces Nachteile}
+\begin{itemize}
+	\item Konflikte zwischen Interfaces: Oft kommt es vor, dass sich zwei Interfaces nicht gleichzeitig implementieren lassen. Um die Funktionalität beider zu gewährleisten muss Java auf Designpatterns zurückgreifen, die oft verbos sind.
+	\item Funktionelle Erweiterung nur durch Veränderung der Klasse selbst: Da Funktionen und Klassen nah gekoppelt sind ist es nur möglich weitere Funktionalität für eine Klasse zu implementieren, wenn man diese Verändert. Um Funktionalität für 3rd-Party-Datentypen zu gewährleisten muss Java an dieser Stelle wieder auf Designpatterns zurückgreifen, die sehr verbos sind.
+	\item Viel Boilerplate: Java ist auch ohne Designpatterns durch sehr viel Boilerplate-Code sehr verbos.
+\end{itemize}
 \bibliographystyle{plain}
 \bibliography{bib}
 

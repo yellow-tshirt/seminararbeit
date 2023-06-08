@@ -24,7 +24,7 @@
 \PYG{k+kd}{class} \PYG{n+nc}{SpecificPair}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{+w}{ }\PYG{k+kd}{extends}\PYG{+w}{ }\PYG{n}{IGiveHelloString}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{k+kd}{extends}\PYG{+w}{ }\PYG{n}{Pair}\PYG{p}{\PYGZob{}}
 \PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n+nf}{SpecificPair}\PYG{p}{(}\PYG{n}{T}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{)\PYGZob{}}
 \PYG{+w}{        }\PYG{k+kd}{super}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{);}
-\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
 
 \PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{PrintBothHelloString}\PYG{p}{()\PYGZob{}}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}
